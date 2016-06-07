@@ -1,0 +1,28 @@
+.ui-content-ul{
+    margin: 50px;
+}
+
+.ui-content-li{
+    width:50%;
+    height:150px;
+    float: left;
+}
+
+.ui-content-footer{
+    text-align: right;
+    margin-right: 50px;
+}
+
+
+.ui-path{
+    margin:0 auto;
+}
+.ui-path-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-path ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}

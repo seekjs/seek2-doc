@@ -1,0 +1,34 @@
+<div>
+    <div>
+        <div class="ui-alert">
+
+           <div class="ui-alert-top">
+                <div class="ui-alert-tit">
+                    <strong>{this.title}</strong>
+                </div>
+               {if this.hasClose}
+               <div class="ui-alert-close" data-event="hide"></div>
+               {/if}
+            </div>
+
+            <div class="ui-alert-cont">
+                <div class="ui-alert-txt">
+                    <p>{this.text}</p>
+                </div>
+            </div>
+            <div class="ui-alert-btn">
+                {if this.hasOk}
+                <div class="ui-alert-ture" data-event="pickOk">{this.okText}</div>
+                {/if}
+                {if this.hasCancel}
+                <div class="ui-alert-cancel" data-event="pickCancel">{this.cancelText}</div>
+                {/if}
+                {foreach from=this.buttons}
+                <div class="ui-alert-cancel" data-event="pickButton:{i}">{item}</div>
+                {/foreach}
+            </div>
+        </div>
+
+    </div>
+    <div class="ui-alert-bg"></div>
+</div>

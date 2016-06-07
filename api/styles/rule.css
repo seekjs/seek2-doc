@@ -1,0 +1,23 @@
+/*主容器*/
+.ui-page{
+    /*
+    margin:25px;
+    width: calc(100% - 50px);
+    */
+    min-height: calc(100% - 50px);
+    background: #fff;
+}
+
+
+.ui-template{
+    margin:0 auto;
+}
+.ui-template-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-template ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}

@@ -1,0 +1,117 @@
+(function(req, exp) {
+    "use strict";
+    var http = req("http");
+    var os = req("os");
+    var fs = req("fs");
+
+    //文件类型
+    var Mime = {
+        txt: "text/plain",
+        htm: "text/html",
+        html: "text/html",
+        css: "text/css",
+        xml: "text/xml",
+        js: "text/js",
+        json: "text/json",
+
+        gif: "image/gif",
+        jpg: "image/jpeg",
+        jpeg: "image/jpeg",
+        png: "image/png",
+        ico: "image/x-icon"
+    };
+
+    //静态服务器
+    var Server = function (Req, Res) {
+        var file = Req.url.replace(/^\//, "").replace(/\?.*$/, "");
+        if (file == "") {
+            file = "index.html";
+        }
+        var ext = file.split(".")[1] || "txt";
+        ext = Mime[ext] || "text/plain";
+        var bm = /^image\//.test(ext) ? 'binary' : 'utf-8';
+        fs.readFile(file, bm, function (err, data) {
+            if (err) {
+                Res.writeHead(404, {'Content-Type': 'text/plain'});
+                Res.end("file is not found!");
+            } else {
+                Res.writeHead(200, {'Content-Type': ext});
+                Res.write(data, bm);
+                Res.end();
+            }
+        });
+    };
+
+    //报错处理
+    var Error = function(err){
+        if(err) {
+            if (err.code && err.code == "EACCES") {
+                console.log("权限不够, 请提高权限或切换端口...............");
+
+            }else if (err.code && err.code == "EADDRINUSE") {
+                console.log("端口已被启用, 请先停掉此端口或切换端口...............");
+
+            } else {
+                console.log(err);
+                err.stack && console.log(err.stack);
+            }
+        }else{
+            console.log("未知错误..................");
+        }
+    };
+
+    //判断是否纯对象
+    exp.isPlainObject = function(v){
+        return typeof(v)=="object" && !Array.isArray(v);
+    };
+
+    //字符串格式化
+    exp.format = function (str, obj) {
+        if(arguments.length==1){
+            return str;
+        }else if(arguments.length==2 && exp.isPlainObject(obj)){
+            return str.replace(/\{(\w+)\}/g, function (_, key) {
+                return obj[key];
+            });
+        }else{
+            var arr = [].slice.call(arguments, 1);
+            return str.replace(/\{(\d+)\}/g, function (_, n) {
+                return arr[n];
+            });
+        }
+    };
+
+    //字符串格式化输出
+    exp.log = function () {
+        var args = [].slice.call(arguments);
+        var str = exp.format.apply(exp, args);
+        console.log(str);
+    };
+
+    //获取IP
+    exp.getIp = function(){
+        try{
+            var ips = os.networkInterfaces();
+            for(var i in ips) {
+                var a = ips[i];
+                for(var j=0; j<a.length; j++){
+                    var o = a[j];
+                    if(o.family == "IPv4" && o.internal===false){
+                        return o.address;
+                    }
+                }
+            }
+        }catch(e){
+            return "localhost";
+        }
+    };
+
+    //启动
+    exp.start = function (port) {
+        http.createServer(Server).listen(port).on("error", Error);
+        exp.log("Node Is Running At {0}:{1} OR localhost:{1}", exp.getIp(), port);
+    };
+
+    exp.start(process.env.PORT||9999);
+
+})(require, {});

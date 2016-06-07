@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.ui-com-clear{
+    clear: both;
+}
+.ui-alert-bg{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.7);
+    overflow: scroll;
+    z-index: 1;
+    display: block;
+}
+.ui-alert{
+    z-index: 9999;
+    position: relative;
+    margin: 10rem auto;
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 0.7rem #545151;
+    font-family: "Microsoft YaHei";
+}
+.ui-alert-top{
+    padding: 1.5rem 0 0.5rem 0;
+    border-top-right-radius: 0.7rem;
+    border-top-left-radius:0.7rem;
+    font-size: 1.3rem;
+    color: #4A4949;
+    text-align: center;
+}
+.ui-alert-tit{
+    display: inline-block;
+}
+.ui-alert-close{
+    position: absolute;
+    top: -1.37rem;
+    right: -1.37rem;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url("roundclose.png") no-repeat center;
+    background-size: 1.8rem auto;
+}
+.ui-alert-cont{
+    padding: 1rem;
+    text-align: center;
+    color: #3E3A39;
+}
+.ui-alert-txt{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+.ui-alert-btn{
+    width: 100%;
+    line-height: 2.5rem;
+    color: #3E3A39;
+    font-size: 1rem;
+    border-top: 1px solid #E5E8E8;
+    text-align: center;
+}
+.ui-alert-cancel{
+    text-align: center;
+    display: inline-block;
+    float: right;
+    border-bottom-right-radius:0.7rem;
+    width: 50%;
+    box-shadow: -1px 0 0 0 #E5E8E8;
+
+}
+.ui-alert-ture{
+    text-align: center;
+    display: inline-block;
+    border-bottom-left-radius:0.7rem;
+    width: 50%;
+}

@@ -1,0 +1,16 @@
+.ui-plugin-chart p{
+	margin:30px auto;
+}
+
+.bar{
+	width: 75%;
+	height:150px;
+}
+.line{
+	width: 75%;
+	height:300px;
+}
+.pie{
+	width: 75%;
+	height:150px;
+}

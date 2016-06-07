@@ -1,0 +1,45 @@
+.ui-content-ul{
+    margin: 50px;
+}
+
+.ui-content-li{
+    width:50%;
+    height:150px;
+    float: left;
+}
+
+.ui-layer-bg{
+    width: 30rem;
+}
+
+.ui-layer-bg p{
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+    padding: 1rem;
+    background: lightgrey;
+}
+
+.ui-layer-guid ul{
+    display: inline-block;
+    list-style: none;
+}
+
+.ui-layer-guid img{
+    width: 1rem;
+    height:1rem;
+    vertical-align: middle;
+}
+
+.ui-layer-guid div{
+    width: 8rem;
+    height:3rem;
+    border:1px solid #000;
+    border-radius: 0.5rem;
+    line-height: 2rem;
+    display: inline-block;
+    margin: 1rem 0 1rem 0;
+}
+.ui-layer-guid ul li{
+    text-align: center;
+    line-height: 3rem;
+}

@@ -1,0 +1,46 @@
+﻿.sk-accordion {
+    background: #eee;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sk-accordion>*{
+    border-top:1px solid #aaa;
+}
+
+.sk-accordion>li p {
+    background: #ccc;
+    line-height: 40px;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    text-indent: 1em;
+}
+
+.sk-accordion>li p b{
+    display:inline-block;
+    width:13px;
+    height:15px;
+}
+
+.sk-accordion>li p.close b{
+    background-image:url(box-close.png);
+}
+
+.sk-accordion>li p.open b{
+    background-image:url(box-open.png);
+}
+
+.sk-accordion>li ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.sk-accordion>li li {
+    text-indent: 3em;
+    font-size: 12px;
+    line-height: 20px;
+}

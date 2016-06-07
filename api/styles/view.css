@@ -1,0 +1,17 @@
+/*
+.ui-view{
+    margin:0 auto;
+}
+.ui-view-title{
+    background-color: lightgrey;
+    / *padding-left: 20px;* /
+    padding: 1rem;
+}
+.ui-view ul li{
+    padding: 0.5rem 2rem;
+    /*vpadding-left: 20px;v*v/
+}*/
+
+.item{
+    padding: 0.1rem 0.5rem;
+}

@@ -1,0 +1,18 @@
+.ui-tree div{
+    margin-left: 2em;
+    font-size: 12px;
+    height: 25px;
+}
+
+.ui-plugin{
+    margin:0 auto;
+}
+.ui-plugin-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-plugin ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}

@@ -1,0 +1,79 @@
+﻿.sk-dialog{
+	position:absolute;
+	display:none;
+    background:#fff;
+    /*height:auto!important;*/
+    -webkit-box-shadow:0px 0px 15px rgba(0,0,0,0.2);
+}
+
+.sk-dialog-bar{
+	width:100%;
+	height:40px;
+	background:#cd1b0d;
+}
+
+.sk-dialog-bar p{
+	margin:0;
+	padding:0;
+}
+
+.sk-dialog-bar p:nth-child(1){
+	float:left;
+}
+
+.sk-dialog-bar p:nth-child(2){
+	float:right;
+	width:20px;
+	height:20px;
+	text-align:center;
+	line-height: 20px;
+	font-size: 2em;
+	margin-right:10px;
+	margin-top:10px;
+	cursor:pointer;	
+}
+
+.sk-dialog-title{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	font-size:15px;
+	font-weight:bold;
+	text-indent:15px;
+}
+
+.sk-dialog-title, .sk-dialog-close{
+	color:#fff;
+}
+
+.sk-dialog-content{
+	/*height:auto!important;*/
+	background:#fff;
+    padding:15px;
+}
+
+.sk-dialog-content div:nth-child(1){
+	text-align: center;
+	font-size: 12px;
+	padding: 20px;
+	font-size: 14px;
+	height: 100%;
+    /*background:#000;*/
+}
+
+.sk-dialog-content-iframe{
+	width:100%; 
+	height:100%;
+}
+
+.sk-dialog-buttons{
+	text-align: center;
+}
+
+.sk-dialog-buttons p{
+	display: inline-block;
+	border: 1px solid #666;
+	border-radius: 3px;
+	margin:5px;
+	padding:5px;
+}

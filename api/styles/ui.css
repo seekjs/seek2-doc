@@ -1,0 +1,41 @@
+/*主容器*/
+.ui-page{
+    /*
+    margin:25px;
+    width: calc(100% - 50px);
+    */
+    min-height: calc(100% - 50px);
+    background: #fff;
+}
+
+
+
+h1{
+    background-color: lightgrey;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+h2{
+    background-color: lightgrey;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+h3{
+    background-color: lightgrey;
+    font-size: 0.5rem;
+    padding: 1rem;
+}
+
+.ui-color-red{
+    color:red;
+}
+
+.ui-color-blue{
+    color:blue;
+}
+
+.ui-color-green{
+    color:green;
+}

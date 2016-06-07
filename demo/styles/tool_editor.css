@@ -1,0 +1,12 @@
+
+.ui-code>div{
+    margin: 20px 0;
+}
+
+.ui-code__panel{
+    line-height: 20px;
+}
+
+.ui-code button{
+    margin: 0 5px;
+}

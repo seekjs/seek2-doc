@@ -1,0 +1,28 @@
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    background: #fff;
+    width:100%;
+    min-height: 100%;
+}
+
+/*头部公用样式*/
+header{
+    text-align: center;
+}
+
+/*中部公用样式*/
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/*底部公用样式*/
+footer{
+    text-align: right;
+    margin-right: 50px;
+}

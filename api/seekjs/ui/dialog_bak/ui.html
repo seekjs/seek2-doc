@@ -1,0 +1,25 @@
+﻿<%
+	var ops=this;
+%>
+<div class="sk-dialog" style="width:{ops.width}px; height:{ops.height}px;">
+	{if !ops.nobar}
+	<div class="sk-dialog-bar">
+		<p class="sk-dialog-title">{ops.title}</p>
+		<p class="sk-dialog-close" data-event="pickButton:close">×</p>
+	</div>
+	{/if}
+	<div class="sk-dialog-content" style="height:{ops.btn?ops.height-110:ops.height-50}px;">
+		{if ops.url}
+		<iframe class="sk-dialog-content-iframe" src="{ops.url}"></iframe>
+		{else}
+		<div>{ops.content}</div>
+		{/if}
+	</div>
+	{if ops.btn}
+	<div class="sk-dialog-buttons">
+		{foreach from=ops.btn}
+		<p class="sk-dialog-btn-{i}" data-event="pickButton:{i}">{item}</p>
+		{/foreach}
+	</div>
+	{/if}
+</div>
