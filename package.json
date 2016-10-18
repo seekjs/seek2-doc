@@ -1,7 +1,10 @@
 {
   "name": "seekjs-doc",
   "version": "1.0.0",
-  "dependencies": {
+  "devDependencies": {
     "seekjs": "^1.2.3"
+  },
+  "dependencies": {
+    "ifun": "latest"
   }
 }

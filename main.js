@@ -4,25 +4,22 @@
 
 seekjs.config({
     ns:{
-        data: seekjs.resolve("./data/"),
-        st: seekjs.resolve("./styles/")
+        "data.": "/data/",
+        "css.": {
+            path: "/styles/",
+            type: ".css"
+        }
     }
 });
 
-define(function(req, exp, mod){
-    "use strict";
-    req("st.main.css");
-    req("st.ui.css");
+require("css.main");
+require("css.ui");
 
-    var app = req("sys.app");
+var app = require("sys.app");
 
-    app.setPath({
-        js: mod.resolve("./js/"),
-        tp: mod.resolve("./templates/"),
-        st: mod.resolve("st.")
-    });
-
-    app.useAnimate = true;
-
-    app.init("home");
+app.config({
+    path: `/pages/`,
+    useAnimate: true
 });
+
+app.init("home");
