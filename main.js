@@ -6,7 +6,7 @@ seekjs.config({
     ns:{
         "data.": "/data/",
         "css.": {
-            path: "/styles/",
+            path: "/css/",
             type: ".css"
         }
     }
