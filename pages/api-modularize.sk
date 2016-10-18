@@ -1,0 +1,125 @@
+<style>
+.ui-content-ul{
+    margin: 50px;
+}
+
+.ui-content-li{
+    width:50%;
+    height:150px;
+    float: left;
+}
+
+
+.ui-modularize{
+    margin:0 auto;
+    /*border: 1px solid lightgrey;*/
+}
+.ui-modularize-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-modularize ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<template>
+<ul>
+    <li>
+        <div class="ui-modularize">
+            <h3 class="ui-modularize-title">1.两种模块化的写法</h3>
+            <ul>
+                <li>
+                    <p>amd 异步模块加载</p>
+                    <p>先行原则</p>
+                    <p>基本语法</p>
+                    <code>define(id, deps, factory);</code><br/>
+                    <code>define(deps, factory);</code>
+                    <p>范例:</p>
+                    <code>
+                        define("id", ["dep1","dep2","dep3"], function(require, exports, module, dep1, dep2, dep3){{
+
+                        }});
+                    </code>
+                </li>
+                <li>
+                    <p>cmd 通用模块定义</p>
+                    <p>就近原则</p>
+                    <p>基本语法</p>
+                    <code>define(id, factory);</code>
+                    <p>范例:</p>
+                    <code>
+                        define("id", function(req, exp, mod){{
+                            var dep1 = req("dep1");
+                            var dep2 = req("dep2");
+                            var dep3 = req("dep3");
+
+                        }});
+                    </code>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-modularize">
+            <h3 class="ui-modularize-title">2.factory参数</h3>
+            <ul>
+                <li>require(req) 请求模块</li>
+                <li>exports(exp) 输出对象</li>
+                <li>module(mod) 模块本身</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-modularize">
+            <h3 class="ui-modularize-title">3.config配置</h3>
+            <ul>
+                <li>1.写法: {literal}seekjs.config({ns:{-},path:{-},alias:{-},packages:{-}});{/literal}</li>
+                <li>2.ns 命名空间 如: req("mod.Dream");</li>
+                <li>3.path 短路径 如: req("ad/160101/home");</li>
+                <li>4.alias 别名 如: req("service");</li>
+                <li>5.packages 包 如: req("echarts")/req("cheachs/line");</li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</template>
+
+<script type="text/ecmascript-6">
+/**
+ * Created by likaituan on 15/8/9.
+ */
+
+define(function(req, exp){
+    "use strict";
+    var hl = req("sys.code.highlight");
+
+    exp.onRender = function(){
+        [].forEach.call(exp.ui.querySelectorAll("code"), function(element){
+            var html = hl(element.innerHTML);
+            var div = document.createElement("div");
+            div.innerHTML = html;
+            element.parentNode.insertBefore(div, element);
+            element.style.display = "none";
+        });
+    };
+
+});
+</script>

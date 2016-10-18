@@ -1,0 +1,7 @@
+{
+  "name": "seekjs-doc",
+  "version": "1.0.0",
+  "dependencies": {
+    "seekjs": "^1.2.3"
+  }
+}

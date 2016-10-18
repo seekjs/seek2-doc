@@ -1,0 +1,62 @@
+<style>
+.ui-tree div{
+    margin-left: 2em;
+    font-size: 12px;
+    height: 25px;
+}
+
+.ui-node{
+    margin:0 auto;
+}
+.ui-node-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-node ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}
+</style>
+
+<template>
+<ul>
+    <li>
+        <div class="ui-node">
+            <h3 class="ui-node-title">1.表单验证</h3>
+            <ul>
+                <li>chk</li>
+                <li><a href="#rule">rule定义规则</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-node">
+            <h3 class="ui-node-title">2.service转发</h3>
+            <ul>
+                <li>get转发</li>
+                <li>post转发</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-node">
+            <h3 class="ui-node-title">3.静态服务器</h3>
+            <ul>
+                <li>目前支持的文件类型如下: .html,.js,.txt,.json,.jpg,.gif,.png</li>
+                <li>如找不到文件, 提示file is node found</li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</template>
+
+<script type="text/ecmascript-6">
+/**
+ * Created by likaituan on 15/8/9.
+ */
+
+define(function(req, exp){
+    "use strict";
+});
+</script>

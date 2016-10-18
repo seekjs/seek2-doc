@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="225d51c5-dbde-4c6e-8723-2000bce2e853" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/seekjs2/module.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/Readme.MD" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/js/home.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ajax.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/animate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/code/code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/code/compress.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/code/format.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/code/highlight.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/compatible.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/currency.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/data_bind.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/date.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/drag.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/env.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/event.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ex.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/format.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/grid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/grid_bak.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/history.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/num_lang.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/number.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/object.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/plugin/echarts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/promise.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/query.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/query_new.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/seek.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/session.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/spring.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/store.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/string.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/task.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/tool/chart/bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/tool/chart/chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/tool/chart/line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/tool/chart/pie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/tool/linq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/tool/move.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/tool/num_lang.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/tool/pinyin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/transfer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/accordion/box-close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/accordion/box-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/accordion/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/accordion/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/alert/roundclose.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/alert/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/alert/ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/alert/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/calendar/arrow_left@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/calendar/arrow_right@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/calendar/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/calendar/ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/calendar/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/datePicker/arrow_left@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/datePicker/arrow_right@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/datePicker/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/datePicker/ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/datePicker/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/datePicker/ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog/pic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog/roundclose.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog/ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog/ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog/ui_pad.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog/ui_phone.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog_bak/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog_bak/ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog_bak/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/dialog_bak/ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/drawer/icon_arrow@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/drawer/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/drawer/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/genui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/grid/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/mask/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/mask/loading2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/mask/pic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/mask/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/mask/ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/mask/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/mask/ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/message/icon_arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/message/icon_close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/message/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/message/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/slides/arrow-left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/slides/arrow-right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/slides/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/slides/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/sortTable/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/sortTable/ui.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/sortTable/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/tabPanel/arrow-left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/tabPanel/arrow-right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/tabPanel/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/tabPanel/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/test.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/tree/line_conn.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/tree/standard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/tree/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/seekjs/ui/tree/ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/api/start" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/layer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/modularize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/nova.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/path.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/plugin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/rule.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/smarty.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/spa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/view.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/core.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/layer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/modularize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/nova.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/path.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/plugin.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/rule.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/service.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/smarty.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/spa.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/template.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/ui.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/styles/view.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/app.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/core.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/layer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/modularize.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/nova.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/path.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/plugin.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/rule.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/service.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/smarty.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/spa.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/template.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/view.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/data/app.js" afterPath="$PROJECT_DIR$/data/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/data/core.js" afterPath="$PROJECT_DIR$/data/core.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/data/framework.js" afterPath="$PROJECT_DIR$/data/framework.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/data/plugin.js" afterPath="$PROJECT_DIR$/data/plugin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/data/rule.js" afterPath="$PROJECT_DIR$/data/rule.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/data/smarty.js" afterPath="$PROJECT_DIR$/data/smarty.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/data/view.js" afterPath="$PROJECT_DIR$/data/view.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/images/iconfont-jiantou.png" afterPath="$PROJECT_DIR$/images/iconfont-jiantou.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/styles/home.css" afterPath="$PROJECT_DIR$/styles/home.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/styles/main.css" afterPath="$PROJECT_DIR$/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
+    <ignored path="seekjs-doc.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="seekjs-doc" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.875">
+              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node_modules/seekjs2/module.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.34438777">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#44#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/api/index.html" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/node_modules/seekjs2/module.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="962" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seekjs-doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seekjs-doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seekjs-doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seekjs-doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seekjs-doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seekjs2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seekjs-doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seekjs-doc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/styles" />
+      <recent name="$PROJECT_DIR$/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="225d51c5-dbde-4c6e-8723-2000bce2e853" name="Default" comment="" />
+      <created>1470117521829</created>
+      <option name="number" value="Default" />
+      <updated>1470117521829</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="962" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51834863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24968474" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13089006">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8035714">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2853261">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/api-nova.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5298913">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/api-nova.sk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25609756">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1097561">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/api-layer.sk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35545024">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14687882">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/api-app.sk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35545024">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/api-home.sk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31990522">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/api-plugin.sk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28658536">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/api-template.sk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2195122">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/seekjs2/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34438777">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,62 @@
+<style>
+.ui-tree div{
+    margin-left: 2em;
+    font-size: 12px;
+    height: 25px;
+}
+
+.ui-service{
+    margin:0 auto;
+}
+.ui-service-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-service ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}
+</style>
+
+<template>
+<ul>
+    <li>
+        <div class="ui-service">
+            <h3 class="ui-service-title">1. ajax全局配置</h3>
+            <ul>
+                <li>ajax.setup();</li>
+                <li>实例:</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-service">
+            <h3 class="ui-service-title">2. ajax返回处理</h3>
+            <ul>
+                <li>ajax.res</li>
+                <li>实例:</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-service">
+            <h3 class="ui-service-title">3. ajax封装emit接口</h3>
+            <ul>
+                <li>引入: var emit = req("emit");</li>
+                <li>调用: emit("file/method");</li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</template>
+
+<script type="text/ecmascript-6">
+/**
+ * Created by likaituan on 15/8/9.
+ */
+
+define(function(req, exp){
+    "use strict";
+});
+</script>

@@ -1,0 +1,99 @@
+<style>
+/*
+.ui-view{
+    margin:0 auto;
+}
+.ui-view-title{
+    background-color: lightgrey;
+    / *padding-left: 20px;* /
+    padding: 1rem;
+}
+.ui-view ul li{
+    padding: 0.5rem 2rem;
+    /*vpadding-left: 20px;v*v/
+}*/
+
+.item{
+    padding: 0.1rem 0.5rem;
+}
+</style>
+
+<template>
+<ul>
+    <li>
+        <div class="ui-view">
+            <h1 class="ui-view-title">一.属性</h1>
+            <ul>
+                <% var num=0; %>
+                <% var color = ""; %>
+                {foreach src=this.data.propertyList}
+                <li class="item">
+                    {if item.cat}
+                    <% color = item.color; %>
+                    <h2>{item.cat}</h2>
+                    {else}
+                    <% ++num; %>
+                    <p>
+                        <span class="pro-item-sn">{num}.</span>
+                        <span class="pro-item-name ui-color-{color}">exp.{item.name}</span>
+                        <span class="pro-item-title">{item.title}</span>
+                        <span class="pro-item-type">{item.type}</span>
+                        {if item.example}
+                            <span class="pro-item-example">如:{item.example}</span>
+                        {/if}
+                    </p>
+                    {if item.subItems}
+                    <ul>
+                        {foreach src=item.subItem item=o}
+                        <li>{o.name}, {o.title}</li>
+                        {/foreach}
+                    </ul>
+                    {/if}
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-view">
+            <h1 class="ui-view-title">二.方法</h1>
+            <ul>
+                {foreach src=this.data.methodList}
+                <li>{sn}.exp.{item.name} {item.title} 参数:{if item.args}{item.args}{else}无{/if}</li>
+                {/foreach}
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-view">
+            <h1 class="ui-view-title">三.事件</h1>
+            <ul>
+                {foreach src=this.data.eventList}
+                <li>{sn}.exp.{item.name} {item.title}</li>
+                {/foreach}
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-view">
+            <h1 class="ui-view-title">四.subView</h1>
+            <ul>
+                <li>1.写法</li>
+                <li>2.调用主view</li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</template>
+
+<script type="text/ecmascript-6">
+/**
+ * Created by likaituan on 15/8/9.
+ */
+
+define(function(req, exp){
+    "use strict";
+    exp.data = req("data.view");
+});
+</script>
