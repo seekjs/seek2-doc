@@ -3,10 +3,7 @@
  */
 
 
-define(function (req, exp) {
-    "use strict";
-
-    exp.data = [
+    exports.data = [
         {
             title: "架构基础",
             list:[
@@ -33,5 +30,3 @@ define(function (req, exp) {
             ]
         }
     ];
-
-});

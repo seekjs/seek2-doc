@@ -1,0 +1,9 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+<template>
+    <div class="ui-bbs">
+        <p>{$Lang.now_is_developing}</p>
+    </div>
+</template>

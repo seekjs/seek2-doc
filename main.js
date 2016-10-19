@@ -5,10 +5,12 @@
 seekjs.config({
     ns:{
         "data.": "/data/",
+        "utils.": "/utils/",
         "css.": {
             path: "/css/",
             type: ".css"
-        }
+        },
+        "code.": "/plugins/code/"
     }
 });
 
@@ -21,5 +23,15 @@ app.config({
     path: `/pages/`,
     useAnimate: true
 });
+
+var Lang = require("utils.Lang");
+
+app.onInit = function(){
+    window.$Lang = Lang.getLang(localStorage.lang);
+};
+
+if(!localStorage.lang){
+    localStorage.lang = "cn";
+}
 
 app.init("home");

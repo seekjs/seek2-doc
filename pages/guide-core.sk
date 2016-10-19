@@ -1,0 +1,50 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+<style>
+.ui-tree div{
+    margin-left: 2em;
+    font-size: 12px;
+    height: 25px;
+}
+
+.ui-spa{
+    margin:0 auto;
+}
+.ui-spa-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-spa ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}
+
+
+
+
+
+</style>
+
+<template>
+<ul class="ui-spa-ul">
+    <li>
+        {foreach src=this.data}
+        <div class="ui-spa">
+            <h3 class="ui-spa-title">{sn}.{item.title}</h3>
+            <ul>
+                {foreach src=item.list item=content}
+                <li>{sn}.{content}</li>
+                {/foreach}
+            </ul>
+        </div>
+        {/foreach}
+    </li>
+</ul>
+</template>
+
+<script type="text/ecmascript-6">
+    exports.model = require("data.core");
+</script>

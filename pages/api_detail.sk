@@ -1,0 +1,28 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+<style>
+    .ui-home-title{
+        background-color: #428bca;
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+    .ui-home-li{
+        border: 1px solid #eeeeee;
+        padding-left: 1.5rem;
+        cursor:pointer;
+    }
+</style>
+
+<template>
+    <div class="ui-api-detail">
+       <p>{this.name}</p>
+    </div>
+</template>
+
+<script type="text/ecmascript-6">
+    exports.model = require("data.api").getDetail(exports.params.id);
+</script>

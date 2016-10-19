@@ -1,0 +1,50 @@
+<style>
+.ui-tree div{
+    margin-left: 2em;
+    font-size: 12px;
+    height: 25px;
+}
+
+.ui-app{
+    margin:0 auto;
+}
+.ui-app-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-app ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}
+
+</style>
+
+<template>
+<ul>
+    {foreach src=this.data item=cat}
+    <li>
+        <div class="ui-app">
+            <h3 class="ui-app-title">{sn}.{cat.title}</h3>
+            <ul>
+                {foreach src=cat.list}
+                <li>
+                    {sn}.{item.name} {item.title}
+                    {if item.args}
+                        参数列表:
+                        {foreach src=item.args item=arg}
+                        <span>{arg.name} {arg.title}</span>
+                        {/foreach}
+                    {/if}
+                </li>
+                {/foreach}
+            </ul>
+        </div>
+    </li>
+    {/foreach}
+</ul>
+</template>
+
+<script type="text/ecmascript-6">
+    exports.model = require("data.app");
+</script>

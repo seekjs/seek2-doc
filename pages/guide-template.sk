@@ -1,0 +1,67 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+<style>
+/*主容器*/
+.ui-page{
+    /*
+    margin:25px;
+    width: calc(100% - 50px);
+    */
+    min-height: calc(100% - 50px);
+    background: #fff;
+}
+
+
+.ui-template{
+    margin:0 auto;
+}
+.ui-template-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-template ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}
+</style>
+
+<template>
+<ul>
+    <li>
+        <div class="ui-template">
+            <h3 class="ui-template-title">一.语法</h3>
+            <ul>
+                <li>1.<a href="#smarty">smarty语法</a></li>
+                <li>2.原生JS语法</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-template">
+            <h3 class="ui-template-title">二.format格式化</h3>
+            <ul>
+                <li>1.date-format</li>
+                <li>2.string-format</li>
+                <li>3.number-format</li>
+                <li>4.currency</li>
+                <li>5.rmb</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-template">
+            <h3 class="ui-template-title">三.data扩展</h3>
+            <ul>
+                <li>1.data-event</li>
+                <li>2.data-bind</li>
+                <li>3.data-view</li>
+                <li>4.data-part</li>
+                <li>5.data-pop</li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</template>
