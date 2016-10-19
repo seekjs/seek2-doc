@@ -1,0 +1,24 @@
+.ui-spring-tab{
+	background-color:red;
+	height:30px;
+}
+
+.ui-spring-icon{
+	width: 1.2rem;
+	height: 1.6rem;
+	background: url(https://m.dreamwm.com/5t.png?1449131477116)no-repeat right center;
+	background-size: 100% auto;
+	display: inline-block;
+	float: right;
+}
+
+.ui-spring-panel{
+	background-color:blue;
+	overflow:hidden;
+	height:0px;
+}
+
+.ui-spring-panel li{
+	line-height:50px;
+}
+

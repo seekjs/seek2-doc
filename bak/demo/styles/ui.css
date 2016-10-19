@@ -1,0 +1,8 @@
+/*主容器*/
+.ui-page{
+    margin:25px;
+    width: 100%;
+    min-height: 100%;
+    background: #fff;
+    box-sizing: content-box;
+}
