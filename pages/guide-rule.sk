@@ -1,3 +1,8 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+
 <style>
 /*主容器*/
 .ui-page{
@@ -40,12 +45,5 @@
 </template>
 
 <script type="text/ecmascript-6">
-/**
- * Created by likaituan on 15/8/9.
- */
-
-define(function(req, exp){
-    "use strict";
-    exp.data = req("data.rule");
-});
+    exports.data = require("data.rule");
 </script>

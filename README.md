@@ -7,7 +7,7 @@ step2. 安装seekjs
 npm install seekjs
 
 step3. 启动nobox服务
-nobox start path=./ port=[your port]
+nobox start
 
 step4. 访问web
 http://{your ip}:{your port}/api/index.html

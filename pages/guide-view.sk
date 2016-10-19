@@ -1,3 +1,7 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
 <style>
 /*
 .ui-view{
@@ -88,12 +92,5 @@
 </template>
 
 <script type="text/ecmascript-6">
-/**
- * Created by likaituan on 15/8/9.
- */
-
-define(function(req, exp){
-    "use strict";
-    exp.data = req("data.view");
-});
+    exports.data = require("data.view");
 </script>

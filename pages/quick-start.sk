@@ -1,0 +1,51 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+<style>
+.ui-start p{
+    font-weight: bold;
+}
+</style>
+
+<template>
+    <div class="ui-start">
+        <p>step 1: 引入seekjs模块引擎(index.html)</p>
+        <code>
+            < script src="node_modules/seekjs2/module.js" data-main="root.main">< /script>
+        </code>
+        <p>step 2: 配置命名空间(main.js)</p>
+        <code>
+            seekjs.config({
+
+            });
+        </code>
+
+        <p>step 3: 配置APP(main.js)</p>
+        <code>
+            require("sys.app");
+        </code>
+
+        <p>step 4: 添加sk(pages/home.sk)</p>
+        <code>
+            < style>....< /style>
+            < template>...< /template>
+            < script type="text/ecmascript-6">...< /script>
+        </code>
+    </div>
+</template>
+
+<script type="text/ecmascript-6">
+    var hl = require("code.highlight");
+
+    exports.onRender = function(){
+        [...exports.ui.querySelectorAll("code")].forEach( element => {
+            var html = hl.getHTML(element.innerHTML.trim());
+            var div = document.createElement("div");
+            div.innerHTML = html;
+            element.parentNode.insertBefore(div, element);
+            element.style.display = "none";
+        });
+    };
+
+</script>

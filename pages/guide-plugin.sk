@@ -1,3 +1,7 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
 <style>
 .ui-tree div{
     margin-left: 2em;
@@ -39,12 +43,5 @@
 </template>
 
 <script type="text/ecmascript-6">
-/**
- * Created by likaituan on 15/8/9.
- */
-
-define(function(req, exp){
-    "use strict";
-    exp.list = req("data.plugin").pluginList;
-});
+    exports.list = require("data.plugin").pluginList;
 </script>

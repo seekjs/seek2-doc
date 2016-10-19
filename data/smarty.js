@@ -2,11 +2,9 @@
  * Created by likaituan on 15/8/10.
  */
 
-define(function (req, exp) {
-    "use strict";
 
     //语法列表
-    exp.syntaxList = [
+    exports.syntaxList = [
         {name: "if", title: "条件开始"},
         {name: "elsif", title: "条件分支"},
         {name: "else", title: "最后条件"},
@@ -22,5 +20,3 @@ define(function (req, exp) {
         {name: "i", title: "当前索引, 从0开始"},
         {name: "sn", title: "当前索引, 从1开始"}
     ];
-
-});

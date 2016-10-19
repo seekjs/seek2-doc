@@ -2,11 +2,9 @@
  * Created by likaituan on 15/8/10.
  */
 
-define(function (req, exp) {
-    "use strict";
 
     //列表
-    exp.data = [
+    exports.data = [
         {
             title: "动画",
             list:[
@@ -88,5 +86,3 @@ define(function (req, exp) {
             ]
         }
     ];
-
-});

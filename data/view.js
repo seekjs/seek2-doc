@@ -2,11 +2,8 @@
  * Created by likaituan on 15/8/10.
  */
 
-define(function (req, exp) {
-    "use strict";
-
     //属性列表
-    exp.propertyList = [
+    exports.propertyList = [
 
         { cat:"基本属性", color: "red"},
 
@@ -42,7 +39,7 @@ define(function (req, exp) {
     ];
 
     //方法列表
-    exp.methodList = [
+    exports.methodList = [
         {
             name: "go",
             title: "跳转",
@@ -62,9 +59,7 @@ define(function (req, exp) {
 
 
     //事件列表
-    exp.eventList = [
+    exports.eventList = [
         {name: "onInit", title: "初始化事件"},
         {name: "onRender", title: "View加载完成或刷新触发的事件,相当于window.onload"}
     ];
-
-});

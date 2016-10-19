@@ -1,3 +1,7 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
 <style>
 .ui-tree div{
     margin-left: 2em;
@@ -42,13 +46,5 @@
 </template>
 
 <script type="text/ecmascript-6">
-/**
- * Created by likaituan on 15/8/9.
- */
-
-define(function(req, exp){
-    "use strict";
-
-    exp.model = req("data.core");
-});
+    exports.model = require("data.core");
 </script>

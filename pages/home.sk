@@ -3,50 +3,142 @@
  */
 
 <style>
-/*.ui-api>div{*/
-    /*float: left;*/
-/*}*/
 
-/*.ui-api>div:first-child{*/
-    /*width:200px;*/
-/*}*/
-
-/*.ui-api>div:last-child{*/
-    /*width: calc(100% - 200px);*/
-/*}*/
-
-.ui-home-title{
-    background-color: #428bca;
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 50px;
+.ui-home{
+    width: 80%;
+    margin: 0 auto;
 }
 
+.ui-menu li{
+    margin-top: 20px;
+    width: 20%;
+    text-align:center;
+    float: left;
+}
 
-.ui-home-li{
-    border: 1px solid #eeeeee;
-    padding-left: 1.5rem;
-    cursor:pointer;
+.ui-logo{
+    margin-top: 50px;
+}
+
+#features {
+    padding: 3em 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+#features .cool {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 1em;
+    color: #7f8c8d;
+}
+#features .feats {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#features .feat {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    width: 280px;
+    margin: 20px;
+}
+#features .feat h2 {
+    color: #34495e;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+#features .feat p {
+    color: #7f8c8d;
+    padding-left: 52px;
+    margin: 0.4em 0;
+}
+#features .feat a {
+    color: #42b983;
+    font-weight: 600;
+}
+#features .icon {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    background: url("../images/icons.png");
+    background-size: 240px 40px;
+}
+#features .icon.fast {
+    background-position: -40px 0;
+}
+#features .icon.compact {
+    background-position: -80px 0;
+}
+#features .icon.powerful {
+    background-position: -120px 0;
+}
+#features .icon.composable {
+    background-position: -160px 0;
+}
+#features .icon.module {
+    background-position: -200px 0;
 }
 </style>
 
 <template>
 <div class="ui-home">
-    <div data-part="tree">
-        <div class="ui-tree">
-            <header class="ui-home-title">seekJs API列表</header>
-            <ul>
-                {foreach src=this.framework}
-                <li class="ui-home-li">
-                    <p data-event="go:{item.page}">{sn}. {item.name} - {item.title}</p>
-                </li>
-                {/foreach}
-            </ul>
+    <ul class="ui-menu">
+        <li data-event="go:guide">{$Lang.guide}</li>
+        <li data-event="go:api">{$Lang.api}</li>
+        <li data-event="go:bbs">{$Lang.bbs}</li>
+        <li data-event="go:im">{$Lang.im}</li>
+        <li data-event="go:http://github.com/likaituan/seekjs">{$Lang.github}</li>
+    </ul>
+    <div class="clear"></div>
+    <div class="ui-logo">
+        <p class="ui-center">seek.js</p>
+        <p class="ui-center">{$Lang.framework_des}</p>
+        <p class="ui-center"><button data-event="go:quick-start">{$Lang.quick_start}</button></p>
+    </div>
+    <div id="features">
+        <div class="feats">
+            <div class="feat">
+                <h2><span class="icon simple"></span>{$Lang.three_in_one}</h2>
+                <p>{$Lang.three_in_one_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon powerful"></span>{$Lang.data_driver}</h2>
+                <p>{$Lang.data_driver_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon compact"></span>{$Lang.modular}</h2>
+                <p>{$Lang.modular_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon composable"></span>{$Lang.plugin}</h2>
+                <p>{$Lang.plugin_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon fast"></span>{$Lang.light}</h2>
+                <p>{$Lang.light_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon module"></span>{$Lang.language_setting}</h2>
+                <p>{$Lang.language_setting_des}</p>
+            </div>
         </div>
     </div>
+    <footer class="ui-center">
+        <span>Copyright (c) 2016 Li</span>
+        <span data-event="setLang:cn">中文</span>
+        <span data-event="setLang:en">english</span>
+    </footer>
 </div>
 </template>
-
-<script type="text/ecmascript-6">
-exports.framework = require("data.framework");
+<script>
+    exports.setLang = function(lang){
+        localStorage.lang = lang;
+        exports.render();
+    };
 </script>

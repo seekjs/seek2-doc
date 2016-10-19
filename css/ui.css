@@ -1,3 +1,12 @@
+/*一级class*/
+
+.clear{
+    clear: both;
+}
+
+
+
+
 /*主容器*/
 .ui-page{
     /*
@@ -8,34 +17,40 @@
     background: #fff;
 }
 
-
-
-h1{
-    background-color: lightgrey;
-    font-size: 1.5rem;
-    padding: 1rem;
-}
-
-h2{
-    background-color: lightgrey;
-    font-size: 1rem;
-    padding: 1rem;
-}
-
-h3{
-    background-color: lightgrey;
-    font-size: 0.5rem;
-    padding: 1rem;
-}
-
-.ui-color-red{
+/*颜色配置*/
+.ui-red{
     color:red;
 }
 
-.ui-color-blue{
+.ui-blue{
     color:blue;
 }
 
-.ui-color-green{
+.ui-green{
     color:green;
+}
+
+/*文字对齐模式*/
+.ui-left{
+    text-align: left;
+}
+
+.ui-center{
+    text-align: center;
+}
+
+.ui-right{
+    text-align: right;
+}
+
+/*其他*/
+
+.ui-button{
+    border: 1px solid #eeeeee;
+    padding-left: 1.5rem;
+    cursor:pointer;
+}
+
+.ui-float{
+    float:left;
 }

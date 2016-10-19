@@ -1,3 +1,9 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+
+
 <style>
 .ui-content-ul{
     margin: 50px;
@@ -23,20 +29,6 @@
     padding: 0.5rem 2rem;
     /*padding-left: 20px;*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </style>
 
@@ -103,17 +95,11 @@
 </template>
 
 <script type="text/ecmascript-6">
-/**
- * Created by likaituan on 15/8/9.
- */
+    var hl = require("code.highlight");
 
-define(function(req, exp){
-    "use strict";
-    var hl = req("sys.code.highlight");
-
-    exp.onRender = function(){
-        [].forEach.call(exp.ui.querySelectorAll("code"), function(element){
-            var html = hl(element.innerHTML);
+    exports.onRender = function(){
+        [...exports.ui.querySelectorAll("code")].forEach( element => {
+            var html = hl.getHTML(element.innerHTML.trim());
             var div = document.createElement("div");
             div.innerHTML = html;
             element.parentNode.insertBefore(div, element);
@@ -121,5 +107,4 @@ define(function(req, exp){
         });
     };
 
-});
 </script>
