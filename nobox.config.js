@@ -2,13 +2,16 @@
  * Created by likaituan on 16/10/19.
  */
 
-var {log} = require("ifun");
-
 module.exports = function (args) {
     return {
         static: {
-            path: "/",
-            dir: __dirname,
+            items: [{
+                path: "/node_modules/seekjs/",
+                dir: "/data/github/seekjs2"
+            },{
+                path: "/",
+                dir: __dirname
+            }]
         },
         pub:{
             domain: "seekjs.org",

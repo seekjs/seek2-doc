@@ -18,11 +18,61 @@
 </style>
 
 <template>
+    {=this}
+    <%
+        var args = (this.args||[]).map(x=>x.name).join(",");
+    %>
     <div class="ui-api-detail">
-       <p>{this.name}</p>
+        <ul>
+            <li>
+                {this.name}{if this.cat=="method"}({args}){/if}
+            </li>
+            {if this.title}
+            <li>{this.title}</li>
+            {/if}
+            {if this.type}
+            <li>类型: {this.type}</li>
+            {/if}
+        </ul>
+
+        {if this.cat=="property"}
+            {if this.list}
+            <p>可选值:</p>
+            <ul>
+                {foreach src=this.list}
+                <li>{i} : {item}</li>
+                {/foreach}
+            </ul>
+            {/if}
+        {elsif this.cat=="method"}
+            {if this.args}
+            <table>
+                <tr>
+                    <th>{$Lang.argument}</th>
+                    <th>{$Lang.is_required}</th>
+                    <th>{$Lang.descriptions}</th>
+                    <th>{$Lang.type}</th>
+                </tr>
+                {foreach src=this.args}
+                <tr>
+                    <th>{item.name}</th>
+                    <th>{item.required?$Lang.yes:$Lang.no}</th>
+                    <th>{item.title}</th>
+                    <th>{item.type}</th>
+                </tr>
+                {/foreach}
+            </table>
+            {/if}
+        {/if}
+
+        {if this.example}
+        <code>{this.example}</code>
+        {/if}
     </div>
 </template>
 
 <script type="text/ecmascript-6">
-    exports.model = require("data.api").getDetail(exports.params.id);
+    exports.onInit = function(){
+        exports.model = require("data.api").getDetail(exports.params.id);
+    };
 </script>

@@ -85,6 +85,40 @@ module.exports = {
         en: "Simple configuration language, immediately let your project appear on the tall"
     },
 
+
+    //API首页
+    api_reference: {
+        cn: "API参考",
+        en: "API Reference"
+    },
+
+    //API详情页
+    argument: {
+        cn: "参数",
+        en: "argument"
+    },
+    is_required: {
+        cn: "是否必须",
+        en: "Required"
+    },
+    descriptions: {
+        cn: "描述",
+        en: "descriptions"
+    },
+    type: {
+        cn: "类型",
+        en: "Type"
+    },
+    yes: {
+        cn: "是",
+        en: "Yes"
+    },
+    no: {
+        cn: "否",
+        en: "No"
+    },
+
+
     //其他
     now_is_developing:{
         cn: "正在努力开发中,敬请期待!",

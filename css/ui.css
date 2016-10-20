@@ -30,6 +30,19 @@
     color:green;
 }
 
+/*背景颜色配置*/
+.bg-red{
+    background-color:red;
+}
+
+.bg-blue{
+    background-color:blue;
+}
+
+.bg-green{
+    background-color:green;
+}
+
 /*文字对齐模式*/
 .ui-left{
     text-align: left;
