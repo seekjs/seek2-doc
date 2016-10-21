@@ -5,10 +5,10 @@
 module.exports = function (args) {
     return {
         static: {
-            items: [{
+            items: [/*{
                 path: "/node_modules/seekjs/",
                 dir: "/data/github/seekjs2"
-            },{
+            },*/{
                 path: "/",
                 dir: __dirname
             }]

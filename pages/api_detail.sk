@@ -18,7 +18,6 @@
 </style>
 
 <template>
-    {=this}
     <%
         var args = (this.args||[]).map(x=>x.name).join(",");
     %>
