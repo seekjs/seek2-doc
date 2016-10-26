@@ -1,14 +1,5 @@
-/*一级class*/
-
-.clear{
-    clear: both;
-}
-
-
-
-
 /*主容器*/
-.ui-page{
+.page{
     /*
     margin:25px;
     width: calc(100% - 50px);
@@ -17,20 +8,42 @@
     background: #fff;
 }
 
-/*颜色配置*/
-.ui-red{
+/*布局块*/
+.clear{
+    clear: both;
+}
+
+.float{
+    float:left;
+}
+
+/*文字对齐*/
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+/*文字颜色*/
+.red{
     color:red;
 }
 
-.ui-blue{
+.blue{
     color:blue;
 }
 
-.ui-green{
+.green{
     color:green;
 }
 
-/*背景颜色配置*/
+/*背景颜色*/
 .bg-red{
     background-color:red;
 }
@@ -43,27 +56,9 @@
     background-color:green;
 }
 
-/*文字对齐模式*/
-.ui-left{
-    text-align: left;
-}
-
-.ui-center{
-    text-align: center;
-}
-
-.ui-right{
-    text-align: right;
-}
-
 /*其他*/
-
-.ui-button{
+.button{
     border: 1px solid #eeeeee;
     padding-left: 1.5rem;
     cursor:pointer;
-}
-
-.ui-float{
-    float:left;
 }

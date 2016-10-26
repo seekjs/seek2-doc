@@ -37,6 +37,11 @@
         text-align: center;
         width: 16px;
     }
+
+    .ui-api footer{
+        margin-top: 50px;
+        margin-right: 50px;
+    }
 </style>
 
 <template>
@@ -49,27 +54,32 @@
     %>
     <div class="ui-api">
         <header class="ui-api-title">{$Lang.api_reference}</header>
-        <p>P = Property  M = Method E = Event</p>
         {foreach src=this.apiList key=cateName item=cate}
-        <p>@seekjs/{cateName}</p>
-        {if cate.des}
-        <p class="ui-api-des">{cate.des}</p>
-        {/if}
+        <p>@seekjs/{cateName}{if cate.title}{cate.title}{/if}</p>
         <ul class="ui-api-ul">
             {foreach src=cate.list}
             <li class="ui-api-li" data-event="go:api_detail/{cateName}.{item.name}" title="{item.title}">
-                {if item.cat=="property"}
+                {if cateName=="template"}
+                <span class="symbol2" style="background-color: cyan;">T</span>
+                {elsif cateName=="pipe"}
+                <span class="symbol2" style="background-color: purple;">P</span>
+                {elsif item.cat=="property"}
                 <span class="symbol2 bg-red">P{catIndex[item.subcat]}</span>
                 {elsif item.cat=="method"}
                 <span class="symbol2 bg-green">M</span>
                 {elsif item.cat=="event"}
                 <span class="symbol2 bg-blue">E</span>
                 {/if}
-                view.{item.name}
+                {item.name}
             </li>
             {/foreach}
         </ul>
+        <div class="clear"></div>
+        {if cate.des}
+        <p class="ui-api-des">{cate.des}</p>
+        {/if}
         {/foreach}
+        <footer class="right">说明:P = Property(红色)  M = Method E = Event T = Template P=Pipe(青色)</footer>
     </div>
 </template>
 

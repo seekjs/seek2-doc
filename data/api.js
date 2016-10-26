@@ -5,6 +5,64 @@
 
 //属性列表
 exports.apiList = {
+    app: {
+        list: [
+            {name: "useAnimate", title: "是否使用动画", type: "boolean", cat:"property", subcat:"animate"},
+            {name: "aniDuration", title: "动画时长(毫秒)", type: "number", cat:"property", subcat:"animate"},
+            {name: "plugin", title:"插件列表对象", type: "object", cat:"property", subcat:"plugin"},
+            {
+                name: "usePlugin",
+                des: '使用插件, 参考<a href="#plugin">插件列表</a>',
+                args: [
+                    {name: "module", title: "plug模块,写法同require", type: "string"}
+                ],
+                cat: "method",
+                subcat: "plugin"
+            },
+            {
+                name: "onViewInit",
+                title: "所有View的初始化事件",
+                args: [
+                    {name: "view", title: "当前View", type: "object"}
+                ],
+                cat: "event"
+            },
+            {
+                name: "onViewRender",
+                title: "所有View的加载完成事件",
+                args: [
+                    {name: "view", title: "当前View", type: "object"}
+                ],
+                cat: "event"
+            },
+            {name: "title", title:"设置标题", type: "number", cat: "property"},
+            {name: "useTitleRepair", title:"使用标题修复", type:"boolean", cat: "property"},
+
+
+            {name: "ext", title:"扩展名", type:"object", cat: "property"},
+            {name: "useGrid", title:"是否使用栅格", type:"boolean", cat: "property"},
+            {name: "viewEx", title:"设置页面公用方法模块", type:"module object", cat: "property"},
+            {name: "formatEx", title:"设置格式化公用方法模块", type:"module object", cat: "property"},
+            {
+                name: "setPath",
+                des: '设置目录,具体用法见<a href="#path">path目录配置</a>',
+                args:[
+                    {name: "path", title: "设置JS/HTML/CSS的目录", type: "object"}
+                ],
+                cat: "method"
+
+            },
+            {
+                name: "init",
+                title: "设置初始页面",
+                args:[
+                    {name: "uri", title: "设置JS/HTML/CSS的目录", type: "string"},
+                    {name: "container", title: "DOM容器或选择器", type: "node/selector"}
+                ],
+                cat: "method"
+            }
+        ]
+    },
     view: {
         des: "P1=基本属性\nP2=View/子View之间的相互调用\nP3=URL地址相关",
         list:[
@@ -75,6 +133,47 @@ exports.apiList = {
 
             {name: "onInit", title: "初始化事件", cat: "event"},
             {name: "onRender", title: "View加载完成或刷新触发的事件,相当于window.onload", cat: "event"}
+        ]
+    },
+    template: {
+        title: "模板",
+        list: [
+            {name: "if", title: "条件开始"},
+            {name: "elsif", title: "条件分支"},
+            {name: "else", title: "最后条件"},
+            {name: "foreach", title: "循环开始"},
+
+            {name: "=[obj]", title: "相当于console.log(obj)"},
+            {name: "src.length", title: "当前循环的数组长度"},
+            {name: "src.first", title: "是否第一项"},
+            {name: "src.last", title: "是否最后一项"},
+            {name: "item", title: "当前项"},
+            {name: "i", title: "当前索引, 从0开始"},
+            {name: "sn", title: "当前索引, 从1开始"}
+        ]
+    },
+    pipe: {
+        title: "管道",
+        list: [
+            {
+                name: "date_format",
+                title: "日期格式化",
+                cat: "method",
+                args: [
+                    {name: "dateObj", type: "String", title: "日期对象", required: 1},
+                    {name: "rule", type: "String", title: "格式化样式", required: 1}
+                ]
+            },
+            {
+                name: "rmb",
+                title: "人民币格式化",
+                cat: "method"
+            },
+            {
+                name: "json",
+                title: "以JSON字符串的形式输出对象",
+                cat: "method"
+            }
         ]
     }
 };
