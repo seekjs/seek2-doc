@@ -159,44 +159,72 @@ exports.apiList = {
             {
                 name: "begin",
                 title: "取头几位",
-                method: "method"
+                method: "method",
+                args: [
+                    {name: "str", type: "String", title: "字符串", required: 1}
+                ],
+                example: `<template>{"13601187438" | begin:3}}</template>`
             },
             {
                 name: "end",
                 title: "取末几位",
-                method: "method"
+                method: "method",
+                args: [
+                    {name: "str", type: "String", title: "字符串", required: 1}
+                ],
+                example: `<template>{"13601187438" | end:4}}</template>`
             },
             {
                 name: "upper",
                 title: "转大写字母",
-                method: "method"
+                method: "method",
+                args: [
+                    {name: "str", type: "String", title: "字符串", required: 1}
+                ],
+                example: `<template>{abc | upper}}</template>`
             },
             {
                 name: "lower",
                 title: "转小写字母",
-                method: "method"
+                method: "method",
+                args: [
+                    {name: "str", type: "String", title: "字符串", required: 1}
+                ],
+                example: `<template>{ABC | upper}}</template>`
             },
 
             //数字
             {
                 name: "en",
                 title: "转英文数字",
-                method: "method"
+                method: "method",
+                args: [
+                    {name: "num", type: "Number", title: "数字", required: 1}
+                ]
             },
             {
                 name: "cn",
                 title: "转中文数字",
-                method: "method"
+                method: "method",
+                args: [
+                    {name: "num", type: "Number", title: "数字", required: 1}
+                ]
             },
             {
                 name: "big",
                 title: "转繁体中文数字",
-                method: "method"
+                method: "method",
+                args: [
+                    {name: "num", type: "Number", title: "数字", required: 1}
+                ]
             },
             {
                 name: "sep",
                 title: "分隔符",
-                method: "method"
+                method: "method",
+                args: [
+                    {name: "num", type: "Number", title: "数字", required: 1}
+                ]
             },
 
             //日期
