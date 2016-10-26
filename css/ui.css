@@ -1,11 +1,11 @@
 /*一级class*/
 
-.clear{
+.clear::after{
+    content: "";
+    display: block;
+    width: 100%;
     clear: both;
 }
-
-
-
 
 /*主容器*/
 .ui-page{
@@ -32,15 +32,15 @@
 
 /*背景颜色配置*/
 .bg-red{
-    background-color:red;
+    background-color:#F27935;
 }
 
 .bg-blue{
-    background-color:blue;
+    background-color:#1E8BC3;
 }
 
 .bg-green{
-    background-color:green;
+    background-color:#00B16A;
 }
 
 /*文字对齐模式*/

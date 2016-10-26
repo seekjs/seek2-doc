@@ -92,6 +92,16 @@ module.exports = {
         en: "API Reference"
     },
 
+    api_des:{
+        cn:"注",
+        en:"Notes"
+    },
+
+    example:{
+        cn : "例子",
+        en : "example"
+    },
+
     //API详情页
     argument: {
         cn: "参数",
