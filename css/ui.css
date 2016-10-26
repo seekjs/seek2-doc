@@ -8,6 +8,23 @@
     background: #fff;
 }
 
+<<<<<<< HEAD
+.clear::after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+/*主容器*/
+.ui-page{
+    /*
+    margin:25px;
+    width: calc(100% - 50px);
+    */
+    min-height: calc(100% - 50px);
+    background: #fff;
+=======
 /*布局块*/
 .clear{
     clear: both;
@@ -28,6 +45,7 @@
 
 .right{
     text-align: right;
+>>>>>>> 3794e42fe298747cb09c733fb05284e2afdaae24
 }
 
 /*文字颜色*/
@@ -45,15 +63,15 @@
 
 /*背景颜色*/
 .bg-red{
-    background-color:red;
+    background-color:#F27935;
 }
 
 .bg-blue{
-    background-color:blue;
+    background-color:#1E8BC3;
 }
 
 .bg-green{
-    background-color:green;
+    background-color:#00B16A;
 }
 
 /*其他*/

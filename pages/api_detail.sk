@@ -19,6 +19,37 @@
     .api-detail table td{
 
     }
+    .ui-api-detail{
+        padding-left: 50px;
+        padding-top: 50px;
+        font-weight: bold;
+    }
+
+    .ui-api-detail li{
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: normal;
+    }
+
+    .ui-api-detail code{
+        background-color: #F4F3F1;
+        font-size: 13px;
+        min-width: 500px;
+        min-height: 100px;
+        display: inline-block;
+        padding: 20px;
+        font-weight: normal;
+        color: #465665;
+        line-height: 25px;
+    }
+
+    .ui-api-detail code b{
+        margin-bottom: -10px;
+        font-size: 14px;
+    }
+    .ui-api-detailExp{
+        line-height: 30px;
+    }
 </style>
 
 <template>
@@ -76,9 +107,14 @@
         {/if}
 
         {if this.example}
+<<<<<<< HEAD
         <code>{this.example|code}</code>
         <p><button data-event="runCode">run code</button></p>
         <div class="api-detail-result"></div>
+=======
+        <p class="ui-api-detailExp">{$Lang.example} : </p>
+        <code>{this.example}</code>
+>>>>>>> 344e0c1a14e05871423a6867fe8ec5d6d9bfa8fa
         {/if}
     </div>
 </template>

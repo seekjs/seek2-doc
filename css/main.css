@@ -1,9 +1,11 @@
+*{margin: 0;padding: 0;}
+
 html,body{
     margin: 0;
     padding: 0;
-    background: #fff;
     width:100%;
     height: 100%;
+    background-color: #FCFCFC;
 }
 
 /*头部公用样式*/

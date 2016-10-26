@@ -64,7 +64,7 @@ exports.apiList = {
         ]
     },
     view: {
-        des: "P1=基本属性\nP2=View/子View之间的相互调用\nP3=URL地址相关",
+        des: "说明：P1=基本属性\nP2=View/子View之间的相互调用\nP3=URL地址相关",
         list:[
             {
                 name: "type",
@@ -77,13 +77,13 @@ exports.apiList = {
                 cat: "property",
                 subcat: "basic"
             },
-            {name: "title", title: "标题", type: "String", example: "欢迎光临", cat: "property", subcat: "basic"},
+            {name: "title", title: "标题", type: "String", example: "<p>设置标题 : exp.title = '欢迎使用seek.js'</p>", cat: "property", subcat: "basic"},
             {name: "model", title: "模型", type: "任意类型", example: "{a:1,b:2}", cat: "property", subcat: "basic"},
             {
                 name: "templateHTML",
                 title: "模板代码",
                 type: "String",
-                example: '<p>{this.name}</p>',
+                example: "<p><b>js:</b></p> exports.msg = {name:'姓名'} <div><p><b>html : </b></p><span><</span>p>{this.msg.name}<span><</span>/p></div><p><b>result : </b></p><div>姓名</div>",
                 cat: "property",
                 subcat: "basic"
             },
