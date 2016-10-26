@@ -1,5 +1,14 @@
-/*一级class*/
+/*主容器*/
+.page{
+    /*
+    margin:25px;
+    width: calc(100% - 50px);
+    */
+    min-height: calc(100% - 50px);
+    background: #fff;
+}
 
+<<<<<<< HEAD
 .clear::after{
     content: "";
     display: block;
@@ -15,22 +24,44 @@
     */
     min-height: calc(100% - 50px);
     background: #fff;
+=======
+/*布局块*/
+.clear{
+    clear: both;
 }
 
-/*颜色配置*/
-.ui-red{
+.float{
+    float:left;
+}
+
+/*文字对齐*/
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+>>>>>>> 3794e42fe298747cb09c733fb05284e2afdaae24
+}
+
+/*文字颜色*/
+.red{
     color:red;
 }
 
-.ui-blue{
+.blue{
     color:blue;
 }
 
-.ui-green{
+.green{
     color:green;
 }
 
-/*背景颜色配置*/
+/*背景颜色*/
 .bg-red{
     background-color:#F27935;
 }
@@ -43,27 +74,9 @@
     background-color:#00B16A;
 }
 
-/*文字对齐模式*/
-.ui-left{
-    text-align: left;
-}
-
-.ui-center{
-    text-align: center;
-}
-
-.ui-right{
-    text-align: right;
-}
-
 /*其他*/
-
-.ui-button{
+.button{
     border: 1px solid #eeeeee;
     padding-left: 1.5rem;
     cursor:pointer;
-}
-
-.ui-float{
-    float:left;
 }

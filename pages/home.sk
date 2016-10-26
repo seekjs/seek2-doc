@@ -97,9 +97,9 @@
     </ul>
     <div class="clear"></div>
     <div class="ui-logo">
-        <p class="ui-center">seek.js</p>
-        <p class="ui-center">{$Lang.framework_des}</p>
-        <p class="ui-center"><button data-event="go:quick-start">{$Lang.quick_start}</button></p>
+        <p class="center">seek.js</p>
+        <p class="center">{$Lang.framework_des}</p>
+        <p class="center"><button data-event="go:quick-start">{$Lang.quick_start}</button></p>
     </div>
     <div id="features">
         <div class="feats">
@@ -129,7 +129,7 @@
             </div>
         </div>
     </div>
-    <footer class="ui-center">
+    <footer class="center">
         <span>Copyright (c) 2016 Li</span>
         <span data-event="setLang:cn">中文</span>
         <span data-event="setLang:en">english</span>

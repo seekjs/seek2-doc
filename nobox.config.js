@@ -2,13 +2,12 @@
  * Created by likaituan on 16/10/19.
  */
 
+var myconfig = require("my.config.js");
+
 module.exports = function (args) {
-    return {
+    var config = {
         static: {
-            items: [/*{
-                path: "/node_modules/seekjs/",
-                dir: "/data/github/seekjs2"
-            },*/{
+            items: [{
                 path: "/",
                 dir: __dirname
             }]
@@ -21,4 +20,13 @@ module.exports = function (args) {
         },
         port: 2016
     };
+
+    if(args.useLocalFramework && myconfig.frameworkDir){
+        config.static.items.push({
+            path: "/node_modules/seekjs/",
+            dir: myconfig.frameworkDir //"/data/github/seekjs2"
+         });
+    }
+
+    return config;
 };

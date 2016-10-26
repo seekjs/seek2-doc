@@ -34,7 +34,7 @@
         <div class="ui-template">
             <h3 class="ui-template-title">一.语法</h3>
             <ul>
-                <li>1.<a href="#smarty">smarty语法</a></li>
+                <li>1.<a href="#guide-smarty">smarty语法</a></li>
                 <li>2.原生JS语法</li>
             </ul>
         </div>
