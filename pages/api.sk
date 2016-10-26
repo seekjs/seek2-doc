@@ -44,8 +44,10 @@
     }
 
     .ui-api-top{
-        padding: 10px;
-        line-height: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        color: #2C3E50;
+        font-weight: bold;
     }
 
     .symbol {
@@ -59,7 +61,10 @@
         text-align: center;
         width: 16px;
     }
-
+    .ui-api-topone{
+        padding-top: 20px;
+        color: #2C3E50;
+    }
     .ui-api footer{
         margin-top: 50px;
         margin-right: 50px;
@@ -76,18 +81,22 @@
     %>
     <div class="ui-api">
         <header class="ui-api-title">{$Lang.api_reference}</header>
-        {foreach src=this.apiList key=cateName item=cate}
-        <div class="ui-api-top">
-            <p>@seekjs/{cateName}</p>
+        <div>
+            <p class="ui-api-ul ui-api-topone ui-api-one">{$Lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>
+            {foreach src=this.apiList key=cateName item=cate}
+            <p class="ui-api-top">@seekjs/{cateName}</p>
+            {if cate.des}
+            <p class="ui-api-ul ui-api-one">{cate.des}</p>
+            {/if}
         </div>
 
         <ul class="ui-api-ul clear">
             {foreach src=cate.list}
             <li class="ui-api-li" data-event="go:api_detail/{cateName}.{item.name}" title="{item.title}">
                 {if cateName=="template"}
-                <span class="symbol2" style="background-color: cyan;">T</span>
+                <span class="symbol2" style="background-color: #F64747;">T</span>
                 {elsif cateName=="pipe"}
-                <span class="symbol2" style="background-color: purple;">P</span>
+                <span class="symbol2" style="background-color: #9A12B3;">P</span>
                 {elsif item.cat=="property"}
                 <span class="symbol2 bg-red">P{catIndex[item.subcat]}</span>
                 {elsif item.cat=="method"}
@@ -99,12 +108,13 @@
             </li>
             {/foreach}
         </ul>
-        <div class="clear"></div>
         {if cate.des}
         <p class="ui-api-des ui-api-one">{cate.des}</p>
         {/if}
         {/foreach}
-        <footer class="right ui-api-one">{$Lang.api_des}:P = Property(红色)  M = Method E = Event T = Template P=Pipe(青色)</footer>
+        <footer class="ui-api-one"></footer>
+
+        <!--<footer class=" ui-api-one">{$Lang.api_des}:P = Property(红色)  M = Method E = Event T = Template P=Pipe(青色)</footer>-->
     </div>
 </template>
 

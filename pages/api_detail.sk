@@ -31,7 +31,7 @@
         font-weight: normal;
     }
 
-    .ui-api-detail code{
+    .api-detail code{
         background-color: #F4F3F1;
         font-size: 13px;
         min-width: 500px;
@@ -43,12 +43,23 @@
         line-height: 25px;
     }
 
-    .ui-api-detail code b{
+    .api-detail code b{
         margin-bottom: -10px;
         font-size: 14px;
     }
-    .ui-api-detailExp{
-        line-height: 30px;
+    .api-btn{
+        height: 30px;
+        padding: 0 8px;
+        background: #1E8BC3;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .api-btn:hover{
+        background-color: #20A8F1;
     }
 </style>
 
@@ -109,7 +120,7 @@
         {if this.example}
         <p class="ui-api-detailExp">{$Lang.example} : </p>
         <code>{this.example|code}</code>
-        <p><button data-event="runCode">run code</button></p>
+        <p><button class="api-btn" data-event="runCode">run code</button></p>
         <div class="api-detail-result"></div>
         {/if}
     </div>
