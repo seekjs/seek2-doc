@@ -76,7 +76,6 @@
     %>
     <div class="ui-api">
         <header class="ui-api-title">{$Lang.api_reference}</header>
-<<<<<<< HEAD
         <div class="ui-api-top">
             <p class="ui-api-one">{$Lang.api_des}: P = <span>Property</span>  M = <span>Method</span>  E = <span>Event</span></p>
             {foreach src=this.apiList key=cateName item=cate}
@@ -87,11 +86,6 @@
         </div>
 
         <ul class="ui-api-ul clear">
-=======
-        {foreach src=this.apiList key=cateName item=cate}
-        <p>@seekjs/{cateName}{if cate.title}{cate.title}{/if}</p>
-        <ul class="ui-api-ul">
->>>>>>> 3794e42fe298747cb09c733fb05284e2afdaae24
             {foreach src=cate.list}
             <li class="ui-api-li" data-event="go:api_detail/{cateName}.{item.name}" title="{item.title}">
                 {if cateName=="template"}

@@ -107,14 +107,10 @@
         {/if}
 
         {if this.example}
-<<<<<<< HEAD
+        <p class="ui-api-detailExp">{$Lang.example} : </p>
         <code>{this.example|code}</code>
         <p><button data-event="runCode">run code</button></p>
         <div class="api-detail-result"></div>
-=======
-        <p class="ui-api-detailExp">{$Lang.example} : </p>
-        <code>{this.example}</code>
->>>>>>> 344e0c1a14e05871423a6867fe8ec5d6d9bfa8fa
         {/if}
     </div>
 </template>
