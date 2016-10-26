@@ -3,17 +3,21 @@
 */
 
 <style>
-    .ui-home-title{
-        background-color: #428bca;
-        color: #ffffff;
-        font-size: 18px;
-        line-height: 50px;
+    .api-detail{
+        margin-top: 50px;
+        margin-left: 50px;
+        line-height: 30px;
     }
 
-    .ui-home-li{
-        border: 1px solid #eeeeee;
-        padding-left: 1.5rem;
-        cursor:pointer;
+    .api-detail table{
+        border-collapse: collapse;
+        width: 80%;
+    }
+    .api-detail table th{
+
+    }
+    .api-detail table td{
+
     }
 </style>
 
@@ -21,10 +25,17 @@
     <%
         var args = (this.args||[]).map(x=>x.name).join(",");
     %>
-    <div class="ui-api-detail">
+    <div class="api-detail">
         <ul>
             <li>
+                <b>usage:</b>
+                {if this.cate=="pipe"}
+                {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if}
+                {elsif this.cate=="template"}
                 {this.name}{if this.cat=="method"}({args}){/if}
+                {else}
+                {this.cate}.{this.name}{if this.cat=="method"}({args}){/if}
+                {/if}
             </li>
             {if this.title}
             <li>{this.title}</li>
@@ -45,7 +56,7 @@
             {/if}
         {elsif this.cat=="method"}
             {if this.args}
-            <table>
+            <table border="1">
                 <tr>
                     <th>{$Lang.argument}</th>
                     <th>{$Lang.is_required}</th>
@@ -65,13 +76,24 @@
         {/if}
 
         {if this.example}
-        <code>{this.example}</code>
+        <code>{this.example|code}</code>
+        <p><button data-event="runCode">run code</button></p>
+        <div class="api-detail-result"></div>
         {/if}
     </div>
 </template>
 
 <script type="text/ecmascript-6">
+    var template = require("sys.template");
+
     exports.onInit = function(){
         exports.model = require("data.api").getDetail(exports.params.id);
+    };
+
+    exports.runCode = function(){
+        var code = document.querySelector("code").textContent.replace(/<\/?template>/ig,"").trim();
+        var fun = template.compile(code);
+        var html = fun();
+        document.querySelector(".api-detail-result").innerHTML = html;
     };
 </script>

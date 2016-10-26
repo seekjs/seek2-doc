@@ -24,6 +24,8 @@ app.config({
     useAnimate: true
 });
 
+app.pipeEx = require("utils.pipe");
+
 var Lang = require("utils.Lang");
 
 app.onInit = function(){

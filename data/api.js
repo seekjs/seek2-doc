@@ -42,7 +42,7 @@ exports.apiList = {
             {name: "ext", title:"扩展名", type:"object", cat: "property"},
             {name: "useGrid", title:"是否使用栅格", type:"boolean", cat: "property"},
             {name: "viewEx", title:"设置页面公用方法模块", type:"module object", cat: "property"},
-            {name: "formatEx", title:"设置格式化公用方法模块", type:"module object", cat: "property"},
+            {name: "pipeEx", title:"设置格式化公用方法模块", type:"module object", cat: "property"},
             {
                 name: "setPath",
                 des: '设置目录,具体用法见<a href="#path">path目录配置</a>',
@@ -167,12 +167,39 @@ exports.apiList = {
             {
                 name: "rmb",
                 title: "人民币格式化",
-                cat: "method"
+                cat: "method",
+                args: [
+                    {name: "number", type: "Number", title: "人民币", required: 1}
+                ]
             },
             {
                 name: "json",
                 title: "以JSON字符串的形式输出对象",
-                cat: "method"
+                cat: "method",
+                args: [
+                    {name: "jsonObj", type: "Object", title: "JSON对象", required: 1}
+                ],
+                example:`<template><%var jsonObj = {a:1,b:2,c:3}; %> { jsonObj | json}</template>`
+            },
+            {
+                name: "iif",
+                title: "条件判断",
+                des: "参考VB同名函数,条件为真,返回v1,否则返回",
+                cat: "method",
+                args: [
+                    {name: "exp", type: "Boolean", title: "条件表达式", required: 1},
+                    {name: "v1", type: "Value", title: "返回值1", required: 0},
+                    {name: "v2", type: "Value", title: "返回值2", required: 0}
+                ],
+                example:`
+                    <template>
+                        <p>{"cn"|iif}</p>
+                        <p>{"cn"|iif:china}</p>
+                        <p>{undefined|iif:japan}</p>
+                        <p>{2==2|iif:a,b}</p>
+                        <p>{1==2|iif:c,d}</p>
+                    </template>
+                `
             }
         ]
     }
@@ -181,5 +208,7 @@ exports.apiList = {
 //获取详情
 exports.getDetail = function(id){
     var [cate,name] = id.split(".");
-    return this.apiList[cate].list.filter(x=>x.name==name)[0];
+    var o = this.apiList[cate].list.filter(x=>x.name==name)[0];
+    o.cate = cate;
+    return o;
 };

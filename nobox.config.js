@@ -2,7 +2,8 @@
  * Created by likaituan on 16/10/19.
  */
 
-var myconfig = require("my.config.js");
+var {requireJson,log} = require("ifun");
+var myconfig = requireJson(`${__dirname}/my.config.js`);
 
 module.exports = function (args) {
     var config = {
@@ -22,11 +23,12 @@ module.exports = function (args) {
     };
 
     if(args.useLocalFramework && myconfig.frameworkDir){
-        config.static.items.push({
+        config.static.items.unshift({
             path: "/node_modules/seekjs/",
-            dir: myconfig.frameworkDir //"/data/github/seekjs2"
+            dir: myconfig.frameworkDir
          });
     }
+    log(config.static);
 
     return config;
 };

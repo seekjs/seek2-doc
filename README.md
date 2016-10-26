@@ -10,4 +10,4 @@ step3. 启动nobox服务
 nobox start
 
 step4. 访问web
-http://{your ip}:{your port}/api/index.html
+http://{your ip}:{your port}
