@@ -113,6 +113,8 @@
         {/if}
         {/foreach}
         <footer class="ui-api-one"></footer>
+
+        <!--<footer class=" ui-api-one">{$Lang.api_des}:P = Property(红色)  M = Method E = Event T = Template P=Pipe(青色)</footer>-->
     </div>
 </template>
 

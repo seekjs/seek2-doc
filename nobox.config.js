@@ -14,10 +14,7 @@ module.exports = function (args) {
             }]
         },
         pub:{
-            domain: "seekjs.org",
-            packages: ["README.md", "css", "data", "images", "index.html", "main.js", "nobox.config.js", "node_modules", "package.json", "pages", "plugins", "utils"],
-            dir: "/nobox-server/seekjs-doc",
-            port: 2016
+            packages: ["README.md", "css", "data", "images", "index.html", "main.js", "nobox.config.js", "node_modules", "package.json", "pages", "plugins", "utils"]
         },
         port: 2016
     };
@@ -28,7 +25,6 @@ module.exports = function (args) {
             dir: myconfig.frameworkDir
          });
     }
-    log(config.static);
 
     return config;
 };

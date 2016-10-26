@@ -72,7 +72,7 @@
             <li>
                 <b>usage:</b>
                 {if this.cate=="pipe"}
-                {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if}
+                {{ {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if} }}
                 {elsif this.cate=="template"}
                 {this.name}{if this.cat=="method"}({args}){/if}
                 {else}
