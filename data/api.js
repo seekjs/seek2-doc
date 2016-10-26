@@ -155,6 +155,51 @@ exports.apiList = {
     pipe: {
         title: "管道",
         list: [
+            //字符串
+            {
+                name: "begin",
+                title: "取头几位",
+                method: "method"
+            },
+            {
+                name: "end",
+                title: "取末几位",
+                method: "method"
+            },
+            {
+                name: "upper",
+                title: "转大写字母",
+                method: "method"
+            },
+            {
+                name: "lower",
+                title: "转小写字母",
+                method: "method"
+            },
+
+            //数字
+            {
+                name: "en",
+                title: "转英文数字",
+                method: "method"
+            },
+            {
+                name: "cn",
+                title: "转中文数字",
+                method: "method"
+            },
+            {
+                name: "big",
+                title: "转繁体中文数字",
+                method: "method"
+            },
+            {
+                name: "sep",
+                title: "分隔符",
+                method: "method"
+            },
+
+            //日期
             {
                 name: "date_format",
                 title: "日期格式化",
@@ -172,6 +217,8 @@ exports.apiList = {
                     {name: "number", type: "Number", title: "人民币", required: 1}
                 ]
             },
+
+            //对象
             {
                 name: "json",
                 title: "以JSON字符串的形式输出对象",
@@ -181,6 +228,8 @@ exports.apiList = {
                 ],
                 example:`<template><%var jsonObj = {a:1,b:2,c:3}; %> { jsonObj | json}</template>`
             },
+
+            //其他
             {
                 name: "iif",
                 title: "条件判断",
