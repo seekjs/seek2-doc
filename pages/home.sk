@@ -91,8 +91,8 @@
     <ul class="ui-menu">
         <li data-event="go:guide">{$Lang.guide}</li>
         <li data-event="go:api">{$Lang.api}</li>
-        <li data-event="go:forum">{$Lang.forum}</li>
-        <li data-event="go:blog">{$Lang.blog}</li>
+        <li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li>
+        <li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li>
         <li data-event="go:http://github.com/likaituan/seekjs">{$Lang.github}</li>
     </ul>
     <div class="clear"></div>
