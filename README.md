@@ -1,13 +1,14 @@
-安装方法:
+1、安装前准备:
 
-step1. 安装nobox
+A. 安装nobox
 npm install -g nobox
 
-step2. 安装seekjs
-npm install seekjs
+B. 安装本地依赖
+npm install
 
-step3. 启动nobox服务
+2. 启动nobox服务
 nobox start
 
-step4. 访问web
-http://{your ip}:{your port}
+3. 构建及预览dist
+npm run build
+nobox start --dist
