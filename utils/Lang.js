@@ -13,13 +13,13 @@ module.exports = {
         cn: "API",
         en: "API"
     },
-    bbs: {
+    forum: {
         cn: "论坛",
-        en: "BBS"
+        en: "Forum"
     },
-    im: {
-        cn: "在线讨论",
-        en: "IM"
+    blog: {
+        cn: "博客",
+        en: "Blog"
     },
     github: {
         cn: "GitHub",

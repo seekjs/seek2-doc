@@ -1,0 +1,21 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+<style>
+    .guide-scaffold{
+
+    }
+</style>
+
+<template>
+    <div class="guide-scaffold">
+        <p>seekjs自动构建工具</p>
+        <p>常用命令:</p>
+        <ul>
+            <li>seek create 新建一个项目</li>
+            <li>seek build 代码打包</li>
+            <li>seek update 更新自身版本</li>
+        </ul>
+    </div>
+</template>

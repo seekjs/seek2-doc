@@ -4,6 +4,6 @@
 
 <template>
     <div class="ui-im">
-        <p>{$Lang.now_is_developing}</p>
+        <iframe src="http://blog.likaituan.me:2015/#list?cat=seekjs"></iframe>
     </div>
 </template>

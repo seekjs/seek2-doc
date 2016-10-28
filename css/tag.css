@@ -43,3 +43,16 @@ h3{
     font-size: 0.5rem;
     padding: 1rem;
 }
+
+/*代码*/
+code{
+    background-color: #F4F3F1;
+    font-size: 13px;
+    min-width: 500px;
+    min-height: 100px;
+    display: inline-block;
+    padding: 20px;
+    font-weight: normal;
+    color: #465665;
+    line-height: 25px;
+}

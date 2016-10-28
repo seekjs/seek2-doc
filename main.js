@@ -14,8 +14,8 @@ seekjs.config({
     }
 });
 
-require("css.main");
-require("css.ui");
+require("css.tag");
+require("css.class");
 
 var app = require("sys.app");
 

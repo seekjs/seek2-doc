@@ -10,23 +10,31 @@
 
 <template>
     <div class="ui-start">
-        <p>step 1: 引入seekjs模块引擎(index.html)</p>
+        <p>step 1: 安装seekjs包及脚手架工具</p>
+        <code>
+            npm install seekjs
+            npm install seek-cli
+
+        </code>
+        <p>step 2: 引入seekjs模块引擎(index.html)</p>
         <code>
             < script src="node_modules/seekjs2/module.js" data-main="root.main">< /script>
         </code>
-        <p>step 2: 配置命名空间(main.js)</p>
+        <p>step 3: 配置入口文件(main.js)</p>
         <code>
+            1.配置命名空间
             seekjs.config({
 
             });
-        </code>
 
-        <p>step 3: 配置APP(main.js)</p>
-        <code>
+            2. 配置APP
             require("sys.app");
+
+            3. 设置初始页面
+            app.init("home");
         </code>
 
-        <p>step 4: 添加sk(pages/home.sk)</p>
+        <p>step 4: 添加.sk页面文件(pages/home.sk)</p>
         <code>
             < style>....< /style>
             < template>...< /template>
@@ -36,6 +44,7 @@
 </template>
 
 <script type="text/ecmascript-6">
+    /*
     var hl = require("code.highlight");
 
     exports.onRender = function(){
@@ -47,5 +56,5 @@
             element.style.display = "none";
         });
     };
-
+    */
 </script>

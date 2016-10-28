@@ -32,5 +32,12 @@ module.exports = [
     },
     {
         page: "guide-nova", name: "Nova", title: "Node轻量级框架"
+    },
+    {
+        page: "guide-scaffold", name: "Scaffold", title: "脚手架"
+    },
+    {
+        page: "quick-start", name: "Quick Start", title: "快速上手"
     }
+
 ];
