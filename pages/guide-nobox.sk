@@ -30,7 +30,7 @@
             <h3 class="ui-node-title">1.表单验证</h3>
             <ul>
                 <li>chk</li>
-                <li><a href="#rule">rule定义规则</a></li>
+                <li><a href="#guide-rule">rule定义规则</a></li>
             </ul>
         </div>
     </li>

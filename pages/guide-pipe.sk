@@ -1,0 +1,41 @@
+/**
+* Created by likaituan on 15/8/9.
+*/
+
+<style>
+.ui-tree div{
+    margin-left: 2em;
+    font-size: 12px;
+    height: 25px;
+}
+
+.ui-node{
+    margin:0 auto;
+}
+.ui-node-title{
+    background-color: lightgrey;
+    /*padding-left: 20px;*/
+    padding: 1rem;
+}
+.ui-node ul li{
+    padding: 0.5rem 2rem;
+    /*padding-left: 20px;*/
+}
+</style>
+
+<template>
+<ul>
+    <li>
+        <div class="ui-node">
+            <h3 class="ui-node-title">1.用法</h3>
+            <ul>
+                <li>1.date-format</li>
+                <li>2.string-format</li>
+                <li>3.number-format</li>
+                <li>4.currency</li>
+                <li>5.rmb</li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</template>

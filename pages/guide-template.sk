@@ -34,7 +34,21 @@
         <div class="ui-template">
             <h3 class="ui-template-title">一.语法</h3>
             <ul>
-                <li>1.<a href="#guide-smarty">smarty语法</a></li>
+                <li>
+                    1.smarty语法
+                    <ul>
+                        <li>
+                            <div class="ui-template">
+                                <h3 class="ui-template-title">一.语法</h3>
+                                <ul>
+                                    {foreach src=this.data.syntaxList}
+                                    <li>{sn}.{item.name} - {item.title}</li>
+                                    {/foreach}
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
                 <li>2.原生JS语法</li>
             </ul>
         </div>
@@ -42,26 +56,25 @@
     <li>
         <div class="ui-template">
             <h3 class="ui-template-title">二.format格式化</h3>
-            <ul>
-                <li>1.date-format</li>
-                <li>2.string-format</li>
-                <li>3.number-format</li>
-                <li>4.currency</li>
-                <li>5.rmb</li>
-            </ul>
+            <p><a href="#guide-pipe">用法详见</a></p>
         </div>
     </li>
     <li>
         <div class="ui-template">
             <h3 class="ui-template-title">三.data扩展</h3>
+            <p>类似于angular和vue中的自定义指令,但是严格遵守HTML5的规范</p>
             <ul>
-                <li>1.data-event</li>
-                <li>2.data-bind</li>
-                <li>3.data-view</li>
-                <li>4.data-part</li>
-                <li>5.data-pop</li>
+                <li>1.data-event, 事件绑定, <a href="#guide-event">用法详见</a></li>
+                <li>2.data-bind, 数据绑定, <a href="#guide-bind">用法详见</a></li>
+                <li>3.data-view,子View <a href="#guide-view">用法详见</a></li>
+                <li>4.data-part,嵌入part 用法跟view差不多</li>
+                <!--li>5.data-pop</li-->
             </ul>
         </div>
     </li>
 </ul>
 </template>
+
+<script type="text/ecmascript-6">
+    exports.data = require("data.smarty");
+</script>

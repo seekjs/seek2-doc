@@ -36,13 +36,15 @@
 <ul>
     <li>
         <div class="ui-modularize">
-            <h3 class="ui-modularize-title">1.模块化规范</h3>
-            <p>采用跟NodeJs一样的commonJs规范</p>
+            <h3 class="ui-modularize-title">1.增强模块化</h3>
+            <p>1.采用跟NodeJs一样的commonJs规范</p>
+            <p>2.采用同步方式</p>
+            <p>3.加入命名空间</p>
         </div>
     </li>
     <li>
         <div class="ui-modularize">
-            <h3 class="ui-modularize-title">2.模块内部变量</h3>
+            <h3 class="ui-modularize-title">2.模块内部对象及方法</h3>
             <ul>
                 <li>module 模块本身</li>
                 <li>exports = module.exports 输出对象</li>

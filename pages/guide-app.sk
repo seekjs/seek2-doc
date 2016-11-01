@@ -22,26 +22,22 @@
 
 <template>
 <ul>
-    {foreach src=this.data item=cat}
     <li>
-        <div class="ui-app">
-            <h3 class="ui-app-title">{sn}.{cat.title}</h3>
-            <ul>
-                {foreach src=cat.list}
-                <li>
-                    {sn}.{item.name} {item.title}
-                    {if item.args}
-                        参数列表:
-                        {foreach src=item.args item=arg}
-                        <span>{arg.name} {arg.title}</span>
-                        {/foreach}
-                    {/if}
-                </li>
-                {/foreach}
-            </ul>
-        </div>
+        <h3 class="ui-app-title">1.Route 路由</h3>
+        <p>单页应用(SPA)</p>
     </li>
-    {/foreach}
+    <li>
+        <h3 class="ui-app-title">2.Component 组件化</h3>
+        <p>三位一体.sk单文件</p>
+    </li>
+    <li>
+        <h3 class="ui-app-title">3.Transfer 页面切换动画效果</h3>
+        <p>前进=>向右  后退<=向左</p>
+    </li>
+    <li>
+        <h3 class="ui-app-title">4.API</h3>
+        <p><a href="#api">详见</a></p>
+    </li>
 </ul>
 </template>
 

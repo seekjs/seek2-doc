@@ -12,7 +12,7 @@ exports.apiList = {
             {name: "plugin", title:"插件列表对象", type: "object", cat:"property", subcat:"plugin"},
             {
                 name: "usePlugin",
-                des: '使用插件, 参考<a href="#plugin">插件列表</a>',
+                des: '使用插件, 参考<a href="#guide-plugin">插件列表</a>',
                 args: [
                     {name: "module", title: "plug模块,写法同require", type: "string"}
                 ],
@@ -43,6 +43,12 @@ exports.apiList = {
             {name: "useGrid", title:"是否使用栅格", type:"boolean", cat: "property"},
             {name: "viewEx", title:"设置页面公用方法模块", type:"module object", cat: "property"},
             {name: "pipeEx", title:"设置格式化公用方法模块", type:"module object", cat: "property"},
+            {name: "addView", title:"设置页面公用方法模块", cat:"method",args:[
+                {name: "viewEx", title: "viewEx对象", type: "object", required:true}
+            ]},
+            {name: "addPipe", title:"设置格式化公用方法模块", cat:"method",args:[
+                {name: "pipeEx", title: "pipeEx对象", type: "object", required:true}
+            ]},
             {
                 name: "setPath",
                 des: '设置目录,具体用法见<a href="#path">path目录配置</a>',

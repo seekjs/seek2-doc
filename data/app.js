@@ -18,7 +18,7 @@
                 {name: "app.plugin", title:"插件列表对象", type: "object"},
                 {
                     name: "app.usePlugin",
-                    title: '使用插件, 参考<a href="#plugin">插件列表</a>',
+                    title: '使用插件, 参考<a href="#guide-plugin">插件列表</a>',
                     args: [
                         {name: "module", title: "plug模块,写法同require", type: "string"}
                     ]
@@ -52,16 +52,6 @@
             ]
         },
         {
-            title: "自定义分享",
-            list: [
-                {name: "app.hasShare", title:"是否使用分享", type:"boolean" },
-                {name: "app.shareTitle", title:"分享标题", type:"string"},
-                {name: "app.shareDes", title:"分享描述", type:"string"},
-                {name: "app.shareUrl", title:"分享地址", type:"string"},
-                {name: "app.shareImage", title:"分享图标", type:"string"}
-            ]
-        },
-        {
             title: "其他",
             list:[
                 {name: "app.ext", title:"扩展名", type:"object"},
@@ -70,7 +60,7 @@
                 {name: "app.formatEx", title:"设置格式化公用方法模块", type:"module object"},
                 {
                     name: "app.setPath",
-                    title: '设置目录,具体用法见<a href="#path">path目录配置</a>',
+                    title: '设置目录,具体用法见<a href="#guide-path">path目录配置</a>',
                     args:[
                         {name: "path", title: "设置JS/HTML/CSS的目录", type: "object"}
                     ]

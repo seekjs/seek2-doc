@@ -82,6 +82,9 @@
             {if this.title}
             <li>{this.title}</li>
             {/if}
+            {if this.des}
+            <li>{this.des}</li>
+            {/if}
             {if this.type}
             <li>类型: {this.type}</li>
             {/if}
@@ -96,7 +99,7 @@
                 {/foreach}
             </ul>
             {/if}
-        {elsif this.cat=="method"}
+        {elsif this.cat=="method"||this.cat=="event"}
             {if this.args}
             <table border="1">
                 <tr>

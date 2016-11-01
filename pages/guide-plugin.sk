@@ -24,22 +24,43 @@
 </style>
 
 <template>
-<ul>
-    {foreach src=this.list}
-    <li>
-        <div class="ui-plugin">
-            <h3 class="ui-plugin-title">
-                <a href="#{item.page}">{item.title}</a>
-            </h3>
-            <ul>
-                <li>???</li>
-                <li>???</li>
-            </ul>
-        </div>
-    </li>
-    {/foreach}
-</ul>
-
+    <div class="guide-plugin">
+        <p>seekjs本身不带任何插件,所有插件均从npm下载</p>
+        <ul>
+            <li>
+                <div class="ui-plugin">
+                    <h3 class="ui-plugin-title">1.安装</h3>
+                    <p>npm install [seek-plugin]</p>
+                </div>
+            </li>
+            <li>
+                <div class="ui-plugin">
+                    <h3 class="ui-plugin-title">2.用法</h3>
+                    <p>app.usePlugin([plugin_name])</p>
+                </div>
+            </li>
+            <li>
+                <div class="ui-plugin">
+                    <h3 class="ui-plugin-title">3.条件</h3>
+                    <ul>
+                        <li>1.插件名称前缀统一为: seek-plugin-</li>
+                        <li>2.文件后缀统一为.sk</li>
+                        <li>3.必须包含完整API文档+Demo+单元测试</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="ui-plugin">
+                    <h3 class="ui-plugin-title">4.推荐的插件</h3>
+                    <ul>
+                        {foreach src=this.list}
+                        <li><a href="https://www.npmjs.com/package/{item.page}" target="_blank">{item.title}</a></li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script type="text/ecmascript-6">
