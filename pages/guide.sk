@@ -20,7 +20,7 @@
 
 <template>
     <div class="ui-guide">
-        <header class="ui-guide-title">seekJs教程</header>
+        <header class="ui-guide-title">seekJs {$Lang.guide}</header>
         <ul>
             {foreach src=this.preList}
             <li class="ui-guide-li">
@@ -40,5 +40,49 @@
 </template>
 
 <script type="text/ecmascript-6">
-    exports.model = require("data.guide");
+    exports.$lang = {
+        app: {
+            cn: "seekApp框架",
+            en: "App Framework"
+        },
+        view: {
+            cn: "View页面",
+            en: "View Page"
+        },
+        ajax: {
+            cn: "Ajax封装",
+            en: "AJAx"
+        },
+        form: {
+            cn: "表单验证",
+            en: "Form"
+        },
+        env: {
+            cn: "环境检测",
+            en: "Environment"
+        }
+    };
+
+    exports.onInit = function() {
+        exports.preList = [
+            { page: "guide-summary", name: "Summary", title: $Lang.summary },
+            { page: "guide-scaffold", name: "Scaffold", title: $Lang.scaffold },
+            { page: "quick-start", name: "Quick Start", title: $Lang.quick_start }
+        ];
+
+        exports.List = [
+            { page: "guide-modularize", name: "Modularize", title: $Lang.modularize },
+            { page: "guide-app", name: "App", title: $lang.app },
+            { page: "guide-view", name: "View", title: $lang.view },
+            { page: "guide-template", name: "Template", title: $Lang.template },
+            { page: "guide-bind", name: "Bind", title: $Lang.data_bind },
+            { page: "guide-event", name: "Event", title: $Lang.event_bind },
+            { page: "guide-pipe", name: "Pipe", title: $Lang.pipe },
+            { page: "guide-ajax", name: "AJAX", title: $lang.ajax },
+            { page: "guide-form", name: "Form", title: $lang.form },
+            { page: "guide-env", name: "Environment", title: $lang.env },
+            { page: "guide-test", name: "Unit Test", title: $Lang.unit_test },
+            { page: "guide-plugin", name: "Plugin", title: $Lang.plugin }
+        ];
+    };
 </script>

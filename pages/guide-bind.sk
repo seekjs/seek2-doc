@@ -27,13 +27,13 @@
 <ul>
     <li>
         <div class="ui-node">
-            <h3 class="ui-node-title">1.用法</h3>
+            <h3 class="ui-node-title">1.{$Lang.usage}</h3>
             <p>data-bind="[eventName]>[method]:arguments1,arguments2"</p>
         </div>
     </li>
     <li>
         <div class="ui-node">
-            <h3 class="ui-node-title">2.示例</h3>
+            <h3 class="ui-node-title">2.{$Lang.example}</h3>
             <p>data-bind="showMessage"</p>
         </div>
     </li>

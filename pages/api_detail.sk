@@ -70,7 +70,7 @@
     <div class="api-detail">
         <ul>
             <li>
-                <b>usage:</b>
+                <b>{$Lang.usage}:</b>
                 {if this.cate=="pipe"}
                 {{ {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if} }}
                 {elsif this.cate=="template"}
@@ -80,19 +80,19 @@
                 {/if}
             </li>
             {if this.title}
-            <li>{this.title}</li>
+            <li>{$Lang.title}: {this.title}</li>
             {/if}
             {if this.des}
-            <li>{this.des}</li>
+            <li>{$Lang.descriptions}: {this.des}</li>
             {/if}
             {if this.type}
-            <li>类型: {this.type}</li>
+            <li>{$Lang.type}: {this.type}</li>
             {/if}
         </ul>
 
         {if this.cat=="property"}
             {if this.list}
-            <p>可选值:</p>
+            <p>{$lang.optional_value}:</p>
             <ul>
                 {foreach src=this.list}
                 <li>{i} : {item}</li>
@@ -141,5 +141,12 @@
         var fun = template.compile(code);
         var html = fun();
         document.querySelector(".api-detail-result").innerHTML = html;
+    };
+
+    exports.$lang = {
+        optional_value: {
+            cn: "可选值",
+            en: "Optional value"
+        }
     };
 </script>

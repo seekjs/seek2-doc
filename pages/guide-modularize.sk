@@ -36,33 +36,35 @@
 <ul>
     <li>
         <div class="ui-modularize">
-            <h3 class="ui-modularize-title">1.增强模块化</h3>
-            <p>1.采用跟NodeJs一样的commonJs规范</p>
-            <p>2.采用同步方式</p>
-            <p>3.加入命名空间</p>
-        </div>
-    </li>
-    <li>
-        <div class="ui-modularize">
-            <h3 class="ui-modularize-title">2.模块内部对象及方法</h3>
+            <h3 class="ui-modularize-title">1.{$lang.stronger_modular}</h3>
             <ul>
-                <li>module 模块本身</li>
-                <li>exports = module.exports 输出对象</li>
-                <li>require 加载模块</li>
-                <li>__dirname 模块所在的目录名称</li>
-                <li>__filename 模块对应的文件名</li>
+                <li>1.{$lang.commonJs_rule}</li>
+                <li>2.{$lang.sync_mode}</li>
+                <li>3.{$lang.join_namespace}</li>
             </ul>
         </div>
     </li>
     <li>
         <div class="ui-modularize">
-            <h3 class="ui-modularize-title">3.seekjs.config配置</h3>
+            <h3 class="ui-modularize-title">2.{$lang.module_object_and_method}</h3>
             <ul>
-                <li>1.写法: {literal}seekjs.config({ns:{-},path:{-},alias:{-},packages:{-}});{/literal}</li>
-                <li>2.ns 命名空间 如: req("mod.Dream");</li>
-                <li>3.path 短路径 如: req("ad/160101/home");</li>
-                <li>4.alias 别名 如: req("service");</li>
-                <li>5.packages 包 如: req("echarts")/req("cheachs/line");</li>
+                <li>module {$lang.module_itself}</li>
+                <li>exports = module.exports {$lang.export_object}</li>
+                <li>require {$lang.load_module}</li>
+                <li>__dirname {$lang.dir_name}</li>
+                <li>__filename {$lang.filename}</li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <div class="ui-modularize">
+            <h3 class="ui-modularize-title">3.seekjs.config {$Lang.config}</h3>
+            <ul>
+                <li>1.{$Lang.usage}: {literal}seekjs.config({ns:{-},path:{-},alias:{-},packages:{-}});{/literal}</li>
+                <li>2.ns {$Lang.namespace} {$Lang.example}: req("mod.Dream");</li>
+                <li>3.path {$Lang.short_path} {$Lang.example}: req("ad/160101/home");</li>
+                <li>4.alias {$Lang.alias} {$Lang.example}: req("service");</li>
+                <li>5.packages {$Lang.package} {$Lang.example}: req("echarts")/req("cheachs/line");</li>
             </ul>
         </div>
     </li>
@@ -80,6 +82,51 @@
             element.parentNode.insertBefore(div, element);
             element.style.display = "none";
         });
+    };
+
+
+    exports.$lang = {
+        stronger_modular:{
+            cn: "增强模块化",
+            en: "Enhanced modular"
+        },
+        commonJs_rule:{
+            cn: "采用跟NodeJs一样的commonJs规范",
+            en: "Using NodeJs as the same as the commonJs specification"
+        },
+        sync_mode:{
+            cn: "采用同步方式",
+            en: "Using synchronization mode"
+        },
+        join_namespace:{
+            cn: "加入命名空间",
+            en: "Join namespace"
+        },
+
+        module_object_and_method:{
+            cn: "模块内部对象及方法",
+            en: "Module internal object and method"
+        },
+        module_itself:{
+            cn: "模块本身",
+            en: "Module itself"
+        },
+        export_object:{
+            cn: "输出对象",
+            en: "Export object"
+        },
+        load_module:{
+            cn: "加载模块",
+            en: "Load module"
+        },
+        dir_name:{
+            cn: "模块所在的目录名称",
+            en: "Name of the directory where the module is located"
+        },
+        filename:{
+            cn: "模块对应的文件名",
+            en: "The file name of the module"
+        }
     };
 
 </script>

@@ -1,7 +1,7 @@
 /**
 * Created by likaituan on 15/8/9.
 */
-<!--cnsjdn-->
+
 <style>
     .ui-api-title{
         background-color: #428bca;
@@ -80,9 +80,9 @@
         };
     %>
     <div class="ui-api">
-        <header class="ui-api-title">{$Lang.api_reference}</header>
+        <header class="ui-api-title">{$lang.api_reference}</header>
         <div>
-            <p class="ui-api-ul ui-api-topone ui-api-one">{$Lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>
+            <p class="ui-api-ul ui-api-topone ui-api-one">{$lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>
             {foreach src=this.apiList key=cateName item=cate}
             <p class="ui-api-top">@seekjs/{cateName}</p>
             {if cate.des}
@@ -114,10 +114,23 @@
         {/foreach}
         <footer class="ui-api-one"></footer>
 
-        <!--<footer class=" ui-api-one">{$Lang.api_des}:P = Property(红色)  M = Method E = Event T = Template P=Pipe(青色)</footer>-->
+        <!--<footer class=" ui-api-one">{$lang.api_des}:P = Property(红色)  M = Method E = Event T = Template P=Pipe(青色)</footer>-->
     </div>
 </template>
 
 <script type="text/ecmascript-6">
-    exports.apiList = require("data.api").apiList;
+    exports.$lang = {
+        api_reference: {
+            cn: "API参考",
+            en: "API Reference"
+        },
+        api_des:{
+            cn:"注",
+            en:"Notes"
+        }
+    };
+
+    exports.onInit = function() {
+        exports.apiList = require("data.api").getApiList();
+    };
 </script>

@@ -10,31 +10,31 @@
 
 <template>
     <div class="ui-start">
-        <p>step 1: 安装seekjs包及脚手架工具</p>
+        <p>step 1: {$lang.step1_title}</p>
         <code>
             npm install seekjs
             npm install seek-cli
 
         </code>
-        <p>step 2: 引入seekjs模块引擎(index.html)</p>
+        <p>step 2: {$lang.step2_title}(index.html)</p>
         <code>
             < script src="node_modules/seekjs2/module.js" data-main="root.main">< /script>
         </code>
-        <p>step 3: 配置入口文件(main.js)</p>
+        <p>step 3: {$lang.step3_title}(main.js)</p>
         <code>
-            1.配置命名空间
+            1.{$lang.config_namespace}
             seekjs.config({
 
             });
 
-            2. 配置APP
+            2. {$lang.config_app}
             require("sys.app");
 
-            3. 设置初始页面
+            3. {$lang.setting_ini_page}
             app.init("home");
         </code>
 
-        <p>step 4: 添加.sk页面文件(pages/home.sk)</p>
+        <p>step 4: {$lang.step4_title}(pages/home.sk)</p>
         <code>
             < style>....< /style>
             < template>...< /template>
@@ -57,4 +57,36 @@
         });
     };
     */
+
+    exports.$lang = {
+        step1_title: {
+            cn: "安装seekjs包及脚手架工具",
+            en: "Install seekjs kit and scaffolding tools"
+        },
+        step2_title: {
+            cn: "引入seekjs模块引擎",
+            en: "Import seekjs module engine"
+        },
+        step3_title: {
+            cn: "配置入口文件",
+            en: "Configuration entry file"
+        },
+        step4_title: {
+            cn: "添加.sk页面文件",
+            en: "Add.Sk page file"
+        },
+
+        config_namespace: {
+            cn: "配置命名空间",
+            en: "Configuration namespace"
+        },
+        config_app: {
+            cn: "配置APP",
+            en: "Configuration APP"
+        },
+        setting_ini_page: {
+            cn: "设置初始页面",
+            en: "Set initial page"
+        }
+    };
 </script>

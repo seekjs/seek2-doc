@@ -23,24 +23,65 @@
 <template>
 <ul>
     <li>
-        <h3 class="ui-app-title">1.Route 路由</h3>
-        <p>单页应用(SPA)</p>
+        <h3 class="ui-app-title">1.{$lang.route}</h3>
+        <p>{$lang.single_page_application}(SPA)</p>
     </li>
     <li>
-        <h3 class="ui-app-title">2.Component 组件化</h3>
-        <p>三位一体.sk单文件</p>
+        <h3 class="ui-app-title">2.{$lang.component}</h3>
+        <p>{$lang.three_in_one}.sk{$lang.single_page}</p>
     </li>
     <li>
-        <h3 class="ui-app-title">3.Transfer 页面切换动画效果</h3>
-        <p>前进=>向右  后退<=向左</p>
+        <h3 class="ui-app-title">3.{$lang.transfer}</h3>
+        <p>{$lang.forward}=>{$lang.go_right}  {$lang.back}<={$lang.go_left}</p>
     </li>
     <li>
         <h3 class="ui-app-title">4.API</h3>
-        <p><a href="#api">详见</a></p>
+        <p><a href="#api/app">{$Lang.see_details}</a></p>
     </li>
 </ul>
 </template>
 
 <script type="text/ecmascript-6">
-    exports.model = require("data.app");
+    exports.$lang = {
+        route:{
+            cn: "路由",
+            en: "Route"
+        },
+        single_page_application:{
+            cn: "单页应用",
+            en: "Single Page Application"
+        },
+        component: {
+            cn: "组件化",
+            en: "Component"
+        },
+        three_in_one: {
+            cn: "三位一体",
+            en: "Three-in-one"
+        },
+        single_file: {
+            cn: "单文件",
+            en: "Single file"
+        },
+        transfer: {
+            cn: "页面切换动画效果",
+            en: "Page switching animation effects"
+        },
+        forward: {
+            cn: "前进",
+            en: "Forward"
+        },
+        back:{
+            cn: "后退",
+            en: "Back off"
+        },
+        go_right:{
+            cn: "向右",
+            en: "Towards the right"
+        },
+        go_left:{
+            cn: "向左",
+            en: "Towards the left"
+        }
+    };
 </script>

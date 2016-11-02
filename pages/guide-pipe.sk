@@ -27,15 +27,21 @@
 <ul>
     <li>
         <div class="ui-node">
-            <h3 class="ui-node-title">1.用法</h3>
+            <h3 class="ui-node-title">1. API {$Lang.list}</h3>
             <ul>
-                <li>1.date-format</li>
-                <li>2.string-format</li>
-                <li>3.number-format</li>
-                <li>4.currency</li>
-                <li>5.rmb</li>
+                <li>1.{$lang.similar_linux_pipe_and_allow_chain}</li>
+                <li>2.pipe API <a href="#api/pipe">{$Lang.see_details}</a></li>
             </ul>
         </div>
     </li>
 </ul>
 </template>
+
+<script>
+    exports.$lang = {
+        similar_linux_pipe_and_allow_chain: {
+            cn: "类似linux的pipe管道, 允许多级串联",
+            en: "Pipe similar to the Linux pipeline, allowing multi-level series"
+        }
+    };
+</script>

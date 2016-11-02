@@ -90,55 +90,122 @@
 <div class="ui-home">
     <ul class="ui-menu">
         <li data-event="go:guide">{$Lang.guide}</li>
-        <li data-event="go:api">{$Lang.api}</li>
+        <li data-event="go:api">API</li>
         <li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li>
         <li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li>
-        <li data-event="go:http://github.com/likaituan/seekjs">{$Lang.github}</li>
+        <li data-event="go:http://github.com/likaituan/seekjs">GitHub</li>
     </ul>
     <div class="clear"></div>
     <div class="ui-logo">
         <p class="center">seek.js</p>
-        <p class="center">{$Lang.framework_des}</p>
+        <p class="center">{$lang.framework_des}</p>
         <p class="center"><button data-event="go:quick-start">{$Lang.quick_start}</button></p>
     </div>
     <div id="features">
         <div class="feats">
             <div class="feat">
                 <h2><span class="icon simple"></span>{$Lang.three_in_one}</h2>
-                <p>{$Lang.three_in_one_des}</p>
+                <p>{$lang.three_in_one_des}</p>
             </div>
             <div class="feat">
-                <h2><span class="icon powerful"></span>{$Lang.data_driver}</h2>
-                <p>{$Lang.data_driver_des}</p>
+                <h2><span class="icon powerful"></span>{$lang.data_driver}</h2>
+                <p>{$lang.data_driver_des}</p>
             </div>
             <div class="feat">
-                <h2><span class="icon compact"></span>{$Lang.modular}</h2>
-                <p>{$Lang.modular_des}</p>
+                <h2><span class="icon compact"></span>{$lang.node_modular}</h2>
+                <p>{$lang.node_modular_des}</p>
             </div>
             <div class="feat">
-                <h2><span class="icon composable"></span>{$Lang.plugin}</h2>
-                <p>{$Lang.plugin_des}</p>
+                <h2><span class="icon composable"></span>{$lang.nice_plugin}</h2>
+                <p>{$lang.nice_plugin_des}</p>
             </div>
             <div class="feat">
-                <h2><span class="icon fast"></span>{$Lang.light}</h2>
-                <p>{$Lang.light_des}</p>
+                <h2><span class="icon fast"></span>{$lang.lightweight}</h2>
+                <p>{$lang.lightweight_des}</p>
             </div>
             <div class="feat">
-                <h2><span class="icon module"></span>{$Lang.language_setting}</h2>
-                <p>{$Lang.language_setting_des}</p>
+                <h2><span class="icon module"></span>{$lang.multi_language}</h2>
+                <p>{$lang.multi_language_des}</p>
             </div>
         </div>
     </div>
     <footer class="center">
-        <span>Copyright (c) 2016 Li</span>
-        <span data-event="setLang:cn">中文</span>
-        <span data-event="setLang:en">english</span>
+        <p class="center">Copyright (c) 2016 Li</p>
+        <p class="right">
+            <span>{$lang.switch_language}</span>
+            <select data-event="change>setLang">
+                {foreach src=this.langs}
+                <option value="{i}" {localStorage.lang==i|iif:selected='selected'}>{item}</option>
+                {/foreach}
+            </select>
+        </p>
     </footer>
 </div>
 </template>
 <script>
-    exports.setLang = function(lang){
-        localStorage.lang = lang;
+    exports.langs = {
+        en: "english",
+        cn: "中文"
+    };
+
+    exports.setLang = function(){
+        localStorage.lang = this.element.value;
         exports.render();
+    };
+
+    exports.$lang = {
+        framework_des: {
+            cn: "数据驱动的组件，为现代化的 Web 界面而生",
+            en: "Data driven components for the modernization of the Web interface"
+        },
+        switch_language: {
+            cn: "切换语言",
+            en: "switch language"
+        },
+
+        three_in_one_des: {
+            cn: "CSS样式 + HTML模板 + Javascript合并成一个文件",
+            en: "CSS style + HTML template + Javascript mixed into one file"
+        },
+        data_driver:{
+            cn: "数据驱动模板",
+            en: "Data Driver"
+        },
+        data_driver_des:{
+            cn: "数据跟模板双向绑定, 只需专注数据, 去掉繁琐的dom操作, 让你的工作效率嗖嗖提升",
+            en: "Basically do not operate DOM, just care about the data"
+        },
+        node_modular: {
+            cn: "NodeJs 模块化",
+            en: "NodeJs Modular"
+        },
+        node_modular_des: {
+            cn: "采用目前流行的CommonJS模块化规范,无缝兼容NodeJS",
+            en: "Real front end browser module, non AMD specification"
+        },
+        nice_plugin: {
+            cn: "方便的插件机制",
+            en: "Nice Plugin"
+        },
+        nice_plugin_des: {
+            cn: "统一规范的插件机制, 通过NPM一键安装",
+            en: "Unified specification of the plug-in mechanism, through the NPM a key to install"
+        },
+        lightweight: {
+            cn: "轻量",
+            en: "Lightweight"
+        },
+        lightweight_des: {
+            cn: "~10kb min+gzip，简洁, 无依赖。",
+            en: "Min+gzip ~10kb, concise, no dependence."
+        },
+        multi_language: {
+            cn: "多语言",
+            en: "Multi Language"
+        },
+        multi_language_des: {
+            cn: "支持多国语言, 让你的项目走向国际化铺平了道路",
+            en: "Simple configuration language, immediately let your project appear on the tall"
+        }
     };
 </script>

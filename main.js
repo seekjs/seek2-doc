@@ -28,12 +28,13 @@ app.pipeEx = require("utils.pipe");
 
 var Lang = require("utils.Lang");
 
-app.onInit = function(){
-    window.$Lang = Lang.getLang(localStorage.lang);
+app.onInit = function(view){
+    window.$Lang = Lang.getLang(Lang, localStorage.lang);
+    window.$lang = Lang.getLang(view.$lang, localStorage.lang);
 };
 
 if(!localStorage.lang){
-    localStorage.lang = "cn";
+    localStorage.lang = "en";
 }
 
 app.init("home");

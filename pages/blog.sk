@@ -1,9 +1,0 @@
-/**
-* Created by likaituan on 15/8/9.
-*/
-
-<template>
-    <div class="ui-im">
-        <iframe src="http://blog.likaituan.me:2015/#list?cat=seekjs"></iframe>
-    </div>
-</template>

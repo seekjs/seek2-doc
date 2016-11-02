@@ -2,20 +2,39 @@
 * Created by likaituan on 15/8/9.
 */
 
-<style>
-    .guide-scaffold{
-
-    }
-</style>
-
 <template>
     <div class="guide-scaffold">
-        <p>seekjs自动构建工具</p>
-        <p>常用命令:</p>
+        <p>seekjs {$lang.auto_build_tool}</p>
+        <p>{$lang.common_commands}:</p>
         <ul>
-            <li>seek create 新建一个项目</li>
-            <li>seek build 代码打包</li>
-            <li>seek update 更新自身版本</li>
+            <li>{$lang.create_a_new_project}: seek create</li>
+            <li>{$lang.code_package}: seek build</li>
+            <li>{$lang.update_seekjs_version}: seek update</li>
         </ul>
     </div>
 </template>
+
+<script>
+    exports.$lang = {
+        auto_build_tool:{
+            cn: "自动构建工具",
+            en: "automatic construction tool"
+        },
+        common_commands: {
+            cn: "常用命令",
+            en: "Common commands"
+        },
+        create_a_new_project: {
+            cn: "新建一个项目",
+            en: "Create a new project"
+        },
+        code_package: {
+            cn: "代码打包",
+            en: "Code package"
+        },
+        update_seekjs_version: {
+            cn: "更新自身版本",
+            en: "Update their own version"
+        }
+    };
+</script>
