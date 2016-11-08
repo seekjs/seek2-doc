@@ -3,8 +3,18 @@
 */
 
 <style>
+.ui-start{
+    width: 910px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+}
 .ui-start p{
     font-weight: bold;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: "微软雅黑";
+    padding-top: 10px;
 }
 </style>
 
