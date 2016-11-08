@@ -11,8 +11,8 @@
 .ui-header{
     background: #0a102a;
     color: #fff;
-    font-size: 20px;
-    font-family: "微软雅黑";
+    font-size: 18px;
+
 }
 .ui-header span{
     display: inline-block;
@@ -23,9 +23,10 @@
     width: 12%;
 }
 .ui-menu{
-     display: inline-block;
-     vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
     width: 78%;
+    padding: 0 20px;
 }
 
 .ui-menu li{
@@ -38,13 +39,39 @@
     background-color: #13a4dd;
 }
 .ui-logo{
-    margin-top: 50px;
+    padding: 20px;
+    line-height: 32px;
+    font-size: 18px;
+    background-color: #0a0f2c;
+    color: #fff;
+}
+.ui-seekName{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 5px;
 }
 
+.ui-homeBtn{
+    width: 138px;
+    line-height: 45px;
+    background-color: #039de7;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-top: 28px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.ui-homeBtn:hover{
+    background-color: #017bac;
+    color: #f4feff;
+}
 #features {
     padding: 3em 0;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
 }
 #features .cool {
     font-size: 1.8em;
@@ -121,9 +148,9 @@
     </div>
 
     <div class="ui-logo">
-        <p class="center">seek.js</p>
+        <p class="center ui-seekName">Seek.js</p>
         <p class="center">{$lang.framework_des}</p>
-        <p class="center"><button data-event="go:quick-start">{$Lang.quick_start}</button></p>
+        <p class="center"><button class="ui-homeBtn" data-event="go:quick-start">{$Lang.quick_start}</button></p>
     </div>
     <div id="features">
         <div class="feats">
