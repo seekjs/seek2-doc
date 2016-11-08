@@ -8,12 +8,24 @@
     width: 80%;
     margin: 0 auto;
 }
-
-.ui-menu{
+.ui-header{
     background: #0a102a;
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     font-family: "微软雅黑";
+}
+.ui-header span{
+    display: inline-block;
+    font-weight:bold;
+    vertical-align: middle;
+    padding: 0 20px;
+    font-size: 30px;
+    width: 12%;
+}
+.ui-menu{
+     display: inline-block;
+     vertical-align: middle;
+    width: 78%;
 }
 
 .ui-menu li{
@@ -97,13 +109,17 @@
 
 <template>
 <div class="ui-home">
-    <ul class="clear ui-menu">
-        <li data-event="go:guide">{$Lang.guide}</li>
-        <li data-event="go:api">API</li>
-        <li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li>
-        <li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li>
-        <li data-event="go:http://github.com/likaituan/seekjs">GitHub</li>
-    </ul>
+    <div class="ui-header">
+        <span>Seekjs</span>
+        <ul class="clear ui-menu">
+            <li data-event="go:guide">{$Lang.guide}</li>
+            <li data-event="go:api">API</li>
+            <li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li>
+            <li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li>
+            <li data-event="go:http://github.com/likaituan/seekjs">GitHub</li>
+        </ul>
+    </div>
+
     <div class="ui-logo">
         <p class="center">seek.js</p>
         <p class="center">{$lang.framework_des}</p>
