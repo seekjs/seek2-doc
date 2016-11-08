@@ -1,7 +1,7 @@
 {
   "name": "seekjs-doc",
   "version": "1.0.0",
-  "description": "likaituan",
+  "description": "seekjs api and document",
   "devDependencies": {
     "seekjs": "2.0.5"
   },
@@ -12,5 +12,14 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:likaituan/seekjs-doc.git"
-  }
+  },
+  "author": {
+    "name": "Li",
+    "mail": "61114579@qq.com"
+  },
+  "contributors": [{
+    "name": "qumin"
+  },{
+    "name": "498107199"
+  }]
 }
