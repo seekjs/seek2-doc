@@ -4,10 +4,7 @@
 
 <style>
 
-.ui-home{
-    width: 80%;
-    margin: 0 auto;
-}
+
 .ui-header{
     background: #0a102a;
     color: #fff;
@@ -39,7 +36,7 @@
     background-color: #13a4dd;
 }
 .ui-logo{
-    padding: 20px;
+    padding: 30px;
     line-height: 32px;
     font-size: 18px;
     background-color: #0a0f2c;
@@ -59,7 +56,7 @@
     color: #fff;
     font-size: 16px;
     border-radius: 2px;
-    margin-top: 28px;
+    margin-top: 42px;
     margin-bottom: 7px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -67,6 +64,16 @@
 .ui-homeBtn:hover{
     background-color: #017bac;
     color: #f4feff;
+}
+.ui-home-company{
+    padding: 20px;
+    display: block;
+}
+.ui-home-lang{
+    border: 1px solid #34495e;
+    width: 80px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 #features {
     padding: 3em 0;
@@ -99,7 +106,7 @@
 }
 #features .feat p {
     color: #7f8c8d;
-    padding-left: 52px;
+    padding: 0 10px;
     margin: 0.4em 0;
 }
 #features .feat a {
@@ -181,10 +188,10 @@
         </div>
     </div>
     <footer class="center">
-        <p class="center">Copyright (c) 2016 Li</p>
+        <p class="center ui-home-company">Copyright (c) 2016 Li</p>
         <p class="right">
-            <span>{$lang.switch_language}</span>
-            <select data-event="change>setLang">
+            <span class="">{$lang.switch_language}</span>
+            <select class="ui-home-lang" data-event="change>setLang">
                 {foreach src=this.langs}
                 <option value="{i}" {localStorage.lang==i|iif:selected='selected'}>{item}</option>
                 {/foreach}

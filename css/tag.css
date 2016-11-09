@@ -59,6 +59,11 @@ code{
     line-height: 25px;
 }
 
+.ui-home{
+    width: 80%;
+    margin: 0 auto;
+}
+
 /*详情页面 部分公用样式*/
 .ui-common-details-title{
     background: #000;
