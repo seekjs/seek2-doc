@@ -9,36 +9,17 @@
     height: 25px;
 }
 
-.ui-spa{
-    width:80%;
-    margin:0 auto;
-}
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 736px) {
-    .ui-spa{
-        width:100%;
-        margin:0 auto;
-    }
-}
-.ui-spa-title{
-    font-size:20px;
-    padding: 1rem;
-}
 .ui-spa ul li{
     padding: 0.5rem 2rem;
     /*padding-left: 20px;*/
 }
     
-.ui-spa-bg{
-    background: lightgrey;
-    color: #34495e;
-}
+
 
 </style>
 
 <template>
-    <header class="ui-common-details-title">{$Lang.summary}</header>
+<header class="ui-common-details-title">{$Lang.summary}</header>
 <ul class="ui-spa-ul">
     <li>
         <div class="ui-spa">

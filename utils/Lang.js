@@ -220,6 +220,14 @@ module.exports = {
         cn: "人民币",
         en: "RMB"
     },
+    form:{
+        cn:"表单验证",
+        en:"Form"
+    },
+    env: {
+    cn: "环境检测",
+        en: "Environment"
+    },
 
     getLang: function(langObj, lang){
         if(!langObj){

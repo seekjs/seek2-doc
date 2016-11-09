@@ -21,22 +21,32 @@
 </style>
 
 <template>
-<ul>
+    <header class="ui-common-details-title">{$lang.app}</header>
+<ul class="ui-spa">
     <li>
-        <h3 class="ui-app-title">1.{$lang.route}</h3>
-        <p>{$lang.single_page_application}(SPA)</p>
+        <h4 class="ui-spa-title">1.{$lang.route}</h4>
+        <ul class="ui-spa-bg">
+            <li>{$lang.single_page_application}(SPA)</li>
+        </ul>
+
     </li>
     <li>
-        <h3 class="ui-app-title">2.{$lang.component}</h3>
-        <p>{$lang.three_in_one}.sk{$lang.single_page}</p>
+        <h4 class="ui-spa-title">2.{$lang.component}</h4>
+        <ul class="ui-spa-bg">
+            <li>{$lang.three_in_one}.sk{$lang.single_page}</li>
+        </ul>
     </li>
     <li>
-        <h3 class="ui-app-title">3.{$lang.transfer}</h3>
-        <p>{$lang.forward}=>{$lang.go_right}  {$lang.back}<={$lang.go_left}</p>
+        <h4 class="ui-spa-title">3.{$lang.transfer}</h4>
+        <ul class="ui-spa-bg">
+            <li>{$lang.forward}=>{$lang.go_right}  {$lang.back}<={$lang.go_left}</li>
+        </ul>
     </li>
     <li>
-        <h3 class="ui-app-title">4.API</h3>
-        <p><a href="#api/app">{$Lang.see_details}</a></p>
+        <h4 class="ui-spa-title">4.API</h4>
+        <ul class="ui-spa-bg">
+            <li><a href="#api/app">{$Lang.see_details}</a></li>
+        </ul>
     </li>
 </ul>
 </template>
@@ -82,6 +92,10 @@
         go_left:{
             cn: "向左",
             en: "Towards the left"
+        },
+        app:{
+            cn: "seekApp框架",
+            en: "App Framework"
         }
     };
 </script>
