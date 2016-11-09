@@ -46,6 +46,12 @@
                     </ul>
                 </div>
             </li>
+            <li>
+                <div class="ui-plugin">
+                    <h4 class="ui-spa-title">5.{$lang.more_plugin}</h4>
+                    <p><a href="http://plugin.seekjs.org:2015">{$Lang.see_details}</a></p>
+                </div>
+            </li>
         </ul>
     </div>
 </template>
@@ -55,6 +61,10 @@
         recommended_plugin: {
             cn: "推荐的插件",
             en: "Recommended plugin"
+        },
+        more_plugin: {
+            cn: "更多插件",
+            en: "more plugin"
         },
         seekJs_no_store_plugin: {
             cn: "seekjs本身不带任何插件,所有插件均从npm下载",
