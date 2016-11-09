@@ -33,6 +33,9 @@
         margin-bottom: 20px;
         cursor:pointer;
     }
+    .ui-api-li:hover{
+        color: #017bac;
+    }
     .ui-api-li span{
         width: 15px;
         text-align: center;
