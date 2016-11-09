@@ -30,6 +30,9 @@
         width:80%;
         margin:0 auto;
     }
+    .ui-guide-contents>li:hover{
+        color: #017bac;
+    }
     @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 736px) {

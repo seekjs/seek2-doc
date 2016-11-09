@@ -9,6 +9,7 @@
     background: #0a102a;
     color: #fff;
     font-size: 18px;
+    padding-top: 10px;
 
 }
 .ui-header span{
@@ -31,6 +32,8 @@
     text-align:center;
     float: left;
     line-height: 70px;
+    transition: .5s;
+    cursor: pointer;
 }
 .ui-menu li:hover{
     background-color: #13a4dd;
@@ -60,6 +63,8 @@
     margin-bottom: 7px;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: 0.5s;
+    cursor: pointer;
 }
 .ui-homeBtn:hover{
     background-color: #017bac;
@@ -189,7 +194,7 @@
     </div>
     <footer class="center">
         <p class="center ui-home-company">Copyright (c) 2016 Li</p>
-        <p class="right">
+        <p>
             <span class="">{$lang.switch_language}</span>
             <select class="ui-home-lang" data-event="change>setLang">
                 {foreach src=this.langs}
