@@ -28,7 +28,7 @@
         </code>
         <p>step 2: {$lang.step2_title}(index.html)</p>
         <code>
-            < script src="node_modules/seekjs2/module.js" data-main="root.main">< /script>
+            < script src="node_modules/seekjs/module.js" data-main="root.main">< /script>
         </code>
         <p>step 3: {$lang.step3_title}(main.js)</p>
         <code>
