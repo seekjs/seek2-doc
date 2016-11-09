@@ -94,6 +94,7 @@
             <!--</ul>-->
 <!--=======-->
     <div class="api-detail">
+        <header class="left bold bg-black white">{this.cate}.{this.name}</header>
         <ul>
             {if this.title}
             <li>{$Lang.title}: {this.title}</li>
@@ -143,10 +144,10 @@
                 </tr>
                 {foreach src=this.args}
                 <tr>
-                    <th>{item.name}</th>
-                    <th>{item.required?$Lang.yes:$Lang.no}</th>
-                    <th>{item.title}</th>
-                    <th>{item.type}</th>
+                    <td class="center">{item.name}</td>
+                    <td class="center">{item.required?$Lang.yes:$Lang.no}</td>
+                    <td class="center">{item.title}</td>
+                    <td class="center">{item.type}</td>
                 </tr>
                 {/foreach}
             </table>
