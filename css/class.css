@@ -47,6 +47,10 @@
     color:green;
 }
 
+.white{
+    color:#fff;
+}
+
 /*背景颜色*/
 .bg-red{
     background-color:#F27935;
@@ -60,6 +64,14 @@
     background-color:#00B16A;
 }
 
+.bg-gray{
+    background-color:#666;
+}
+
+.bg-black{
+    background-color:#000;
+}
+
 /*其他*/
 .button{
     border: 1px solid #eeeeee;
@@ -70,4 +82,9 @@
 .content{
     padding: 0.5rem 2rem;
     line-height: 30px;
+}
+
+/*加粗*/
+.bold{
+    font-weight: bold;
 }

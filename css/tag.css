@@ -58,3 +58,40 @@ code{
     color: #465665;
     line-height: 25px;
 }
+
+.ui-home{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*详情页面 部分公用样式*/
+.ui-common-details-title{
+    background: #000;
+    color: #ffffff;
+    font-size:25px;
+    padding:1rem 0;
+}
+.ui-spa-bg{
+    background: lightgrey;
+    color: #34495e;
+}
+.ui-spa-title{
+    font-size:20px;
+    padding: 1rem;
+}
+
+.ui-spa{
+    width:80%;
+    margin:0 auto;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 736px) {
+    .ui-spa{
+        width:100%;
+        margin:0 auto;
+    }
+}
+.ui-spa-bg li{
+    padding: 0.5rem 2rem;
+}

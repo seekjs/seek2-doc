@@ -7,11 +7,12 @@
 </style>
 
 <template>
-    <ul>
+    <header class="ui-common-details-title">{$lang.view}</header>
+    <ul class="ui-spa">
         <li>
             <div class="ui-view">
-                <h1 class="ui-view-title">1.{$Lang.summary}</h1>
-                <ul class="content">
+                <h4 class="ui-spa-title">1.{$Lang.summary}</h4>
+                <ul class="ui-spa-bg">
                     <li>{$lang.view_is_core}</li>
                     <li>API <a href="#api/view">{$Lang.see_details}</a></li>
                 </ul>
@@ -19,8 +20,8 @@
         </li>
         <li>
             <div class="ui-view">
-                <h1 class="ui-view-title">2.{$Lang.sub_view}</h1>
-                <ul class="content">
+                <h4 class="ui-spa-title">2.{$Lang.sub_view}</h4>
+                <ul class="ui-spa-bg">
                     <li>1.{$Lang.usage}</li>
                     <li>2.{$Lang.Call} {$Lang.main_view}</li>
                 </ul>
@@ -34,6 +35,10 @@
         view_is_core: {
             cn: "view是seekJs的核心",
             en: "View is the core of seekJs"
+        },
+        view:{
+            cn: "View页面",
+            en: "View Page"
         }
     };
 </script>

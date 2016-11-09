@@ -3,35 +3,14 @@
 */
 
 <style>
-.ui-tree div{
-    margin-left: 2em;
-    font-size: 12px;
-    height: 25px;
-}
-
-.ui-service{
-    margin:0 auto;
-}
-.ui-service-title{
-    background-color: lightgrey;
-    /*padding-left: 20px;*/
-    padding: 1rem;
-}
-.ui-service ul li{
-    padding: 0.5rem 2rem;
-    /*padding-left: 20px;*/
-}
 </style>
 
 <template>
-<ul>
-    <li>
-        <div class="ui-service">
-            <h3 class="ui-service-title">1. {$Lang.usage}</h3>
-            <ul>
-                <li>{$Lang.now_is_developing}</li>
-            </ul>
-        </div>
-    </li>
-</ul>
+    <header class="ui-common-details-title">{$Lang.form}</header>
+    <div class="ui-spa">
+        <h4 class="ui-spa-title">1. {$Lang.usage}</h4>
+        <ul class="ui-spa-bg">
+            <li>{$Lang.now_is_developing}</li>
+        </ul>
+    </div>
 </template>

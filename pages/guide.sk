@@ -19,7 +19,7 @@
     }
 
     .ui-guide-li p{
-        width:208px;
+        width:239px;
         margin:0 auto;
     }
     .ui-guide-fast{
@@ -99,8 +99,8 @@
             { page: "guide-event", name: "Event", title: $Lang.event_bind },
             { page: "guide-pipe", name: "Pipe", title: $Lang.pipe },
             { page: "guide-ajax", name: "AJAX", title: $lang.ajax },
-            { page: "guide-form", name: "Form", title: $lang.form },
-            { page: "guide-env", name: "Environment", title: $lang.env },
+            { page: "guide-form", name: "Form", title: $Lang.form },
+            { page: "guide-env", name: "Environment", title: $Lang.env },
             { page: "guide-test", name: "Unit Test", title: $Lang.unit_test },
             { page: "guide-plugin", name: "Plugin", title: $Lang.plugin }
         ];
