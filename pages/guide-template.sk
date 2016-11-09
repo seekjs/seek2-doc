@@ -3,37 +3,16 @@
 */
 
 <style>
-/*主容器*/
-.ui-page{
-    /*
-    margin:25px;
-    width: calc(100% - 50px);
-    */
-    min-height: calc(100% - 50px);
-    background: #fff;
-}
 
-
-.ui-template{
-    margin:0 auto;
-}
-.ui-template-title{
-    background-color: lightgrey;
-    /*padding-left: 20px;*/
-    padding: 1rem;
-}
-.ui-template ul li{
-    padding: 0.5rem 2rem;
-    /*padding-left: 20px;*/
-}
 </style>
 
 <template>
-    <ul>
+    <header class="ui-common-details-title">{$Lang.template}</header>
+    <ul class="ui-spa">
         <li>
             <div class="ui-template">
-                <h3 class="ui-template-title">1.{$Lang.usage}</h3>
-                <ul>
+                <h4 class="ui-spa-title">1.{$Lang.usage}</h4>
+                <ul class="ui-spa-bg">
                     <li>1.smarty {$Lang.syntax} <a href="#api/template">{$Lang.see_details}</a></li>
                     <li>2.{$lang.native_js_syntax}</li>
                 </ul>
@@ -41,15 +20,18 @@
         </li>
         <li>
             <div class="ui-template">
-                <h3 class="ui-template-title">2.{$lang.format}</h3>
-                <p class="content">{$lang.pipe_syntax}, <a href="#guide-pipe">{$Lang.see_details}</a></p>
+                <h4 class="ui-spa-title">2.{$lang.format}</h4>
+                <ul class="ui-spa-bg">
+                    <li>{$lang.pipe_syntax}, <a href="#guide-pipe">{$Lang.see_details}</a></li>
+                </ul>
             </div>
         </li>
         <li>
             <div class="ui-template">
-                <h3 class="ui-template-title">3.data ${$Lang.extend}</h3>
-                <p class="content">{$lang.similar_directive}</p>
-                <ul>
+                <h4 class="ui-spa-title">3.data ${$Lang.extend}</h4>
+
+                <ul class="ui-spa-bg">
+                    <p class="content">{$lang.similar_directive}</p>
                     <li>1.data-event, {$Lang.event_bind}, <a href="#guide-event">{$Lang.see_details}</a></li>
                     <li>2.data-bind, {$Lang.data_bind}, <a href="#guide-bind">{$Lang.see_details}</a></li>
                     <li>3.data-view {$Lang.sub_view} <a href="#guide-view">{$Lang.see_details}</a></li>

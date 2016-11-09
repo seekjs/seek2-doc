@@ -24,18 +24,19 @@
 </style>
 
 <template>
-<ul>
-    <li>
+    <header class="ui-common-details-title">{$Lang.data_bind}</header>
+    <div class="ui-spa">
         <div class="ui-node">
-            <h3 class="ui-node-title">1.{$Lang.usage}</h3>
-            <p>data-bind="[eventName]>[method]:arguments1,arguments2"</p>
+            <h4 class="ui-spa-title">1.{$Lang.usage}</h4>
+            <ul class="ui-spa-bg">
+                <li>data-bind="[eventName]>[method]:arguments1,arguments2"</li>
+            </ul>
         </div>
-    </li>
-    <li>
         <div class="ui-node">
-            <h3 class="ui-node-title">2.{$Lang.example}</h3>
-            <p>data-bind="showMessage"</p>
+            <h4 class="ui-spa-title">2.{$Lang.example}</h4>
+            <ul class="ui-spa-bg">
+                <li>data-bind="showMessage"</li>
+            </ul>
         </div>
-    </li>
-</ul>
+    </div>
 </template>

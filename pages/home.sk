@@ -144,7 +144,7 @@
 <template>
 <div class="ui-home">
     <div class="ui-header">
-        <span>Seekjs</span>
+        <span><img src="images/logo.png"></span>
         <ul class="clear ui-menu">
             <li data-event="go:guide">{$Lang.guide}</li>
             <li data-event="go:api">API</li>

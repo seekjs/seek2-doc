@@ -4,10 +4,11 @@
 
 <style>
     .ui-guide-title{
-        background-color: #428bca;
+        background-color: #000;
         color: #ffffff;
-        font-size: 18px;
+        font-size: 22px;
         line-height: 50px;
+        font-weight: bold;
     }
 
     .ui-guide-li{
@@ -16,23 +17,42 @@
         line-height: 50px;
         cursor:pointer;
     }
+
+    .ui-guide-li p{
+        width:239px;
+        margin:0 auto;
+    }
+    .ui-guide-fast{
+        background: lightgray;
+        color: #34495e;
+    }
+    .ui-guide-contents{
+        width:80%;
+        margin:0 auto;
+    }
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 736px) {
+        .ui-guide-contents{
+            width:100%;
+        }
+    }
 </style>
 
 <template>
     <div class="ui-guide">
         <header class="ui-guide-title">seekJs {$Lang.guide}</header>
-        <ul>
+        <ul class="ui-guide-contents">
             {foreach src=this.preList}
-            <li class="ui-guide-li">
-                <p data-event="go:{item.page}">{sn|letter}. {item.name} - {item.title}</p>
+            <li class="ui-guide-li ui-guide-fast" data-event="go:{item.page}">
+                <p>{sn|letter}. {item.name} - {item.title}</p>
             </li>
             {/foreach}
         </ul>
-        <hr/>
-        <ul>
+        <ul class="ui-guide-contents">
             {foreach src=this.List}
-            <li class="ui-guide-li">
-                <p data-event="go:{item.page}">{sn}. {item.name} - {item.title}</p>
+            <li class="ui-guide-li" data-event="go:{item.page}">
+                <p>{sn}. {item.name} - {item.title}</p>
             </li>
             {/foreach}
         </ul>
@@ -79,8 +99,8 @@
             { page: "guide-event", name: "Event", title: $Lang.event_bind },
             { page: "guide-pipe", name: "Pipe", title: $Lang.pipe },
             { page: "guide-ajax", name: "AJAX", title: $lang.ajax },
-            { page: "guide-form", name: "Form", title: $lang.form },
-            { page: "guide-env", name: "Environment", title: $lang.env },
+            { page: "guide-form", name: "Form", title: $Lang.form },
+            { page: "guide-env", name: "Environment", title: $Lang.env },
             { page: "guide-test", name: "Unit Test", title: $Lang.unit_test },
             { page: "guide-plugin", name: "Plugin", title: $Lang.plugin }
         ];

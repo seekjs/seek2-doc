@@ -19,6 +19,10 @@ exports.lang = {
         cn: "插件列表对象",
         en: "Plugin List Object"
     },
+    plugin_des: {
+        cn: "全局插件,可用在任何页面",
+        en: "Plugin List Object"
+    },
     use_plugin: {
         cn: "使用插件",
         en: "Use Plugin"
@@ -286,17 +290,46 @@ exports.getApiList = function() {
     return {
         app: {
             list: [
-                {name: "useAnimate", title: lang.is_use_animate, type: "boolean", cat: "property", subcat: "animate"},
-                {name: "aniDuration", title: lang.animate_duration, type: "number", cat: "property", subcat: "animate"},
-                {name: "plugin", title: lang.plugin, type: "object", cat: "property", subcat: "plugin"},
+                {
+                    name: "useAnimate",
+                    title: lang.is_use_animate,
+                    cat: "property",
+                    subcat: "animate",
+                    usage: `app.useAnimate = [boolean]`,
+                    type: "boolean",
+                    defaultVal: "false",
+                    example: `app.useAnimate = true;`
+                },
+                {
+                    name: "aniDuration",
+                    title: lang.animate_duration,
+                    cat: "property",
+                    subcat: "animate",
+                    usage: `app.aniDuration = [number]`,
+                    type: "number",
+                    defaultVal: 500,
+                    example: `app.aniDuration = 500;`
+                },
+                {
+                    name: "plugin",
+                    title: lang.plugin,
+                    des: lang.plugin_des,
+                    cat: "property",
+                    subcat: "plugin",
+                    type: "object",
+                    example: `app.plugin.dialog.alert("hello seekjs")`
+
+                },
                 {
                     name: "usePlugin",
                     des: `${lang.use_plugin}, <a href="#guide-plugin">${$Lang.see_details}</a>`,
                     args: [
-                        {name: "module", title: lang.plugin_module, type: "string"}
+                        {name: "plugin-name", title: lang.plugin_module, type: "string"}
                     ],
                     cat: "method",
-                    subcat: "plugin"
+                    subcat: "plugin",
+                    usage: `app.usePlugin([plugin-name])`,
+                    example: `app.usePlugin("seek-plugin-dialog")`
                 },
                 {
                     name: "onViewInit",

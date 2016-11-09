@@ -24,17 +24,14 @@
 </style>
 
 <template>
-<ul>
-    <li>
-        <div class="ui-node">
-            <h3 class="ui-node-title">1. API {$Lang.list}</h3>
-            <ul>
-                <li>1.{$lang.similar_linux_pipe_and_allow_chain}</li>
-                <li>2.pipe API <a href="#api/pipe">{$Lang.see_details}</a></li>
-            </ul>
-        </div>
-    </li>
-</ul>
+    <header class="ui-common-details-title">{$Lang.pipe}</header>
+    <div class="ui-spa">
+        <h4 class="ui-spa-title">1. API {$Lang.list}</h4>
+        <ul class="ui-spa-bg">
+            <li>1.{$lang.similar_linux_pipe_and_allow_chain}</li>
+            <li>2.pipe API <a href="#api/pipe">{$Lang.see_details}</a></li>
+        </ul>
+    </div>
 </template>
 
 <script>
