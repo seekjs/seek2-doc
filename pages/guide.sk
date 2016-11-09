@@ -19,7 +19,7 @@
     }
 
     .ui-guide-li p{
-        width:208px;
+        width:239px;
         margin:0 auto;
     }
     .ui-guide-fast{
