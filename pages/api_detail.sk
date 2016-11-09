@@ -69,24 +69,31 @@
     %>
     <div class="api-detail">
         <ul>
-            <li>
-                <b>{$Lang.usage}:</b>
-                {if this.cate=="pipe"}
-                {{ {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if} }}
-                {elsif this.cate=="template"}
-                {this.name}{if this.cat=="method"}({args}){/if}
-                {else}
-                {this.cate}.{this.name}{if this.cat=="method"}({args}){/if}
-                {/if}
-            </li>
             {if this.title}
             <li>{$Lang.title}: {this.title}</li>
             {/if}
             {if this.des}
             <li>{$Lang.descriptions}: {this.des}</li>
             {/if}
+            <li>
+                <b>{$Lang.usage}:</b>
+                {if this.cate=="pipe"}
+                    {{ {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if} }}
+                {elsif this.cate=="template"}
+                    {this.name}{if this.cat=="method"}({args}){/if}
+                {else}
+                    {if this.usage}
+                        {this.usage}
+                    {else}
+                        {this.cate}.{this.name}{if this.cat=="method"}({args}){/if}
+                    {/if}
+                {/if}
+            </li>
             {if this.type}
             <li>{$Lang.type}: {this.type}</li>
+            {/if}
+            {if this.defaultVal}
+            <li>{$lang.default_value}: {this.defaultVal}</li>
             {/if}
         </ul>
 
@@ -147,6 +154,10 @@
         optional_value: {
             cn: "可选值",
             en: "Optional value"
+        },
+        default_value:{
+            cn: "默认值",
+            en: "Default Value"
         }
     };
 </script>

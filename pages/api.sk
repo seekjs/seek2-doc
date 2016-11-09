@@ -81,15 +81,13 @@
     %>
     <div class="ui-api">
         <header class="ui-api-title">{$lang.api_reference}</header>
-        <div>
-            <p class="ui-api-ul ui-api-topone ui-api-one">{$lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>
-            {foreach src=this.apiList key=cateName item=cate}
-            <p class="ui-api-top">@seekjs/{cateName}</p>
-            {if cate.des}
-            <p class="ui-api-ul ui-api-one">{cate.des}</p>
-            {/if}
-        </div>
-
+        <p class="ui-api-ul ui-api-topone ui-api-one">{$lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>
+        {foreach src=this.apiList key=cateName item=cate}
+        {if !this.params.id||this.params.id==cateName}
+        <p class="ui-api-top">@seekjs/{cateName}</p>
+        {if cate.des}
+        <p class="ui-api-ul ui-api-one">{cate.des}</p>
+        {/if}
         <ul class="ui-api-ul clear">
             {foreach src=cate.list}
             <li class="ui-api-li" data-event="go:api_detail/{cateName}.{item.name}" title="{item.title}">
@@ -108,8 +106,6 @@
             </li>
             {/foreach}
         </ul>
-        {if cate.des}
-        <p class="ui-api-des ui-api-one">{cate.des}</p>
         {/if}
         {/foreach}
         <footer class="ui-api-one"></footer>

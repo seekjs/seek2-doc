@@ -19,7 +19,7 @@ module.exports = function (args) {
         port: 2016
     };
 
-    if(args.useLocalFramework && myconfig.frameworkDir){
+    if(args.f && myconfig.frameworkDir){
         config.static.items.unshift({
             path: "/node_modules/seekjs/",
             dir: myconfig.frameworkDir

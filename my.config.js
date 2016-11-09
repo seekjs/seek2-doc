@@ -1,3 +1,3 @@
 module.exports = {
-    frameworkDir: "/data/github/seekjs2"
+    frameworkDir: "/data/github/seekjs"
 };
