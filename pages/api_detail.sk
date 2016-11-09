@@ -4,9 +4,10 @@
 
 <style>
     .api-detail{
-        margin-top: 50px;
-        margin-left: 50px;
+        padding-top: 50px;
         line-height: 30px;
+        background-color: #f6f7fb;
+        padding: 20px;
     }
 
     .api-detail table{
@@ -32,14 +33,14 @@
     }
 
     .api-detail code{
-        background-color: #F4F3F1;
+        background-color: #d9e0e8;
         font-size: 13px;
         min-width: 500px;
         min-height: 100px;
         display: inline-block;
         padding: 20px;
         font-weight: normal;
-        color: #465665;
+        color: #05052d;
         line-height: 25px;
     }
 
@@ -67,30 +68,31 @@
     <%
         var args = (this.args||[]).map(x=>x.name).join(",");
     %>
-    <div class="api-detail">
-        <ul>
-            <li>
-                <b>{$Lang.usage}:</b>
-                {if this.cate=="pipe"}
-                {{ {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if} }}
-                {elsif this.cate=="template"}
-                {this.name}{if this.cat=="method"}({args}){/if}
-                {else}
-                {this.cate}.{this.name}{if this.cat=="method"}({args}){/if}
+    <div class="ui-home">
+        <div class="api-detail">
+            <ul>
+                <li>
+                    <b>{$Lang.usage}:</b>
+                    {if this.cate=="pipe"}
+                    {{ {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if} }}
+                    {elsif this.cate=="template"}
+                    {this.name}{if this.cat=="method"}({args}){/if}
+                    {else}
+                    {this.cate}.{this.name}{if this.cat=="method"}({args}){/if}
+                    {/if}
+                </li>
+                {if this.title}
+                <li>{$Lang.title}: {this.title}</li>
                 {/if}
-            </li>
-            {if this.title}
-            <li>{$Lang.title}: {this.title}</li>
-            {/if}
-            {if this.des}
-            <li>{$Lang.descriptions}: {this.des}</li>
-            {/if}
-            {if this.type}
-            <li>{$Lang.type}: {this.type}</li>
-            {/if}
-        </ul>
+                {if this.des}
+                <li>{$Lang.descriptions}: {this.des}</li>
+                {/if}
+                {if this.type}
+                <li>{$Lang.type}: {this.type}</li>
+                {/if}
+            </ul>
 
-        {if this.cat=="property"}
+            {if this.cat=="property"}
             {if this.list}
             <p>{$lang.optional_value}:</p>
             <ul>
@@ -99,7 +101,7 @@
                 {/foreach}
             </ul>
             {/if}
-        {elsif this.cat=="method"||this.cat=="event"}
+            {elsif this.cat=="method"||this.cat=="event"}
             {if this.args}
             <table border="1">
                 <tr>
@@ -118,15 +120,17 @@
                 {/foreach}
             </table>
             {/if}
-        {/if}
+            {/if}
 
-        {if this.example}
-        <p class="ui-api-detailExp">{$Lang.example} : </p>
-        <code>{this.example|code}</code>
-        <p><button class="api-btn" data-event="runCode">run code</button></p>
-        <div class="api-detail-result"></div>
-        {/if}
+            {if this.example}
+            <p class="ui-api-detailExp">{$Lang.example} : </p>
+            <code>{this.example|code}</code>
+            <p><button class="api-btn" data-event="runCode">run code</button></p>
+            <div class="api-detail-result"></div>
+            {/if}
+        </div>
     </div>
+
 </template>
 
 <script type="text/ecmascript-6">

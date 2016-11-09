@@ -58,3 +58,8 @@ code{
     color: #465665;
     line-height: 25px;
 }
+
+.ui-home{
+    width: 80%;
+    margin: 0 auto;
+}

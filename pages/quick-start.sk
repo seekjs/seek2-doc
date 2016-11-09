@@ -4,7 +4,7 @@
 
 <style>
 .ui-start{
-    width: 910px;
+    width: 80%;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
