@@ -10,25 +10,40 @@
 }
 
 .ui-spa{
+    width:80%;
     margin:0 auto;
 }
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 736px) {
+    .ui-spa{
+        width:100%;
+        margin:0 auto;
+    }
+}
 .ui-spa-title{
-    background-color: lightgrey;
-    /*padding-left: 20px;*/
+    font-size:20px;
     padding: 1rem;
 }
 .ui-spa ul li{
     padding: 0.5rem 2rem;
     /*padding-left: 20px;*/
 }
+    
+.ui-spa-bg{
+    background: lightgrey;
+    color: #34495e;
+}
+
 </style>
 
 <template>
+    <header class="ui-common-details-title">{$Lang.summary}</header>
 <ul class="ui-spa-ul">
     <li>
         <div class="ui-spa">
-            <h3 class="ui-spa-title">1.{$lang.framework_base}</h3>
-            <ul>
+            <h4 class="ui-spa-title">1.{$lang.framework_base}</h4>
+            <ul class="ui-spa-bg">
                 <li>1.{$lang.spa}</li>
                 <li>2.{$lang.modularization}</li>
                 <li>3.{$lang.template}</li>
@@ -36,8 +51,8 @@
         </div>
 
         <div class="ui-spa">
-            <h3 class="ui-spa-title">2.{$lang.framework_rule}</h3>
-            <ul>
+            <h4 class="ui-spa-title">2.{$lang.framework_rule}</h4>
+            <ul class="ui-spa-bg">
                 <li>1.{$lang.simple}</li>
                 <li>2.{$lang.no_repeat}</li>
                 <li>3.{$lang.data_driven}</li>
@@ -45,8 +60,8 @@
         </div>
 
         <div class="ui-spa">
-            <h3 class="ui-spa-title">3.{$lang.multi_mode}</h3>
-            <ul>
+            <h4 class="ui-spa-title">3.{$lang.multi_mode}</h4>
+            <ul class="ui-spa-bg">
                 <li>1.{$lang.mvc_framework}</li>
                 <li>2.{$lang.lightweight}</li>
                 <li>3.{$lang.single}</li>

@@ -58,3 +58,10 @@ code{
     color: #465665;
     line-height: 25px;
 }
+
+.ui-common-details-title{
+    background: #000;
+    color: #ffffff;
+    font-size:25px;
+    padding:1rem 0;
+}
