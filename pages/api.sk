@@ -108,6 +108,7 @@
         <div class="ui-api-home">
             <p class="ui-api-ul ui-api-topone ui-api-one">{$lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>
             {foreach src=this.apiList key=cateName item=cate}
+            {if !this.params.id||this.params.id==cateName}
             <p class="ui-api-top {if cateName=='app'}ui-app{/if}{if cateName=='view'}ui-view{/if}{if cateName=='template'}ui-template{/if}{if cateName=='pipe'}ui-pipe{/if}">seekjs/{cateName}</p>
 
             <ul class="ui-api-ul clear">
@@ -130,6 +131,7 @@
             </ul>
             {if cate.des}
             <p class="ui-api-des ui-api-one">{cate.des}</p>
+            {/if}
             {/if}
             {/foreach}
             <footer class="ui-api-one"></footer>

@@ -47,9 +47,9 @@ exports.lang = {
         cn: "使用标题修复",
         en: "Use Title Repair"
     },
-    extension_name: {
-        cn: "扩展名",
-        en: "Extension name"
+    page_jump: {
+        cn: "页面跳转",
+        en: "page jump"
     },
     page_method_extension: {
         cn: "设置页面公用方法扩展",
@@ -170,10 +170,14 @@ exports.getApiList = function() {
                 example: `app.useTitleRepair = true;`
             },
             {
-                name: "ext",
-                title: lang.extension_name,
-                type: "object",
-                cat: "property"
+                name: "go",
+                title: lang.page_jump,
+                cat: "method",
+                args: [
+                    {name: "page", title: lang.page_name, type: "string", required: true}
+                ],
+                usage: `app.go(page)`,
+                example:  `app.go("home");`
             },
             {
                 name: "viewEx",
