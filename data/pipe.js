@@ -116,7 +116,8 @@ exports.getApiList = function() {
                 method: "method",
                 args: [
                     {name: "num", type: "Number", title: $Lang.number, required: 1}
-                ]
+                ],
+                example: `<template>{8|en}</template>`
             },
             {
                 name: "cn",
@@ -124,7 +125,8 @@ exports.getApiList = function() {
                 method: "method",
                 args: [
                     {name: "num", type: "Number", title: $Lang.number, required: 1}
-                ]
+                ],
+                example: `<template>{8|cn}</template>`
             },
             {
                 name: "big",
@@ -132,7 +134,8 @@ exports.getApiList = function() {
                 method: "method",
                 args: [
                     {name: "num", type: "Number", title: $Lang.number, required: 1}
-                ]
+                ],
+                example: `<template>{8|big}</template>`
             },
             {
                 name: "sep",
@@ -151,7 +154,8 @@ exports.getApiList = function() {
                 args: [
                     {name: "dateObj", type: "String", title: $Lang.date+$Lang.object, required: 1},
                     {name: "rule", type: "String", title: lang.formatting_style, required: 1}
-                ]
+                ],
+                example: `<template>{new Date()|date_format:yyyy年M月dd日 hh:mm:ss}</template>`
             },
             {
                 name: "rmb",
@@ -159,7 +163,8 @@ exports.getApiList = function() {
                 cat: "method",
                 args: [
                     {name: "number", type: "Number", title: $Lang.rmb, required: 1}
-                ]
+                ],
+                example: `<template>{88.8|rmb}</template>`
             },
 
             //对象

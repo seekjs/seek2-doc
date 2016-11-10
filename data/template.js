@@ -57,23 +57,23 @@ exports.getApiList = function() {
         list: [
             {
                 name: "if",
-                title: lang.condition_start
+                title: lang.condition_start,
+                usage: `{if condition}`
             },
             {
                 name: "elsif",
-                title: lang.condition_branch
+                title: lang.condition_branch,
+                usage: `{elsif condition}`
             },
             {
                 name: "else",
-                title: lang.other_condition
+                title: lang.other_condition,
+                usage: `{else}`
             },
             {
                 name: "foreach",
-                title: lang.loop_start
-            },
-            {
-                name: "=[obj]",
-                title: $Lang.amount_to + "console.log(obj)"
+                title: lang.loop_start,
+                usage: `{foreach src=json key=index }`
             },
             {
                 name: "src.length",
@@ -92,7 +92,7 @@ exports.getApiList = function() {
                 title: lang.current_item
             },
             {
-                name: "i",
+                name: "index",
                 title: lang.start_from_zero_index
             },
             {
