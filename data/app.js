@@ -88,6 +88,16 @@ exports.getApiList = function() {
     return {
         list: [
             {
+                name: "useTitleRepair",
+                title: lang.use_title_repair,
+                des: "前提条件, 只有设置有title属性的页面才有效",
+                cat: "property",
+                usage: `app.useTitleRepair = [boolean]`,
+                type: "boolean",
+                defaultVal: "false",
+                example: `app.useTitleRepair = true;`
+            },
+            {
                 name: "useAnimate",
                 title: lang.is_use_animate,
                 cat: "property",
@@ -108,78 +118,6 @@ exports.getApiList = function() {
                 example: `app.aniDuration = 1000;`
             },
             {
-                name: "plugin",
-                title: lang.plugin,
-                des: lang.plugin_des,
-                cat: "property",
-                subcat: "plugin",
-                type: "object",
-                usage: `app.plugin.[plugin-name].[plugin-method]`,
-                example: `app.plugin.dialog.alert("hello seekjs")`
-
-            },
-            {
-                name: "usePlugin",
-                des: `${lang.use_plugin}, <a href="#guide-plugin">${$Lang.see_details}</a>`,
-                args: [
-                    {name: "plugin-name", title: lang.plugin_module, type: "string", required:true}
-                ],
-                cat: "method",
-                subcat: "plugin",
-                usage: `app.usePlugin(plugin-name)`,
-                example: `app.usePlugin("seek-plugin-dialog");`
-            },
-            {
-                name: "onViewInit",
-                title: lang.all_view_ini_event,
-                args: [
-                    {name: "view", title: lang.current_view, type: "object", required:false}
-                ],
-                cat: "event",
-                usage: `app.onViewInit = function(view){...}`,
-                example: `
-                app.onViewInit = function(view){
-                    if(!localStorage.isLogin && view.uri!="login"){
-                        app.go("login");
-                    }
-                }`
-            },
-            {
-                name: "onViewRender",
-                title: lang.all_view_loaded_event,
-                args: [
-                    {name: "view", title: lang.current_view, type: "object"}
-                ],
-                cat: "event",
-                usage: `app.onViewRender = function(view){...}`,
-                example: `
-                app.onViewRender = function(view){
-                    if(view.uri=="home"){
-                        alert("welcome goto my home!");
-                    }
-                }`
-            },
-            {
-                name: "useTitleRepair",
-                title: lang.use_title_repair,
-                des: "前提条件, 只有设置有title属性的页面才有效",
-                cat: "property",
-                usage: `app.useTitleRepair = [boolean]`,
-                type: "boolean",
-                defaultVal: "false",
-                example: `app.useTitleRepair = true;`
-            },
-            {
-                name: "go",
-                title: lang.page_jump,
-                cat: "method",
-                args: [
-                    {name: "page", title: lang.page_name, type: "string", required: true}
-                ],
-                usage: `app.go(page)`,
-                example:  `app.go("home");`
-            },
-            {
                 name: "viewEx",
                 title: lang.page_method_extension,
                 des: "相比于app.addView, 只能设置一次",
@@ -196,6 +134,42 @@ exports.getApiList = function() {
                 cat: "property",
                 usage: `app.pipeEx = [object]`,
                 example:  `app.pipeEx = require('util.pipeEx');`
+            },
+            {
+                name: "plugin",
+                title: lang.plugin,
+                des: lang.plugin_des,
+                cat: "property",
+                subcat: "plugin",
+                type: "object",
+                usage: `app.plugin.[plugin-name].[plugin-method]`,
+                example: `app.plugin.dialog.alert("hello seekjs")`
+
+            },
+            {
+                name: "config",
+                des: lang.dir_setting,
+                args: [
+                    {name: "options", title: lang.pages_dir_config, type: "object", required:true},
+                    {name: "options.path", title: lang.pages_dir_config, type: "string", required:true}
+                ],
+                cat: "method",
+                usage: `app.addPipe(options)`,
+                example:  `
+                app.config({
+                    path: "/path/to/"
+                });`
+            },
+            {
+                name: "usePlugin",
+                des: `${lang.use_plugin}, <a href="#guide-plugin">${$Lang.see_details}</a>`,
+                args: [
+                    {name: "plugin-name", title: lang.plugin_module, type: "string", required:true}
+                ],
+                cat: "method",
+                subcat: "plugin",
+                usage: `app.usePlugin(plugin-name)`,
+                example: `app.usePlugin("seek-plugin-dialog");`
             },
             {
                 name: "addView",
@@ -224,18 +198,14 @@ exports.getApiList = function() {
                 app.addPipe(require('util.pipeEx2'));`
             },
             {
-                name: "config",
-                des: lang.dir_setting,
-                args: [
-                    {name: "options", title: lang.pages_dir_config, type: "object", required:true},
-                    {name: "options.path", title: lang.pages_dir_config, type: "string", required:true}
-                ],
+                name: "go",
+                title: lang.page_jump,
                 cat: "method",
-                usage: `app.addPipe(options)`,
-                example:  `
-                app.config({
-                    path: "/path/to/"
-                });`
+                args: [
+                    {name: "page", title: lang.page_name, type: "string", required: true}
+                ],
+                usage: `app.go(page)`,
+                example:  `app.go("home");`
             },
             {
                 name: "init",
@@ -247,6 +217,51 @@ exports.getApiList = function() {
                 ],
                 cat: "method",
                 example: `app.init("home");`
+            },
+            {
+                name: "onInit",
+                title: lang.all_view_ini_event,
+                args: [
+                    {name: "view", title: lang.current_view, type: "object", required:false}
+                ],
+                cat: "event",
+                usage: `app.onInit = function(view){...}`,
+                example: `
+                app.onInit = function(view){
+                    if(!localStorage.isLogin && view.uri!="login"){
+                        app.go("login");
+                    }
+                }`
+            },
+            {
+                name: "onRenderBefore",
+                title: lang.all_view_loaded_event,
+                args: [
+                    {name: "view", title: lang.current_view, type: "object"}
+                ],
+                cat: "event",
+                usage: `app.onRender = function(view){...}`,
+                example: `
+                app.onRenderBefore = function(view){
+                    if(view.uri=="home"){
+                        alert("welcome goto my home!");
+                    }
+                }`
+            },
+            {
+                name: "onRender",
+                title: lang.all_view_loaded_event,
+                args: [
+                    {name: "view", title: lang.current_view, type: "object"}
+                ],
+                cat: "event",
+                usage: `app.onRender = function(view){...}`,
+                example: `
+                app.onRender = function(view){
+                    if(view.uri=="home"){
+                        alert("welcome goto my home!");
+                    }
+                }`
             }
         ]
     };

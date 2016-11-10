@@ -252,6 +252,11 @@ exports.getApiList = function() {
                 cat: "method"
             },
             {
+                name: "render",
+                title: lang.refresh,
+                cat: "method"
+            },
+            {
                 name: "show",
                 title: $Lang.show + "View",
                 cat: "method"
@@ -282,13 +287,13 @@ exports.getApiList = function() {
                 cat: "method"
             },
             {
-                name: "render",
-                title: lang.refresh,
-                cat: "method"
-            },
-            {
                 name: "onInit",
                 title: lang.ini_event,
+                cat: "event"
+            },
+            {
+                name: "onRenderBefore",
+                title: lang.render_event,
                 cat: "event"
             },
             {
