@@ -4,8 +4,6 @@
 
 <style>
     .api-detail{
-        padding-top: 50px;
-        line-height: 30px;
         background-color: #f6f7fb;
         padding: 20px;
     }
@@ -14,22 +12,18 @@
         border-collapse: collapse;
         width: 80%;
     }
-    .api-detail table th{
 
-    }
-    .api-detail table td{
-
-    }
-    .ui-api-detail{
-        padding-left: 50px;
-        padding-top: 50px;
+    .api-detail li{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 16px;
         font-weight: bold;
-    }
-
-    .ui-api-detail li{
-        font-size: 14px;
         line-height: 30px;
-        font-weight: normal;
+    }
+    .api-detail li span{
+        font-size: 14px;
+        color: #33b4db;
     }
 
     .api-detail code{
@@ -62,6 +56,9 @@
     .api-btn:hover{
         background-color: #20A8F1;
     }
+    .ui-apiDetail-header{
+        padding: 20px;
+    }
 </style>
 
 <template>
@@ -93,14 +90,15 @@
                 <!--{/if}-->
             <!--</ul>-->
 <!--=======-->
-    <div class="api-detail">
-        <header class="left bold bg-black white">{this.cate}.{this.name}</header>
+    <div class="ui-home">
+        <header class="left bold bg-black white ui-apiDetail-header">{this.cate}.{this.name}</header>
+        <div class="api-detail">
         <ul>
             {if this.title}
-            <li>{$Lang.title}: {this.title}</li>
+            <li>{$Lang.title}: <span>{this.title}</span></li>
             {/if}
             {if this.des}
-            <li>{$Lang.descriptions}: {this.des}</li>
+            <li>{$Lang.descriptions}: <span>{this.des}</span></li>
             {/if}
             <li>
                 <b>{$Lang.usage}:</b>
@@ -117,10 +115,10 @@
                 {/if}
             </li>
             {if this.type}
-            <li>{$Lang.type}: {this.type}</li>
+            <li>{$Lang.type}: <span>{this.type}</span></li>
             {/if}
             {if this.defaultVal}
-            <li>{$lang.default_value}: {this.defaultVal}</li>
+            <li>{$lang.default_value}: <span>{this.defaultVal}</span></li>
             {/if}
         </ul>
 
