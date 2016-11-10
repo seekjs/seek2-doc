@@ -6,8 +6,8 @@
 </style>
 
 <template>
-    <header class="ui-common-details-title">{$Lang.unit_test}</header>
     <div class="ui-spa">
+        <header class="ui-common-details-title">{$Lang.unit_test}</header>
         <h4 class="ui-spa-title">1. {$Lang.usage}</h4>
         <ul class="ui-spa-bg">
             <li>test</li>

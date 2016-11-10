@@ -7,6 +7,7 @@
 </style>
 
 <template>
+    <div>
     <header class="ui-common-details-title">{$lang.view}</header>
     <ul class="ui-spa">
         <li>
@@ -28,6 +29,7 @@
             </div>
         </li>
     </ul>
+    </div>
 </template>
 
 <script type="text/ecmascript-6">

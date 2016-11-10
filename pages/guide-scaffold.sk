@@ -3,8 +3,8 @@
 */
 
 <template>
-    <header class="ui-common-details-title">{$Lang.scaffold}</header>
     <div class="guide-scaffold ui-spa">
+        <header class="ui-common-details-title">{$Lang.scaffold}</header>
         <p class="ui-spa-title">seekjs {$lang.auto_build_tool}</p>
         <p class="ui-spa-title">{$lang.common_commands}:</p>
         <ul class="ui-spa-bg">

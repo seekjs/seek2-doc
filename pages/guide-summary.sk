@@ -19,6 +19,7 @@
 </style>
 
 <template>
+    <div>
 <header class="ui-common-details-title">{$Lang.summary}</header>
 <ul class="ui-spa-ul">
     <li>
@@ -50,6 +51,7 @@
         </div>
     </li>
 </ul>
+    </div>
 </template>
 
 <script type="text/ecmascript-6">

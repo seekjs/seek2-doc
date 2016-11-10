@@ -10,12 +10,13 @@ module.exports = function (args) {
         static: {
             items: [{
                 path: "/",
-                dir: __dirname
+                dir: args.time ? `${__dirname}/dist` : __dirname
             }]
         },
         pub:{
-            packages: ["README.md", "css", "data", "images", "index.html", "main.js", "nobox.config.js", "node_modules", "package.json", "pages", "plugins", "utils"]
+            packages: ["nobox.config.js", "node_modules", "dist"]
         },
+        gzip: true,
         port: 2016
     };
 

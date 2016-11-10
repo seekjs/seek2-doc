@@ -6,8 +6,8 @@
 </style>
 
 <template>
-    <header class="ui-common-details-title">{$Lang.plugin}</header>
     <div class="ui-spa">
+        <header class="ui-common-details-title">{$Lang.plugin}</header>
         <p>{$lang.seekJs_no_store_plugin}</p>
         <ul>
             <li>

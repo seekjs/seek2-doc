@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "seekjs api and document",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
     "seekjs": "2.0.5"
   },
   "dependencies": {
@@ -17,11 +19,18 @@
     "name": "Li",
     "email": "61114579@qq.com"
   },
-  "contributors": [{
-    "name": "qumin111"
-  },{
-    "name": "alex8906"
-  },{
-    "name": "498107199"
-  }]
+  "scripts": {
+    "build": "babel /data/github/seekjs-doc/dist/app.js -o /data/github/seekjs-doc/dist/app.js --compact=auto --plugins=es2015"
+  },
+  "contributors": [
+    {
+      "name": "qumin111"
+    },
+    {
+      "name": "alex8906"
+    },
+    {
+      "name": "498107199"
+    }
+  ]
 }

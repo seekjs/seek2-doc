@@ -186,7 +186,7 @@ exports.getApiList = function() {
                 type: "object",
                 cat: "property",
                 usage: `app.viewEx = [object]`,
-                example:  `app.viewEx = require("util.viewEx");`
+                example:  `app.viewEx = require('util.viewEx');`
             },
             {
                 name: "pipeEx",
@@ -195,7 +195,7 @@ exports.getApiList = function() {
                 type: "object",
                 cat: "property",
                 usage: `app.pipeEx = [object]`,
-                example:  `app.pipeEx = require("util.pipeEx");`
+                example:  `app.pipeEx = require('util.pipeEx');`
             },
             {
                 name: "addView",
@@ -207,8 +207,8 @@ exports.getApiList = function() {
                 ],
                 usage: `app.addView(viewEx)`,
                 example:  `
-                app.addView(require("util.viewEx1"));
-                app.addView(require("util.viewEx2"));`
+                app.addView(require('util.viewEx1'));
+                app.addView(require('util.viewEx2'));`
             },
             {
                 name: "addPipe",
@@ -220,8 +220,8 @@ exports.getApiList = function() {
                 ],
                 usage: `app.addPipe(pipeEx)`,
                 example:  `
-                app.addPipe(require("util.pipeEx1"));
-                app.addPipe(require("util.pipeEx2"));`
+                app.addPipe(require('util.pipeEx1'));
+                app.addPipe(require('util.pipeEx2'));`
             },
             {
                 name: "config",
