@@ -3,7 +3,7 @@
  */
 
 exports.code = function(code){
-    return code.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    return code.replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,'<br>').replace(/\s/g,"&nbsp;");
 };
 
 //数字转字母

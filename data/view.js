@@ -10,21 +10,9 @@ exports.lang = {
         cn: "说明：P1=基本属性\nP2=View/子View之间的相互调用\nP3=URL地址相关",
         en: "Description: P1= basic attribute \nP2=View/ View sub \nP3=URL between the mutual call address related"
     },
-    title_example: {
-        cn: "设置标题 : exp.title = '欢迎使用seek.js'",
-        en: "Set title: exp.title = 'welcome to use seek.js'"
-    },
     all_type: {
         cn: "任意类型",
         en: "Arbitrary type"
-    },
-    template_code: {
-        cn: "模板代码",
-        en: "Template code"
-    },
-    template_html_example: {
-        cn: 'js: exports.msg = {name:"姓名"}; \nhtml: <p>{this.msg.name}</p> \nresult : 姓名',
-        en: 'Js: exports.msg = {name: "Name"};   \nHTML: <p>{this.msg.name}</p> \nresult: Name'
     },
     top_container: {
         cn: "最顶层容器",
@@ -37,10 +25,6 @@ exports.lang = {
     main_view: {
         cn: "主View(最顶层View)",
         en: "Main View (top View)"
-    },
-    child_view: {
-        cn: "子View,直接写view id",
-        en: "Child View, directly write ID view"
     },
     part: {
         cn: "局部",
@@ -74,10 +58,6 @@ exports.lang = {
         cn: "single模式",
         en: "Single mode"
     },
-    param_type: {
-        cn: "参数类型",
-        en: "Parameter type"
-    },
     back_prev_page: {
         cn: "返回上一页",
         en: "Return to the last page"
@@ -89,10 +69,6 @@ exports.lang = {
     generate_html: {
         cn: "生成HTM",
         en: "Generate HTM"
-    },
-    generate_template_code: {
-        cn: "生成模板代码",
-        en: "Generate template code"
     },
     refresh: {
         cn: "刷新页面",
@@ -124,29 +100,37 @@ exports.getApiList = function() {
                     sub: $Lang.sub_view
                 },
                 cat: "property",
-                subcat: "basic"
-            },
-            {
-                name: "title",
-                title: $Lang.title,
-                type: "String",
-                example: lang.title_example,
-                cat: "property",
-                subcat: "basic"
+                subcat: "basic",
+                example: `
+                <template>
+                    <div class="main">
+                        <div data-view="subview1"></div>
+                        <div data-view="subview2"></div>
+                    </div>
+                </template>`
             },
             {
                 name: "model",
                 title: $Lang.model,
+                des: "当设置model时, 模板的this指向model, 不然指向view本身",
                 type: lang.all_type,
-                example: "exports.model={a:1,b:2};",
                 cat: "property",
-                subcat: "basic"
+                subcat: "basic",
+                example: `
+                <template>
+                    <div>
+                        <p>姓名: {this.name}</p>
+                        <p>性别: {this.sex}</p>
+                    </div>
+                </template>
+                <script>
+                exports.model = {name:"小明", sex:"男"};
+                <\/script>`
             },
             {
-                name: "templateHTML",
-                title: lang.template_code,
-                type: "String",
-                example: lang.template_html_example,
+                name: "box",
+                title: lang.top_container,
+                type: "Node",
                 cat: "property",
                 subcat: "basic"
             },
@@ -167,13 +151,6 @@ exports.getApiList = function() {
             {
                 name: "root",
                 title: lang.main_view,
-                type: "Object",
-                cat: "property",
-                subcat: "box"
-            },
-            {
-                name: "[subviewname]",
-                title: lang.child_view,
                 type: "Object",
                 cat: "property",
                 subcat: "box"
@@ -231,12 +208,19 @@ exports.getApiList = function() {
                 subcat: "url"
             },
             {
-                name: "paramType",
-                title: lang.param_type,
-                type: "String",
-                example: "double",
+                name: "query",
+                title: "查询参数",
+                type: "Object",
+                subItems: [
+                    {name: lang.double_mode, title: $Lang.return+$Lang.object},
+                    {name: lang.single_mode, title: $Lang.return+$Lang.array}
+                ],
                 cat: "property",
-                subcat: "url"
+                subcat: "url",
+                example: `
+                uri:  #home?a=1&b=2
+                query: {a:1,b:2}
+                `
             },
             {
                 name: "go",
@@ -244,7 +228,12 @@ exports.getApiList = function() {
                 args: [
                     {name: "uri", type: "String", title: $Lang.title, required: 1}
                 ],
-                cat: "method"
+                cat: "method",
+                example: `
+                exports.go("home");     //不带参数
+                exports.go("list/cat/js");      //带参数
+                exports.go("list/cat/js?key=seekjs");      //带查询参数
+                `
             },
             {
                 name: "back",
@@ -279,11 +268,6 @@ exports.getApiList = function() {
             {
                 name: "getHTML",
                 title: lang.generate_html,
-                cat: "method"
-            },
-            {
-                name: "getTemplate",
-                title: lang.generate_template_code,
                 cat: "method"
             },
             {

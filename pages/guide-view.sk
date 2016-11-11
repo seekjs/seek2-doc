@@ -23,8 +23,10 @@
             <div class="ui-view">
                 <h4 class="ui-spa-title">2.{$Lang.sub_view}</h4>
                 <ul class="ui-spa-bg">
-                    <li>1.{$Lang.usage}</li>
-                    <li>2.{$Lang.Call} {$Lang.main_view}</li>
+                    <li>{$Lang.Call}最顶层view: view.root</li>
+                    <li>{$Lang.Call}上一级view: view.parent</li>
+                    <li>{$Lang.Call}下一级view: view.[subview-name]</li>
+                    <li>{$Lang.Call}多层级view: view.[subview-name].[sub-subview-name]</li>
                 </ul>
             </div>
         </li>

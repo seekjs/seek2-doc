@@ -213,8 +213,8 @@
 
     exports.setLang = function(){
         localStorage.lang = this.element.value;
-        //exports.render();
-        location.reload();
+        require("sys.app").onInit(this);
+        exports.render();
     };
 
     exports.$lang = {

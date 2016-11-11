@@ -13,6 +13,9 @@ module.exports = function (args) {
                 dir: args.time ? `${__dirname}/dist` : __dirname
             }]
         },
+        onPubBefore: function(cmd){
+            //cmd(`myseek build sysPath=/data/github/seekjs/`);
+        },
         pub:{
             packages: ["nobox.config.js", "node_modules", "dist"]
         },

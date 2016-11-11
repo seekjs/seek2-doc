@@ -3,19 +3,32 @@
  */
 
 var Lang = require("utils.Lang");
-var app = require("data.app");
-var view = require("data.view");
-var template = require("data.template");
-var pipe = require("data.pipe");
+
+exports.lang = {
+    view_description: {
+        cn: "说明：P1=基本属性\nP2=View/子View之间的相互调用\nP3=URL地址相关",
+        en: "Description: P1= basic attribute \nP2=View/ View sub \nP3=URL between the mutual call address related"
+    }
+};
 
 //属性列表
 exports.getApiList = function() {
-    //var lang = Lang.getLang(exports.lang, localStorage.lang);
+    var lang = Lang.getLang(exports.lang, localStorage.lang);
+
     return {
-        app: app.getApiList(),
-        view: view.getApiList(),
-        template: template.getApiList(),
-        pipe: pipe.getApiList()
+        app: {
+            list: []
+        },
+        view: {
+            des: lang.view_description,
+            list: []
+        },
+        template: {
+            list: []
+        },
+        pipe: {
+            list: []
+        }
     };
 };
 

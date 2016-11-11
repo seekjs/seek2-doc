@@ -43,10 +43,6 @@ exports.lang = {
         cn: "所有View的加载完成事件",
         en: "All View loaded to complete the event"
     },
-    use_title_repair: {
-        cn: "使用标题修复",
-        en: "Use Title Repair"
-    },
     page_jump: {
         cn: "页面跳转",
         en: "page jump"
@@ -87,16 +83,6 @@ exports.getApiList = function() {
 
     return {
         list: [
-            {
-                name: "useTitleRepair",
-                title: lang.use_title_repair,
-                des: "前提条件, 只有设置有title属性的页面才有效",
-                cat: "property",
-                usage: `app.useTitleRepair = [boolean]`,
-                type: "boolean",
-                defaultVal: "false",
-                example: `app.useTitleRepair = true;`
-            },
             {
                 name: "useAnimate",
                 title: lang.is_use_animate,
@@ -164,12 +150,23 @@ exports.getApiList = function() {
                 name: "usePlugin",
                 des: `${lang.use_plugin}, <a href="#guide-plugin">${$Lang.see_details}</a>`,
                 args: [
-                    {name: "plugin-name", title: lang.plugin_module, type: "string", required:true}
+                    {name: "plugin-name", title: lang.plugin_module, type: "string", required:true},
+                    {name: "options", title: "选项", type: "object", required:false},
+                    {name: "options.lang", title: "语言", type: "string", required:false},
+                    {name: "options.langPack", title: "语言包", type: "object", required:false},
                 ],
                 cat: "method",
                 subcat: "plugin",
                 usage: `app.usePlugin(plugin-name)`,
-                example: `app.usePlugin("seek-plugin-dialog");`
+                example: `
+                app.usePlugin("seek-plugin-dialog");        //不带参数
+                app.usePlugin("seek-plugin-dialog", {
+                    lang:"en",
+                    langPack:{
+                        hello:{cn:"你好",cn:"Hello"}
+                    }
+                });  //带参数
+                `
             },
             {
                 name: "addView",
