@@ -21,7 +21,7 @@ exports.getApiList = function() {
         },
         view: {
             des: lang.view_description,
-            list: []
+            list: ["type", "model", "box", "ui"]
         },
         template: {
             list: []

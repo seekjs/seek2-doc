@@ -23,11 +23,9 @@ module.exports = function (args) {
         port: 2016
     };
 
-    if(args.f && myconfig.frameworkDir){
-        config.static.items.unshift({
-            path: "/node_modules/seekjs/",
-            dir: myconfig.frameworkDir
-         });
+    if(args.f){
+        config.static.items.unshift({path: "/node_modules/", dir: "/data/github/seekjs-plugin"});
+        config.static.items.unshift({path: "/node_modules/seekjs/", dir: "/data/github/seekjs"});
     }
 
     return config;

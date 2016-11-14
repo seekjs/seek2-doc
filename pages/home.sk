@@ -153,7 +153,8 @@
         <ul class="clear ui-menu">
             <li data-event="go:guide">{$Lang.guide}</li>
             <li data-event="go:api">API</li>
-            <li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li>
+            <!--li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li-->
+            <li data-event="alert:http://seekjs.club:2000">{$Lang.forum}</li>
             <li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li>
             <li data-event="go:http://github.com/likaituan/seekjs">GitHub</li>
         </ul>
@@ -167,29 +168,30 @@
     <div id="features">
         <div class="feats">
             <div class="feat">
-                <h2><span class="icon simple"></span>{$Lang.three_in_one}</h2>
-                <p>{$lang.three_in_one_des}</p>
+                <h2><span class="icon compact"></span>{$lang.modular}</h2>
+                <p>{$lang.modular_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon module"></span>{$lang.spa}</h2>
+                <p>{$lang.spa_des}</p>
             </div>
             <div class="feat">
                 <h2><span class="icon powerful"></span>{$lang.data_driver}</h2>
                 <p>{$lang.data_driver_des}</p>
             </div>
             <div class="feat">
-                <h2><span class="icon compact"></span>{$lang.node_modular}</h2>
-                <p>{$lang.node_modular_des}</p>
+                <h2><span class="icon simple"></span>{$lang.three_in_one}</h2>
+                <p>{$lang.three_in_one_des}</p>
             </div>
             <div class="feat">
-                <h2><span class="icon composable"></span>{$lang.nice_plugin}</h2>
-                <p>{$lang.nice_plugin_des}</p>
+                <h2><span class="icon composable"></span>{$lang.nice_extend_mode}</h2>
+                <p>{$lang.nice_extend_mode_des}</p>
             </div>
             <div class="feat">
                 <h2><span class="icon fast"></span>{$lang.lightweight}</h2>
                 <p>{$lang.lightweight_des}</p>
             </div>
-            <div class="feat">
-                <h2><span class="icon module"></span>{$lang.multi_language}</h2>
-                <p>{$lang.multi_language_des}</p>
-            </div>
+
         </div>
     </div>
     <footer class="center">
@@ -205,18 +207,8 @@
     </footer>
 </div>
 </template>
+
 <script>
-    exports.langs = {
-        en: "english",
-        cn: "中文"
-    };
-
-    exports.setLang = function(){
-        localStorage.lang = this.element.value;
-        require("sys.app").onInit(this);
-        exports.render();
-    };
-
     exports.$lang = {
         framework_des: {
             cn: "数据驱动的组件，为现代化的 Web 界面而生",
@@ -227,9 +219,21 @@
             en: "switch language"
         },
 
-        three_in_one_des: {
-            cn: "CSS样式 + HTML模板 + Javascript合并成一个文件",
-            en: "CSS style + HTML template + Javascript mixed into one file"
+        modular: {
+            cn: "模块化+命名空间",
+            en: "Modular Add Namespace"
+        },
+        modular_des: {
+            cn: "采用目前流行的CommonJS模块化规范,无缝兼容NodeJS; 独创的命名空间写法, 方便加载和管理模块",
+            en: "Real front end browser module, non AMD specification; Writing the original namespace, convenient loading and management module"
+        },
+        spa: {
+            cn: "单页应用",
+            en: "Single Page Application"
+        },
+        spa_des: {
+            cn: "简单的路由配置,丰富的页面切换效果",
+            en: "Simple routing configuration, rich page switching effect"
         },
         data_driver:{
             cn: "数据驱动模板",
@@ -239,37 +243,98 @@
             cn: "数据跟模板双向绑定, 只需专注数据, 去掉繁琐的dom操作, 让你的工作效率嗖嗖提升",
             en: "Basically do not operate DOM, just care about the data"
         },
-        node_modular: {
-            cn: "NodeJs 模块化",
-            en: "NodeJs Modular"
+        three_in_one: {
+            cn: "三位一体",
+            en: "Three-in-one"
         },
-        node_modular_des: {
-            cn: "采用目前流行的CommonJS模块化规范,无缝兼容NodeJS",
-            en: "Real front end browser module, non AMD specification"
+        three_in_one_des: {
+            cn: "CSS样式 + HTML模板 + Javascript 合并成一个文件",
+            en: "CSS style + HTML template + Javascript mixed into one file"
         },
-        nice_plugin: {
-            cn: "方便的插件机制",
-            en: "Nice Plugin"
+        nice_extend_mode: {
+            cn: "友好的扩展机制",
+            en: "Nice Extend Mode"
         },
-        nice_plugin_des: {
+        nice_extend_mode_des: {
             cn: "统一规范的插件机制, 通过NPM一键安装",
             en: "Unified specification of the plug-in mechanism, through the NPM a key to install"
         },
         lightweight: {
-            cn: "轻量",
+            cn: "轻量模式",
             en: "Lightweight"
         },
         lightweight_des: {
-            cn: "~10kb min+gzip，简洁, 无依赖。",
-            en: "Min+gzip ~10kb, concise, no dependence."
-        },
-        multi_language: {
-            cn: "多语言",
-            en: "Multi Language"
-        },
-        multi_language_des: {
-            cn: "支持多国语言, 让你的项目走向国际化铺平了道路",
-            en: "Simple configuration language, immediately let your project appear on the tall"
+            cn: "~10kb min+gzip，简洁,无依赖, 无需借助任何外部插件即起即用",
+            en: "Min+gzip ~10kb, concise, no dependence, no need to use any external plug-ins to play"
         }
     };
+
+    exports.langs = {
+        en: "english",
+        cn: "中文"
+    };
+
+    exports.setLang = function(){
+        localStorage.lang = this.element.value;
+        require("sys.app").onInit(this);
+        exports.render();
+    };
 </script>
+
+<lang>
+framework_des:
+    cn: 数据驱动的组件，为现代化的 Web 界面而生
+    en: Data driven components for the modernization of the Web interface
+
+switch_language:
+    cn: 切换语言
+    en: switch language
+
+modular:
+    cn: 模块化+命名空间
+    en: Modular Add Namespace
+
+modular_des:
+    cn: 采用目前流行的CommonJS模块化规范,无缝兼容NodeJS; 独创的命名空间写法, 方便加载和管理模块
+    en: Real front end browser module, non AMD specification; Writing the original namespace, convenient loading and management module
+
+spa:
+    cn: 单页应用
+    en: Single Page Application
+
+spa_des:
+    cn: 简单的路由配置,丰富的页面切换效果
+    en: Simple routing configuration, rich page switching effect
+
+data_driver:
+    cn: 数据驱动模板
+    en: Data Driver
+
+data_driver_des:
+    cn: 数据跟模板双向绑定, 只需专注数据, 去掉繁琐的dom操作, 让你的工作效率嗖嗖提升
+    en: Basically do not operate DOM, just care about the data
+
+four_in_one:
+    cn: 四合一
+    en: Four-in-one
+
+four_in_one_des:
+    cn: CSS样式 + HTML模板 + Javascript + Language 合并成一个文件
+    en: CSS style + HTML template + Javascript + Language mixed into one file
+
+nice_extend_mode
+    cn: 友好的扩展机制
+    en: Nice Extend Mode
+
+nice_extend_mode_des:
+    cn: 统一规范的插件机制, 通过NPM一键安装
+    en: Unified specification of the plug-in mechanism, through the NPM a key to install
+
+lightweight:
+    cn: 轻量模式
+    en: Lightweight
+
+lightweight_des:
+    cn: ~10kb min+gzip，简洁,无依赖, 无需借助任何外部插件即起即用
+    en: Min+gzip ~10kb, concise, no dependence, no need to use any external plug-ins to play
+</lang>

@@ -2,7 +2,12 @@
  * Created by likaituan on 15/8/10.
  */
 
-exports.getApi = function() {
+exports.lang = {
+
+};
+
+
+exports.getApi = function(lang) {
     return {
         name: "type",
         title: "view"+$Lang.type,

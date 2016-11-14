@@ -82,7 +82,7 @@ seekjs.config({
 require("sys.app");
 //3. ${$lang.config_app}
 app.config({
-    page: "/pages/"
+    path: "/pages/"
 });
 //4. ${$lang.setting_ini_page}
 app.init("home");`,
