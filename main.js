@@ -27,8 +27,8 @@ app.config({
 app.viewEx = require("utils.viewEx");
 app.pipeEx = require("utils.pipeEx");
 
-app.usePlugin("seek-plugin-mask", {display:false});
-app.usePlugin("seek-plugin-dialog", {display:false});
+app.usePlugin("seekjs-plugin-mask", {display:false});
+app.usePlugin("seekjs-plugin-dialog", {display:false});
 
 var Lang = require("utils.Lang");
 

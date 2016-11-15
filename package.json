@@ -5,9 +5,9 @@
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",
     "seekjs": "2.0.5",
-    "seek-plugin-dialog": "1.0.0",
-    "seek-plugin-mask": "1.0.0",
-    "seek-plugin-flow": "1.0.0"
+    "seekjs-plugin-dialog": "1.0.0",
+    "seekjs-plugin-mask": "1.0.0",
+    "seekjs-plugin-flow": "1.0.0"
   },
   "dependencies": {
     "ifun": "0.2.5"
