@@ -154,8 +154,9 @@
             <li data-event="go:guide">{$Lang.guide}</li>
             <li data-event="go:api">API</li>
             <!--li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li-->
-            <li data-event="alert:http://seekjs.club:2000">{$Lang.forum}</li>
-            <li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li>
+            <li data-event="alert:{$Lang.now_is_developing}">{$Lang.forum}</li>
+            <!--li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li-->
+            <li data-event="go:blog">{$Lang.blog}</li>
             <li data-event="go:http://github.com/likaituan/seekjs">GitHub</li>
         </ul>
     </div>

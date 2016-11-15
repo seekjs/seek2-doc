@@ -1,0 +1,9 @@
+<template>
+    <div class="blog-flow"></div>
+</template>
+
+<script>
+    exports.onRender = function() {
+        exports.usePlugin("seek-plugin-flow");
+    }
+</script>

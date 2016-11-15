@@ -1,7 +1,7 @@
 /**
  * Created by likaituan on 15/8/9.
  */
-
+alert=0;
 seekjs.config({
     ns:{
         "data.": "/data/",
@@ -19,9 +19,6 @@ require("css.class");
 
 var app = require("sys.app");
 
-app.usePlugin("seek-plugin-mask", {display:false});
-app.usePlugin("seek-plugin-dialog", {display:false});
-
 app.config({
     path: `/pages/`,
     useAnimate: true
@@ -29,6 +26,9 @@ app.config({
 
 app.viewEx = require("utils.viewEx");
 app.pipeEx = require("utils.pipeEx");
+
+app.usePlugin("seek-plugin-mask", {display:false});
+app.usePlugin("seek-plugin-dialog", {display:false});
 
 var Lang = require("utils.Lang");
 
