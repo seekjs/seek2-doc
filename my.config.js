@@ -1,3 +1,6 @@
 module.exports = {
-    frameworkDir: "/data/github/seekjs"
+    staticMaps: [
+        //{path: "/node_modules/", dir: "/data/github/seekjs-plugin"},
+        {path: "/node_modules/seekjs/", dir: "/data/github/seekjs"}
+    ]
 };

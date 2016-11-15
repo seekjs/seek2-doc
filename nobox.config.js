@@ -6,12 +6,13 @@ var {requireJson,log} = require("ifun");
 var myconfig = requireJson(`${__dirname}/my.config.js`);
 
 module.exports = function (args) {
+    var staticMaps = myconfig.staticMaps || [];
     var config = {
         static: {
-            items: [{
+            items: staticMaps.concat({
                 path: "/",
                 dir: args.time ? `${__dirname}/dist` : __dirname
-            }]
+            })
         },
         onPubBefore: function(cmd){
             //cmd(`myseek build sysPath=/data/github/seekjs/`);
@@ -24,8 +25,7 @@ module.exports = function (args) {
     };
 
     if(args.f){
-        config.static.items.unshift({path: "/node_modules/", dir: "/data/github/seekjs-plugin"});
-        config.static.items.unshift({path: "/node_modules/seekjs/", dir: "/data/github/seekjs"});
+        config.static.items.unshift();
     }
 
     return config;
