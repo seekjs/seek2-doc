@@ -4,7 +4,7 @@
   "description": "seekjs api and document",
   "devDependencies": {
     "babel-preset-latest": "^6.16.0",
-    "seekjs": "2.0.5",
+    "seekjs": "2.0.8",
     "seekjs-plugin-dialog": "1.0.0",
     "seekjs-plugin-mask": "1.0.0",
     "seekjs-plugin-flow": "1.0.0"
