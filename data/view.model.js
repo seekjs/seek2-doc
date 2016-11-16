@@ -3,6 +3,10 @@
  */
 
 exports.lang = {
+    model: {
+        cn: "模型",
+        en: "Model"
+    },
     model_des: {
         cn: "当设置model时, 模板的this指向model, 不然指向view本身",
         en: "When setting model, the template of the this points to model, or point to the view itself"
@@ -16,7 +20,7 @@ exports.lang = {
 exports.getApi = (lang) => {
     return {
         name: "model",
-        title: $Lang.model,
+        title: lang.model,
         des: lang.model_des,
         type: lang.all_type,
         cat: "property",

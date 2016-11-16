@@ -30,7 +30,7 @@
                 <div class="ui-plugin">
                     <h4 class="ui-spa-title">3.{$Lang.condition}</h4>
                     <ul class="ui-spa-bg">
-                        <li>1.{$lang.plugin_name_prefix}: seek-plugin-</li>
+                        <li>1.{$lang.plugin_name_prefix}: seekjs-plugin-</li>
                         <li>2.{$lang.filename_suffix}.sk</li>
                         <li>3.{$lang.must_contain_doc}</li>
                     </ul>
@@ -108,11 +108,11 @@
     exports.onInit = function(){
         //推荐插件列表
         exports.pluginList = [
-            { page: "seek-plugin-swipe", name: "swipe", title: $lang.swipe },
-            { page: "seek-plugin-move", name: "move", title: $lang.move },
-            { page: "seek-plugin-dialog", name: "dialog", title: $lang.dialog },
-            { page: "seek-plugin-mask", name: "mask", title: $lang.mask },
-            { page: "seek-plugin-datePicker", name: "datePicker", title: $lang.datePicker }
+            { page: "seekjs-plugin-swipe", name: "swipe", title: $lang.swipe },
+            { page: "seekjs-plugin-move", name: "move", title: $lang.move },
+            { page: "seekjs-plugin-dialog", name: "dialog", title: $lang.dialog },
+            { page: "seekjs-plugin-mask", name: "mask", title: $lang.mask },
+            { page: "seekjs-plugin-datePicker", name: "datePicker", title: $lang.datePicker }
         ];
     };
 </script>

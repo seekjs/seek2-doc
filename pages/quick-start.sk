@@ -82,7 +82,13 @@ seekjs.config({
 require("sys.app");
 //3. ${$lang.config_app}
 app.config({
-    path: "/pages/"
+    page: "/pages/"
+});
+或
+app.config({
+    js: "/js/",
+    tp: "/templates/",
+    css: "/css"
 });
 //4. ${$lang.setting_ini_page}
 app.init("home");`,

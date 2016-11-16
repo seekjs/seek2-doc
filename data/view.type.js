@@ -3,21 +3,32 @@
  */
 
 exports.lang = {
-
+    type: {
+        cn: "View类型",
+        en: "View Type"
+    },
+    main_view: {
+        cn: "主View",
+        en: "main view"
+    },
+    sub_view: {
+        cn: "子View",
+        en: "sub view"
+    }
 };
 
 
 exports.getApi = function(lang) {
     return {
         name: "type",
-        title: "view"+$Lang.type,
+        title: lang.type,
         type: "String",
         list: {
-            main: $Lang.main_view,
-            sub: $Lang.sub_view
+            main: lang.main_view,
+            sub: lang.sub_view
         },
         cat: "property",
-        subcat: "basic",
+        sub_cat: "basic",
         example: `
         <template>
             <div class="main">

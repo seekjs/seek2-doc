@@ -6,12 +6,13 @@ var {requireJson,log} = require("ifun");
 var myconfig = requireJson(`${__dirname}/my.config.js`);
 
 module.exports = function (args) {
+    var staticMaps = args.f && myconfig.staticMaps || [];
     var config = {
         static: {
-            items: [{
+            items: staticMaps.concat({
                 path: "/",
                 dir: args.time ? `${__dirname}/dist` : __dirname
-            }]
+            })
         },
         onPubBefore: function(cmd){
             //cmd(`myseek build sysPath=/data/github/seekjs/`);
@@ -22,6 +23,6 @@ module.exports = function (args) {
         gzip: true,
         port: 2016
     };
-
+    
     return config;
 };

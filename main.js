@@ -1,7 +1,7 @@
 /**
  * Created by likaituan on 15/8/9.
  */
-alert=0;
+
 seekjs.config({
     ns:{
         "data.": "/data/",
@@ -20,7 +20,7 @@ require("css.class");
 var app = require("sys.app");
 
 app.config({
-    path: `/pages/`,
+    page: `/pages/`,
     useAnimate: true
 });
 
