@@ -15,6 +15,7 @@ exports.lang = {
 //属性列表
 exports.getApiList = function() {
     var lang = Lang.getLang(exports.lang, localStorage.lang);
+    //{name: "pop", title: "弹窗", type: "Object", cat: "property", sub_cat: "box"},
 
     return {
         app: {
@@ -37,5 +38,7 @@ exports.getApiList = function() {
 exports.getDetail = function(id){
     var item = require(`data.${id}.js`);
     var lang = Lang.getLang(item.lang, localStorage.lang);
-    return item.getApi(lang);
+    var o = item.getApi(lang);
+    o.cate = id.split(".")[0];
+    return o;
 };

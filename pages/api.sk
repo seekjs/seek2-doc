@@ -103,7 +103,7 @@
             url: 3
         };
     %>
-    <div class="ui-home">{=this}
+    <div class="ui-home">
         <header class="ui-api-title">{$lang.api_reference}</header>
         <div class="ui-api-home">
             <p class="ui-api-ul ui-api-topone ui-api-one">{$lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>

@@ -20,7 +20,7 @@ exports.getApi = function(lang) {
         title: lang.plugin,
         des: lang.plugin_des,
         cat: "property",
-        subcat: "plugin",
+        sub_cat: "plugin",
         type: "object",
         usage: `app.plugin.[plugin-name].[plugin-method]`,
         example: `app.plugin.dialog.alert("hello seekjs")`

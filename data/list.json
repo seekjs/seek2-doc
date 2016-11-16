@@ -1,19 +1,40 @@
 {
     "app": [
         {
-            "name": "addPipe",
-            "cat": "method"
-        },
-        {
-            "name": "addView",
-            "cat": "method"
+            "name": "useAnimate",
+            "cat": "property"
         },
         {
             "name": "aniDuration",
             "cat": "property"
         },
         {
+            "name": "viewEx",
+            "cat": "property"
+        },
+        {
+            "name": "pipeEx",
+            "cat": "property"
+        },
+        {
+            "name": "plugin",
+            "cat": "property"
+        },
+        {
             "name": "config",
+            "cat": "method"
+        },
+        {
+            "name": "usePlugin",
+            "cat": "method",
+            "sub_cat": "plugin"
+        },
+        {
+            "name": "addView",
+            "cat": "method"
+        },
+        {
+            "name": "addPipe",
             "cat": "method"
         },
         {
@@ -25,37 +46,16 @@
             "cat": "method"
         },
         {
-            "name": "onBeforeRender",
+            "name": "onInit",
             "cat": "event"
         },
         {
-            "name": "onInit",
+            "name": "onRenderBefore",
             "cat": "event"
         },
         {
             "name": "onRender",
             "cat": "event"
-        },
-        {
-            "name": "pipeEx",
-            "cat": "property"
-        },
-        {
-            "name": "plugin",
-            "cat": "property"
-        },
-        {
-            "name": "useAnimate",
-            "cat": "property"
-        },
-        {
-            "name": "usePlugin",
-            "cat": "method",
-            "sub_cat": "plugin"
-        },
-        {
-            "name": "viewEx",
-            "cat": "property"
         }
     ],
     "pipe": [
@@ -63,16 +63,97 @@
             "name": "begin",
             "cat": "method",
             "sub_cat": "string"
+        },
+        {
+            "name": "end",
+            "cat": "method",
+            "sub_cat": "string"
+        },
+        {
+            "name": "upper",
+            "cat": "method",
+            "sub_cat": "string"
+        },
+        {
+            "name": "lower",
+            "cat": "method",
+            "sub_cat": "string"
+        },
+        {
+            "name": "en",
+            "cat": "method",
+            "sub_cat": "number"
+        },
+        {
+            "name": "cn",
+            "cat": "method",
+            "sub_cat": "number"
+        },
+        {
+            "name": "big",
+            "cat": "method",
+            "sub_cat": "number"
+        },
+        {
+            "name": "sep",
+            "sub_cat": "number"
+        },
+        {
+            "name": "date_format",
+            "cat": "method",
+            "sub_cat": "date"
+        },
+        {
+            "name": "rmb",
+            "cat": "method",
+            "sub_cat": "number"
+        },
+        {
+            "name": "json",
+            "cat": "method",
+            "sub_cat": "object"
+        },
+        {
+            "name": "iif",
+            "cat": "method",
+            "sub_cat": "other"
         }
     ],
     "template": [
         {
             "name": "if"
+        },
+        {
+            "name": "elsif"
+        },
+        {
+            "name": "else"
+        },
+        {
+            "name": "foreach"
+        },
+        {
+            "name": "src.length"
+        },
+        {
+            "name": "src.first"
+        },
+        {
+            "name": "src.last"
+        },
+        {
+            "name": "item"
+        },
+        {
+            "name": "index"
+        },
+        {
+            "name": "sn"
         }
     ],
     "view": [
         {
-            "name": "box",
+            "name": "type",
             "cat": "property"
         },
         {
@@ -81,12 +162,88 @@
             "sub_cat": "basic"
         },
         {
-            "name": "type",
+            "name": "ui",
             "cat": "property"
         },
         {
-            "name": "ui",
+            "name": "parent",
             "cat": "property"
+        },
+        {
+            "name": "root",
+            "cat": "property",
+            "sub_cat": "box"
+        },
+        {
+            "name": "part",
+            "cat": "property",
+            "sub_cat": "box"
+        },
+        {
+            "name": "from",
+            "cat": "property"
+        },
+        {
+            "name": "uri",
+            "cat": "property"
+        },
+        {
+            "name": "path",
+            "cat": "property"
+        },
+        {
+            "name": "id",
+            "cat": "property",
+            "sub_cat": "url"
+        },
+        {
+            "name": "params",
+            "cat": "property",
+            "sub_cat": "url"
+        },
+        {
+            "name": "go",
+            "cat": "method"
+        },
+        {
+            "name": "back",
+            "cat": "method"
+        },
+        {
+            "name": "render",
+            "cat": "method"
+        },
+        {
+            "name": "show",
+            "cat": "method"
+        },
+        {
+            "name": "hide",
+            "cat": "method"
+        },
+        {
+            "name": "toggle",
+            "cat": "method"
+        },
+        {
+            "name": "up2model",
+            "cat": "method"
+        },
+        {
+            "name": "getHTML",
+            "cat": "method"
+        },
+        {
+            "name": "onInit",
+            "cat": "event"
+        },
+        {
+            "name": "onRenderBefore",
+            "cat": "event"
+        },
+        {
+            "name": "onRender",
+            "cat": "event"
         }
     ]
 }

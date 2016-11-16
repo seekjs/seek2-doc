@@ -15,7 +15,7 @@ exports.getApi = function(lang) {
         name: "useAnimate",
         title: lang.is_use_animate,
         cat: "property",
-        subcat: "animate",
+        sub_cat: "animate",
         usage: `app.useAnimate = [boolean]`,
         type: "boolean",
         defaultVal: "false",

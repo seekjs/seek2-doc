@@ -28,7 +28,7 @@ exports.getApi = function(lang) {
             sub: lang.sub_view
         },
         cat: "property",
-        subcat: "basic",
+        sub_cat: "basic",
         example: `
         <template>
             <div class="main">

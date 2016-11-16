@@ -16,6 +16,6 @@ exports.getApi = function(lang) {
         title: lang.top_container,
         type: "Node",
         cat: "property",
-        subcat: "basic"
+        sub_cat: "basic"
     };
 };

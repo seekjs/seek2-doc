@@ -15,7 +15,7 @@ exports.getApi = function(lang) {
         name: "aniDuration",
         title: lang.animate_duration,
         cat: "property",
-        subcat: "animate",
+        sub_cat: "animate",
         usage: `app.aniDuration = [number]`,
         type: "number",
         defaultVal: 500,

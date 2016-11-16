@@ -1,17 +1,16 @@
 var fs = require("fs");
 var log = console.log;
+var keyList = require("./data/list.key.json");
 
 var json = {};
-var type;
-var name;
-fs.readdirSync("./data").forEach(x=>{
-    if(/^(\w+)\.(\w+)\.js$/.test(x)){
-        [type, name] = [RegExp.$1, RegExp.$2];
-        var {cat,sub_cat} = require(`./data/${x}`).getApi({});
-        json[type] = json[type] || [];
-        json[type].push({name,cat,sub_cat});
-    }
-});
+
+for(var type in keyList) {
+    json[type] = json[type] || [];
+    keyList[type].split(",").forEach(name=> {
+        var {cat,sub_cat} = require(`./data/${type}.${name}.js`).getApi({});
+        json[type].push({name, cat, sub_cat});
+    });
+};
 
 json = JSON.stringify(json,null,4);
 fs.writeFileSync("./data/list.json", json);
