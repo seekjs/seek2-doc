@@ -1,7 +1,60 @@
 {
     "app": [
         {
+            "name": "addPipe",
+            "cat": "method"
+        },
+        {
+            "name": "addView",
+            "cat": "method"
+        },
+        {
+            "name": "aniDuration",
+            "cat": "property"
+        },
+        {
+            "name": "config",
+            "cat": "method"
+        },
+        {
+            "name": "go",
+            "cat": "method"
+        },
+        {
+            "name": "init",
+            "cat": "method"
+        },
+        {
+            "name": "onBeforeRender",
+            "cat": "event"
+        },
+        {
+            "name": "onInit",
+            "cat": "event"
+        },
+        {
+            "name": "onRender",
+            "cat": "event"
+        },
+        {
+            "name": "pipeEx",
+            "cat": "property"
+        },
+        {
+            "name": "plugin",
+            "cat": "property"
+        },
+        {
             "name": "useAnimate",
+            "cat": "property"
+        },
+        {
+            "name": "usePlugin",
+            "cat": "method",
+            "sub_cat": "plugin"
+        },
+        {
+            "name": "viewEx",
             "cat": "property"
         }
     ],
