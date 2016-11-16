@@ -3,6 +3,7 @@
  */
 
 var Lang = require("utils.Lang");
+var json = require("data.list.json");
 
 exports.lang = {
     view_description: {
@@ -17,27 +18,24 @@ exports.getApiList = function() {
 
     return {
         app: {
-            list: []
+            list: json.app
         },
         view: {
             des: lang.view_description,
-            list: ["type", "model", "box", "ui"]
+            list: json.view
         },
         template: {
-            list: []
+            list: json.template
         },
         pipe: {
-            list: []
+            list: json.pipe
         }
     };
 };
 
 //获取详情
 exports.getDetail = function(id){
-    var ids = id.split(".");
-    var cate = ids.shift();
-    var name = ids.join(".");
-    var o = this.getApiList()[cate].list.filter(x=>x.name==name)[0];
-    o.cate = cate;
-    return o;
+    var item = require(`data.${id}.js`);
+    var lang = Lang.getLang(item.lang, localStorage.lang);
+    return item.getApi(lang);
 };

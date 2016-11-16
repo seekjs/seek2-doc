@@ -4,6 +4,6 @@
 
 <script>
     exports.onRender = function() {
-        exports.usePlugin("seek-plugin-flow");
+        exports.usePlugin("seekjs-plugin-flow");
     }
 </script>

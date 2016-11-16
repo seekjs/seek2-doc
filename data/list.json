@@ -1,0 +1,39 @@
+{
+    "app": [
+        {
+            "name": "useAnimate",
+            "cat": "property"
+        }
+    ],
+    "pipe": [
+        {
+            "name": "begin",
+            "cat": "method",
+            "sub_cat": "string"
+        }
+    ],
+    "template": [
+        {
+            "name": "if"
+        }
+    ],
+    "view": [
+        {
+            "name": "box",
+            "cat": "property"
+        },
+        {
+            "name": "model",
+            "cat": "property",
+            "sub_cat": "basic"
+        },
+        {
+            "name": "type",
+            "cat": "property"
+        },
+        {
+            "name": "ui",
+            "cat": "property"
+        }
+    ]
+}

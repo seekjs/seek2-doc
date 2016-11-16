@@ -6,10 +6,6 @@ var Lang = require("utils.Lang");
 
 //语言配置
 exports.lang = {
-    condition_start: {
-        cn: "条件开始",
-        en: "Condition start"
-    },
     conditional_branch: {
         cn: "条件分支",
         en: "conditional branch"
@@ -55,11 +51,6 @@ exports.getApiList = function() {
     return {
         title: $Lang.template,
         list: [
-            {
-                name: "if",
-                title: lang.condition_start,
-                usage: `{if condition}`
-            },
             {
                 name: "elsif",
                 title: lang.condition_branch,

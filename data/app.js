@@ -6,11 +6,6 @@ var Lang = require("utils.Lang");
 
 //语言配置
 exports.lang = {
-    //app相关
-    is_use_animate: {
-        cn: "是否使用动画",
-        en: "Is Use Animate"
-    },
     animate_duration: {
         cn: "动画时长(毫秒)",
         en: "Animate Duration(Millisecond)"
@@ -83,16 +78,6 @@ exports.getApiList = function() {
 
     return {
         list: [
-            {
-                name: "useAnimate",
-                title: lang.is_use_animate,
-                cat: "property",
-                subcat: "animate",
-                usage: `app.useAnimate = [boolean]`,
-                type: "boolean",
-                defaultVal: "false",
-                example: `app.useAnimate = true;`
-            },
             {
                 name: "aniDuration",
                 title: lang.animate_duration,

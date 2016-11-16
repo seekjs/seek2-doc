@@ -6,10 +6,6 @@ var Lang = require("utils.Lang");
 
 //语言配置
 exports.lang = {
-    take_few_from_begin: {
-        cn: "取头几位",
-        en: "Take the first few"
-    },
     take_few_from_end: {
         cn: "取末几位",
         en: "Take the first few"
@@ -73,18 +69,10 @@ exports.getApiList = function() {
         list: [
             //字符串
             {
-                name: "begin",
-                title: lang.take_few_from_begin,
-                method: "method",
-                args: [
-                    {name: "str", type: "String", title: $Lang.string, required: 1}
-                ],
-                example: `<template>{"13601187438" | begin:3}}</template>`
-            },
-            {
                 name: "end",
                 title: lang.take_few_from_end,
-                method: "method",
+                cat: "method",
+                sub_cat: "string",
                 args: [
                     {name: "str", type: "String", title: $Lang.string, required: 1}
                 ],
@@ -93,7 +81,7 @@ exports.getApiList = function() {
             {
                 name: "upper",
                 title: lang.turn_capital_letter,
-                method: "method",
+                cat: "method",
                 args: [
                     {name: "str", type: "String", title: $Lang.string, required: 1}
                 ],
@@ -102,7 +90,7 @@ exports.getApiList = function() {
             {
                 name: "lower",
                 title: lang.turn_lower_case_letter,
-                method: "method",
+                cat: "method",
                 args: [
                     {name: "str", type: "String", title: $Lang.string, required: 1}
                 ],
@@ -113,7 +101,7 @@ exports.getApiList = function() {
             {
                 name: "en",
                 title: lang.turn_english_number,
-                method: "method",
+                cat: "method",
                 args: [
                     {name: "num", type: "Number", title: $Lang.number, required: 1}
                 ],
@@ -122,7 +110,7 @@ exports.getApiList = function() {
             {
                 name: "cn",
                 title: lang.turn_chinese_number,
-                method: "method",
+                cat: "method",
                 args: [
                     {name: "num", type: "Number", title: $Lang.number, required: 1}
                 ],
@@ -131,7 +119,7 @@ exports.getApiList = function() {
             {
                 name: "big",
                 title: lang.turn_big_chinese_number,
-                method: "method",
+                cat: "method",
                 args: [
                     {name: "num", type: "Number", title: $Lang.number, required: 1}
                 ],

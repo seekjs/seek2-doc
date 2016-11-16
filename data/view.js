@@ -14,10 +14,6 @@ exports.lang = {
         cn: "任意类型",
         en: "Arbitrary type"
     },
-    top_container: {
-        cn: "最顶层容器",
-        en: "Top container"
-    },
     parent_view: {
         cn: "父级View",
         en: "Parent View"
@@ -91,56 +87,6 @@ exports.getApiList = function() {
     return {
         des: lang.view_description,
         list: [
-            {
-                name: "type",
-                title: "view"+$Lang.type,
-                type: "String",
-                list: {
-                    main: $Lang.main_view,
-                    sub: $Lang.sub_view
-                },
-                cat: "property",
-                subcat: "basic",
-                example: `
-                <template>
-                    <div class="main">
-                        <div data-view="subview1"></div>
-                        <div data-view="subview2"></div>
-                    </div>
-                </template>`
-            },
-            {
-                name: "model",
-                title: $Lang.model,
-                des: "当设置model时, 模板的this指向model, 不然指向view本身",
-                type: lang.all_type,
-                cat: "property",
-                subcat: "basic",
-                example: `
-                <template>
-                    <div>
-                        <p>姓名: {this.name}</p>
-                        <p>性别: {this.sex}</p>
-                    </div>
-                </template>
-                <script>
-                exports.model = {name:"小明", sex:"男"};
-                <\/script>`
-            },
-            {
-                name: "box",
-                title: lang.top_container,
-                type: "Node",
-                cat: "property",
-                subcat: "basic"
-            },
-            {
-                name: "ui",
-                title: lang.top_container,
-                type: "Node",
-                cat: "property",
-                subcat: "basic"
-            },
             {
                 name: "parent",
                 title: lang.parent_view,

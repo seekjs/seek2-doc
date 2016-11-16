@@ -103,13 +103,13 @@
             url: 3
         };
     %>
-    <div class="ui-home">
+    <div class="ui-home">{=this}
         <header class="ui-api-title">{$lang.api_reference}</header>
         <div class="ui-api-home">
             <p class="ui-api-ul ui-api-topone ui-api-one">{$lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>
             {foreach src=this.apiList key=cateName item=cate}
             {if !this.params.id||this.params.id==cateName}
-            <p class="ui-api-top {if cateName=='app'}ui-app{/if}{if cateName=='view'}ui-view{/if}{if cateName=='template'}ui-template{/if}{if cateName=='pipe'}ui-pipe{/if}">seekjs/{cateName}</p>
+            <p class="ui-api-top ui-{cateName}">seekjs/{cateName}</p>
 
             <ul class="ui-api-ul clear">
                 {foreach src=cate.list}

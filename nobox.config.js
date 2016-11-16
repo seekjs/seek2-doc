@@ -6,7 +6,7 @@ var {requireJson,log} = require("ifun");
 var myconfig = requireJson(`${__dirname}/my.config.js`);
 
 module.exports = function (args) {
-    var staticMaps = myconfig.staticMaps || [];
+    var staticMaps = args.f && myconfig.staticMaps || [];
     var config = {
         static: {
             items: staticMaps.concat({
@@ -23,10 +23,7 @@ module.exports = function (args) {
         gzip: true,
         port: 2016
     };
-
-    if(args.f){
-        config.static.items.unshift();
-    }
+    log(config.static);
 
     return config;
 };
