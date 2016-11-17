@@ -1,5 +1,5 @@
 <template>
-    <div class="blog-flow"></div>
+    <div class="blog-flow">blog-flow</div>
 </template>
 
 <script>

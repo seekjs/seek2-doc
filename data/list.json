@@ -2,11 +2,13 @@
     "app": [
         {
             "name": "useAnimate",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "animate"
         },
         {
             "name": "aniDuration",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "animate"
         },
         {
             "name": "viewEx",
@@ -18,7 +20,8 @@
         },
         {
             "name": "plugin",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "plugin"
         },
         {
             "name": "config",
@@ -149,12 +152,33 @@
         },
         {
             "name": "sn"
+        },
+        {
+            "name": "data-view",
+            "cat": "data"
+        },
+        {
+            "name": "data-part",
+            "cat": "data"
+        },
+        {
+            "name": "data-bind",
+            "cat": "data"
+        },
+        {
+            "name": "data-event",
+            "cat": "data"
+        },
+        {
+            "name": "data-enter",
+            "cat": "data"
         }
     ],
     "view": [
         {
             "name": "type",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "basic"
         },
         {
             "name": "model",
@@ -163,11 +187,13 @@
         },
         {
             "name": "ui",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "basic"
         },
         {
             "name": "parent",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "box"
         },
         {
             "name": "root",
@@ -181,15 +207,18 @@
         },
         {
             "name": "from",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "url"
         },
         {
             "name": "uri",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "url"
         },
         {
             "name": "path",
-            "cat": "property"
+            "cat": "property",
+            "sub_cat": "url"
         },
         {
             "name": "id",
