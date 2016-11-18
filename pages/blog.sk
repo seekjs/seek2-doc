@@ -1,17 +1,14 @@
+<style>
+    .blog{
+        line-height: 50px;
+        margin: 50px;
+    }
+</style>
+
 <template>
-    <ul>
-        <li>
-            <a href="#blog-flow">seekJs 流程图</a>
-            <ul>
-                <li data-event="changePage">blog-flow</li>
-                <li data-event="changePage">api</li>
-            </ul>
-            <button data-event="alertPart.toggle">hide</button>
-            <div data-part="alertPart">
-                <p>kkkkk{$.session.aa}</p>
-            </div>
-            <div data-view="{this.subpage}"></div>
-        </li>
+    <ul class="blog">
+        <li><a href="#blog-flow">seekJs 加载流程图</a></li>
+        <li><a href="#blog-view-flow">seekjs-view 流程图</a></li>
     </ul>
 </template>
 
