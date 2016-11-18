@@ -1,9 +1,99 @@
 <template>
-    <div class="blog-flow">blog-flow</div>
+    <div class="blog-flow"></div>
 </template>
 
 <script>
-    exports.onRender = function() {
-        exports.usePlugin("seekjs-plugin-flow");
+var data = [
+    {
+        id: "new",
+        text: "New Page"
+    },
+    {
+        id: "hash",
+        text: "Parse Hash"
+    },
+    {
+        id: "uri",
+        text: "Parse URI"
+    },
+    {
+        id: "skpage",
+        text: "Parse SkPage"
+    },
+    {
+        id: "init-g",
+        text: "Global Init"
+    },
+    {
+        id: "init-p",
+        text: "View Init"
+    },
+    {
+        id: "view",
+        text: "Parse View",
+        items: [
+            {
+                id: "css",
+                text: "Parse Css"
+            },
+            {
+                id: "js",
+                text: "Parse Js"
+            },
+            {
+                id: "template",
+                text: "Parse Template"
+            }
+        ]
+    },
+    {
+        id: "render-bg",
+        text: "Global Render Before"
+    },
+    {
+        id: "render-bp",
+        text: "View Render Before"
+    },
+    {
+        id: "html",
+        text: "Parse HTML",
+        items: [
+            {
+                id: "event",
+                text: "Parse Event"
+            },
+            {
+                id: "bind",
+                text: "Parse Bind"
+            },
+            {
+                id: "part",
+                text: "Parse Part"
+            }
+        ]
+    },
+    {
+        id: "render-g",
+        text: "Global Render"
+    },
+    {
+        id: "render-p",
+        text: "View Render"
+    },
+    {
+        id: "subview",
+        text: "Has SubView",
+        type: "rhombus",
+        yes: "uri",
+        no: "end"
+    },
+    {
+        id: "complete",
+        text: "Complete"
     }
+];
+exports.usePlugin("seekjs-plugin-flow", {
+    title: "seekJs框架加载流程图",
+    data
+});
 </script>

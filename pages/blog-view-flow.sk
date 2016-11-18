@@ -1,0 +1,32 @@
+<template>
+    <div class="view-flow"></div>
+</template>
+
+<script>
+var data = [
+    {
+        id: "main",
+        text: "Main View"
+    },
+        {
+        id: "parent",
+        text: "Parent View"
+    },
+        {
+        id: "part",
+        text: "Part"
+    },
+        {
+        id: "sub",
+        text: "SubView"
+    },
+    {
+        id: "plugin",
+        text: "Plugin"
+    }
+];
+exports.usePlugin("seekjs-plugin-flow", {
+    title: "seekJs-View 流程图",
+    data
+});
+</script>
