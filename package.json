@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "seekjs api and document",
   "devDependencies": {
-<<<<<<< HEAD
-    "babel-preset-latest": "^6.16.0",
-=======
->>>>>>> 9b37e243bf131c6274ef7c92899ba19e7f728d53
     "seekjs": "2.0.8",
     "seekjs-plugin-dialog": "1.0.0",
     "seekjs-plugin-mask": "1.0.0",

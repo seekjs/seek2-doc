@@ -88,3 +88,18 @@
 .bold{
     font-weight: bold;
 }
+
+/*标题*/
+.ui-com-title {
+    background-color: #0a0f2c;
+    color: #fff;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.api-detail{
+    background-color: #f6f7fb;
+    padding: 20px;
+}
+

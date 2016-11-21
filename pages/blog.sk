@@ -1,15 +1,18 @@
 <style>
     .blog{
         line-height: 50px;
-        margin: 50px;
     }
 </style>
 
 <template>
-    <ul class="blog">
-        <li><a href="#blog-flow">seekJs 加载流程图</a></li>
-        <li><a href="#blog-view-flow">seekjs-view 流程图</a></li>
-    </ul>
+    <div class="ui-home">
+        <header class="left bold bg-black white ui-com-title">博客</header>
+        <ul class="api-detail blog">
+            <li><a href="#blog-flow">seekJs 加载流程图</a></li>
+            <li><a href="#blog-view-flow">seekjs-view 流程图</a></li>
+        </ul>
+    </div>
+
 </template>
 
 <script>
