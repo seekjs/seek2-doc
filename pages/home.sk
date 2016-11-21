@@ -148,6 +148,8 @@
 
 <template>
 <div class="ui-home">
+    <!--<input type="text" dateType="start" max readonly data-event="input>controlDate:start;focus>selectTime" placeholder="结束日期" >－<input type="text" readonly dateType="end" min data-event="input>controlDate:end;focus>selectTime"  placeholder="开始月">s-->
+    <!--<input data-event="showDatePicker" style="position: relative" />-->
     <div class="ui-header">
         <span><img src="images/logo.png"></span>
         <ul class="clear ui-menu">
@@ -210,6 +212,28 @@
 </template>
 
 <script>
+//    exports.usePlugin("seekjs-plugin-datePicker", {id:"dataPicker", display:false});
+//    exports.showDatePicker = function(){
+//      exports.plugin.datePicker.show();
+//    };
+//
+//    /*日期部分*/
+//    //选择日期
+//    exports.selectTime = function(){
+//        exports.plugin.datePicker.select(exports.element, exports.controlDate);
+//    };
+//
+//    /*开始和结束时间的控制*/
+//    exports.controlDate = function(type,val){
+//        if(type=="start"){
+//            exports.args.startTime = val;
+//        }else if(type=="end"){
+//            exports.args.endTime = val;
+//        }
+//        exports.queryView.render();
+//    };
+
+
     exports.$lang = {
         framework_des: {
             cn: "数据驱动的组件，为现代化的 Web 界面而生",

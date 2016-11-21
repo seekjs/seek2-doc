@@ -29,7 +29,7 @@ app.pipeEx = require("utils.pipeEx");
 
 app.usePlugin("seekjs-plugin-mask", {display:false});
 app.usePlugin("seekjs-plugin-dialog", {display:false});
-app.usePlugin("seekjs-plugin-datePick", {display:false});
+// app.usePlugin("seekjs-plugin-datePick", {display:false});
 
 var Lang = require("utils.Lang");
 
