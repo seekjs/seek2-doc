@@ -148,6 +148,7 @@
 
 <template>
 <div class="ui-home">
+    <input data-event="showDatePicker">
     <div class="ui-header">
         <span><img src="images/logo.png"></span>
         <ul class="clear ui-menu">
@@ -210,6 +211,11 @@
 </template>
 
 <script>
+    exports.usePlugin("seekjs-plugin-datePicker", {id:"dataPicker", display:false});
+    exports.showDatePicker = function(){
+      exports.plugin.datePicker.show();
+    };
+
     exports.$lang = {
         framework_des: {
             cn: "数据驱动的组件，为现代化的 Web 界面而生",
