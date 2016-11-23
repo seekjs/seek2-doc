@@ -108,11 +108,11 @@
     exports.onInit = function(){
         //推荐插件列表
         exports.pluginList = [
-            { page: "seekjs-plugin-swipe", name: "swipe", title: $lang.swipe },
-            { page: "seekjs-plugin-move", name: "move", title: $lang.move },
             { page: "seekjs-plugin-dialog", name: "dialog", title: $lang.dialog },
             { page: "seekjs-plugin-mask", name: "mask", title: $lang.mask },
-            { page: "seekjs-plugin-datePicker", name: "datePicker", title: $lang.datePicker }
+            { page: "seekjs-plugin-datepicker", name: "datepicker", title: $lang.datePicker },
+            { page: "seekjs-plugin-move", name: "move", title: $lang.move },
+            { page: "seekjs-plugin-swipe", name: "swipe", title: $lang.swipe }
         ];
     };
 </script>

@@ -4,7 +4,12 @@
 
 var app = require("sys.app");
 
-//数字转字母
-exports.alert = function(text){
-    return app.plugin.dialog.alert(text);
+//警告框
+exports.alert = function(...args){
+    app.plugin.dialog.alert.apply(app.plugin.dialog, args);
+};
+
+//确认框
+exports.confirm = function(...args){
+    app.plugin.dialog.confirm.apply(app.plugin.dialog, args);
 };

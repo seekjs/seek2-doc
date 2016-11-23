@@ -155,7 +155,7 @@
             <li data-event="go:guide">{$Lang.guide}</li>
             <li data-event="go:api">API</li>
             <!--li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li-->
-            <li data-event="alert:{$Lang.now_is_developing}">{$Lang.forum}</li>
+            <li data-event="confirm:{$Lang.now_is_developing}">{$Lang.forum}</li>
             <!--li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li-->
             <li data-event="go:blog">{$Lang.blog}</li>
             <li data-event="go:http://github.com/seekjs-framework">GitHub</li>
@@ -211,9 +211,9 @@
 </template>
 
 <script>
-    exports.usePlugin("seekjs-plugin-datePicker", {id:"dataPicker", display:false});
+    //exports.usePlugin("seekjs-plugin-datepicker", {id:"datapicker", display:false});
     exports.showDatePicker = function(){
-      exports.plugin.datePicker.show();
+      exports.plugin.datepicker.show();
     };
 
     exports.$lang = {

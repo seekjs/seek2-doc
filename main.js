@@ -5,7 +5,7 @@
 seekjs.config({
     ns:{
         "data.": "/data/",
-        "utils.": "/utils/",
+        "util.": "/utils/",
         "css.": {
             path: "/css/",
             type: ".css"
@@ -24,13 +24,13 @@ app.config({
     useAnimate: true
 });
 
-app.viewEx = require("utils.viewEx");
-app.pipeEx = require("utils.pipeEx");
+app.viewEx = require("util.viewEx");
+app.pipeEx = require("util.pipeEx");
 
 app.usePlugin("seekjs-plugin-mask", {display:false});
 app.usePlugin("seekjs-plugin-dialog", {display:false});
 
-var Lang = require("utils.Lang");
+var Lang = require("util.Lang");
 
 app.onInit = function(view){
     window.$Lang = Lang.getLang(Lang, localStorage.lang);

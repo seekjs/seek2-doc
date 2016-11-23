@@ -2,7 +2,7 @@
  * Created by likaituan on 15/8/10.
  */
 
-var Lang = require("utils.Lang");
+var Lang = require("util.Lang");
 var json = require("data.list.json");
 
 exports.lang = {
