@@ -23,7 +23,6 @@ module.exports = function (args) {
         gzip: true,
         port: 2016
     };
-    log(config.static);
-
+    
     return config;
 };
