@@ -212,13 +212,13 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-    //exports.usePlugin("seekjs-plugin-datepicker", {id:"datapicker", display:false});
+    exports.usePlugin("seekjs-plugin-datepicker", {id:"datapicker", display:false});
     exports.showDatePicker = function(){
       exports.plugin.datepicker.show();
     };
-=======
-//    exports.usePlugin("seekjs-plugin-datePicker", {id:"dataPicker", display:false});
+
+
+//    exports.usePlugin("seekjs-plugin-datepicker", {id:"dataPicker", display:false});
 //    exports.showDatePicker = function(){
 //      exports.plugin.datePicker.show();
 //    };
@@ -239,7 +239,6 @@
 //        exports.queryView.render();
 //    };
 
->>>>>>> 52d7a3d15581a86796a0599568da3d5d7d932557
 
     exports.$lang = {
         framework_des: {

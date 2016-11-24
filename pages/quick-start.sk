@@ -66,12 +66,14 @@
 
     exports.onInit = function() {
         exports.code = {
-            step1: `
+step1: `
 npm install seekjs
 npm install seek-cli -g`,
-            step2: `
+
+step2: `
 <script src="node_modules/seekjs/module.js" data-main="root.main"><\/script>`,
-            step3: `
+
+step3: `
 //1.${$lang.config_namespace}
 seekjs.config({
     ns: {
@@ -92,7 +94,8 @@ app.config({
 });
 //4. ${$lang.setting_ini_page}
 app.init("home");`,
-            step4: `
+
+step4: `
 <style>...</style>
 <template>...</template>
 <script type="text/ecmascript-6">...<\/script>`
