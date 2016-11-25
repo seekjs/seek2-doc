@@ -9,7 +9,7 @@ exports.lang = {
     },
     pages_dir_config: {
         cn: "设置pages的目录",
-        en: "Set pages directory"
+        en: "Set js directory"
     }
 };
 

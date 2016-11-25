@@ -20,16 +20,16 @@ require("css.class");
 var app = require("sys.app");
 
 app.config({
-    page: `/pages2/`,
+    page: `/pages/`,
     useAnimate: true
 });
 
 app.viewEx = require("util.viewEx");
 app.pipeEx = require("util.pipeEx");
 
-//app.use2Plugin("seekjs-plugin-mask", {display:false});
-//app.use2Plugin("seekjs-plugin-dialog", {display:false});
-// app.use2Plugin("seekjs-plugin-datepicker", {display:false});
+app.usePlugin("seekjs-plugin-mask", {display:false});
+app.usePlugin("seekjs-plugin-dialog", {display:false});
+// app.usePlugin("seekjs-plugin-datepicker", {display:false});
 
 var Lang = require("util.Lang");
 
