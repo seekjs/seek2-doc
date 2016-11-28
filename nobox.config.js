@@ -18,12 +18,11 @@ module.exports = function (args) {
             //cmd(`myseek build sysPath=/data/github/seekjs/`);
         },
         pub:{
-            packages: ["nobox.config.js", "node_modules", "dist"]
+            packages: ["nobox.config.js", "dist"]
         },
         gzip: true,
         port: 2016
     };
-    log(config.static);
-    
+
     return config;
 };

@@ -21,7 +21,7 @@ exports.getApi = function(lang) {
         ],
         usage: `app.addView(viewEx)`,
         example:  `
-        app.addView(require('util.viewEx1'));
-        app.addView(require('util.viewEx2'));`
+        app.addView(require(\"util.viewEx1\"));
+        app.addView(require(\"util.viewEx2\"));`
     };
 };

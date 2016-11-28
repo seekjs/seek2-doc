@@ -32,8 +32,8 @@ exports.getApi = function(lang) {
         sub_cat: "plugin",
         usage: `app.usePlugin(plugin-name)`,
         example: `
-        app.usePlugin("seek-plugin-dialog");        //不带参数
-        app.usePlugin("seek-plugin-dialog", {
+        app.usePlugin(\"seekjs-plugin-dialog\");        //不带参数
+        app.usePlugin(\"seekjs-plugin-dialog\", {
             lang:"en",
             langPack:{
                 hello:{cn:"你好",cn:"Hello"}

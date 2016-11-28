@@ -15,7 +15,7 @@
                 <div class="ui-plugin">
                     <h4 class="ui-spa-title">1.{$Lang.install}</h4>
                     <ul class="ui-spa-bg">
-                        <li>npm install [seek-plugin]</li>
+                        <li>npm install [seekjs-plugin]</li>
                     </ul>
                 </div>
             </li>

@@ -156,7 +156,7 @@
             <li data-event="go:guide">{$Lang.guide}</li>
             <li data-event="go:api">API</li>
             <!--li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li-->
-            <li data-event="confirm:{$Lang.now_is_developing}">{$Lang.forum}</li>
+            <li data-event="showTip">{$Lang.forum}</li>
             <!--li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li-->
             <li data-event="go:blog">{$Lang.blog}</li>
             <li data-event="go:http://github.com/seekjs-framework">GitHub</li>
@@ -212,34 +212,6 @@
 </template>
 
 <script>
-    exports.usePlugin("seekjs-plugin-datepicker", {id:"datapicker", display:false});
-    exports.showDatePicker = function(){
-      exports.plugin.datepicker.show();
-    };
-
-
-//    exports.usePlugin("seekjs-plugin-datepicker", {id:"dataPicker", display:false});
-//    exports.showDatePicker = function(){
-//      exports.plugin.datePicker.show();
-//    };
-//
-//    /*日期部分*/
-//    //选择日期
-//    exports.selectTime = function(){
-//        exports.plugin.datePicker.select(exports.element, exports.controlDate);
-//    };
-//
-//    /*开始和结束时间的控制*/
-//    exports.controlDate = function(type,val){
-//        if(type=="start"){
-//            exports.args.startTime = val;
-//        }else if(type=="end"){
-//            exports.args.endTime = val;
-//        }
-//        exports.queryView.render();
-//    };
-
-
     exports.$lang = {
         framework_des: {
             cn: "数据驱动的组件，为现代化的 Web 界面而生",
@@ -303,6 +275,10 @@
     exports.langs = {
         en: "english",
         cn: "中文"
+    };
+
+    exports.showTip = function(){
+        this.confirm($Lang.now_is_developing);
     };
 
     exports.setLang = function(){

@@ -2,26 +2,25 @@
   "name": "seekjs-doc",
   "version": "1.0.0",
   "description": "seekjs api and document",
-  "devDependencies": {
-    "seekjs": "2.0.8",
-    "seekjs-plugin-dialog": "1.0.0",
-    "seekjs-plugin-mask": "1.0.0",
-    "seekjs-plugin-flow": "1.0.0"
-  },
   "dependencies": {
-    "ifun": "0.2.5"
+    "ifun": "0.2.5",
+    "jquery": "3.1.1",
+    "seekjs": "2.0.21",
+    "seekjs-plugin-dialog": "1.0.5",
+    "seekjs-plugin-flow": "1.0.4",
+    "seekjs-plugin-mask": "1.0.2"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:likaituan/seekjs-doc.git"
   },
+  "scripts": {
+    "build": "babel /data/github/seekjs-doc/dist/app.js -o /data/github/seekjs-doc/dist/app.js --compact=auto --plugins=es2015"
+  },
   "author": {
     "name": "Li",
     "email": "61114579@qq.com"
-  },
-  "scripts": {
-    "build": "babel /data/github/seekjs-doc/dist/app.js -o /data/github/seekjs-doc/dist/app.js --compact=auto --plugins=es2015"
   },
   "contributors": [
     {

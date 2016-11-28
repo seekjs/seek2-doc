@@ -21,7 +21,7 @@ exports.getApi = function(lang) {
         ],
         usage: `app.addPipe(pipeEx)`,
         example:  `
-        app.addPipe(require('util.pipeEx1'));
-        app.addPipe(require('util.pipeEx2'));`
+        app.addPipe(require(\"util.pipeEx1\"));
+        app.addPipe(require(\"util.pipeEx2\"));`
     };
 };

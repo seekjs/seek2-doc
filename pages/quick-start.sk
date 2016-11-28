@@ -67,8 +67,8 @@
     exports.onInit = function() {
         exports.code = {
 step1: `
-npm install seekjs
-npm install seek-cli -g`,
+npm install seekjs-cli -g (如手动部署,可等build时再安装)
+npm install seekjs`,
 
 step2: `
 <script src="node_modules/seekjs/module.js" data-main="root.main"><\/script>`,
