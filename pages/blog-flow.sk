@@ -28,12 +28,8 @@ var data = [
         text: "Parse SkPage"
     },
     {
-        id: "init-g",
-        text: "Global Init"
-    },
-    {
-        id: "init-p",
-        text: "View Init"
+        id: "init",
+        text: "onInit"
     },
     {
         id: "view",
@@ -54,12 +50,8 @@ var data = [
         ]
     },
     {
-        id: "render-bg",
-        text: "Global Render Before"
-    },
-    {
-        id: "render-bp",
-        text: "View Render Before"
+        id: "render-before",
+        text: "onRenderBefore"
     },
     {
         id: "html",
@@ -80,12 +72,8 @@ var data = [
         ]
     },
     {
-        id: "render-g",
-        text: "Global Render"
-    },
-    {
-        id: "render-p",
-        text: "View Render"
+        id: "render",
+        text: "onRender"
     },
     {
         id: "subview",
@@ -95,8 +83,11 @@ var data = [
         no: "end"
     },
     {
-        id: "complete",
-        text: "Complete"
+        id: "load",
+        text: "onLoad"
+    },{
+        id: "leave",
+        text: "onLeave"
     }
 ];
 
