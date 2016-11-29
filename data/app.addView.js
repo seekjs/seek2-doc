@@ -6,6 +6,10 @@ exports.lang = {
     object: {
         cn: "对象",
         en: "Object"
+    },
+    des: {
+        cn: "相比于app.viewEx, 可以设置多次",
+        en: "Compared to app.viewEx, you can set the number of times"
     }
 };
 
@@ -14,7 +18,7 @@ exports.getApi = function(lang) {
     return {
         name: "addView",
         title: lang.add_page_method_extension,
-        des: "相比于app.viewEx, 可以设置多次",
+        des: lang.des,
         cat: "method",
         args: [
             {name: "viewEx", title: "viewEx" + lang.object, type: "object", required: true}

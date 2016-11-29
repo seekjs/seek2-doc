@@ -3,10 +3,10 @@
  */
 
 var {requireJson,log} = require("ifun");
-var myconfig = requireJson(`${__dirname}/my.config.js`);
+var myConfig = requireJson(`${__dirname}/my.config.js`);
 
 module.exports = function (args) {
-    var staticMaps = args.f && myconfig.staticMaps || [];
+    var staticMaps = args.f && myConfig.staticMaps || [];
     var config = {
         static: {
             items: staticMaps.concat({
@@ -15,7 +15,7 @@ module.exports = function (args) {
             })
         },
         onPubBefore: function(cmd){
-            //cmd(`myseek build sysPath=/data/github/seekjs/`);
+            cmd(`seekjs build`);
         },
         pub:{
             packages: ["nobox.config.js", "dist"]

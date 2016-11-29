@@ -3,6 +3,13 @@
 </template>
 
 <script>
+exports.$lang = {
+    loading_flow:{
+        cn: "加载流程图",
+        en: "Loading Flow"
+    }
+};
+
 var data = [
     {
         id: "new",
@@ -92,8 +99,11 @@ var data = [
         text: "Complete"
     }
 ];
-exports.usePlugin("seekjs-plugin-flow", {
-    title: "seekJs框架加载流程图",
-    data
-});
+
+exports.onInit = function() {
+    exports.usePlugin("seekjs-plugin-flow", {
+        title: `seekjs ${this.lang.loading_flow}`,
+        data
+    });
+};
 </script>

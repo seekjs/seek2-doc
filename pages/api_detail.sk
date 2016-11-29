@@ -70,13 +70,13 @@
         <div class="api-detail">
         <ul>
             {if this.title}
-            <li>{$Lang.title}: <span>{this.title}</span></li>
+            <li>{$lang.title}: <span>{this.title}</span></li>
             {/if}
             {if this.des}
-            <li>{$Lang.descriptions}: <span>{this.des}</span></li>
+            <li>{$lang.descriptions}: <span>{this.des}</span></li>
             {/if}
             <li>
-                <b>{$Lang.usage}:</b>
+                <b>{$lang.usage}:</b>
                 {if this.cate=="pipe"}
                     {{ {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if} }}
                 {elsif this.cate=="template"}
@@ -90,7 +90,7 @@
                 {/if}
             </li>
             {if this.type}
-            <li>{$Lang.type}: <span>{this.type}</span></li>
+            <li>{$lang.type}: <span>{this.type}</span></li>
             {/if}
             {if this.defaultVal}
             <li>{$lang.default_value}: <span>{this.defaultVal}</span></li>
@@ -110,15 +110,15 @@
             {if this.args}
             <table border="1">
                 <tr>
-                    <th>{$Lang.argument}</th>
-                    <th>{$Lang.is_required}</th>
-                    <th>{$Lang.descriptions}</th>
-                    <th>{$Lang.type}</th>
+                    <th>{$lang.argument}</th>
+                    <th>{$lang.is_required}</th>
+                    <th>{$lang.descriptions}</th>
+                    <th>{$lang.type}</th>
                 </tr>
                 {foreach src=this.args}
                 <tr>
                     <td class="center">{item.name}</td>
-                    <td class="center">{item.required?$Lang.yes:$Lang.no}</td>
+                    <td class="center">{item.required?$lang.yes:$lang.no}</td>
                     <td class="center">{item.title}</td>
                     <td class="center">{item.type}</td>
                 </tr>
@@ -128,7 +128,7 @@
             {/if}
 
             {if this.example}
-            <p class="ui-api-detailExp">{$Lang.example} : </p>
+            <p class="ui-api-detailExp">{$lang.example} : </p>
             <code>{this.example|code}</code>
             <p><button class="api-btn" data-event="runCode">run code</button></p>
             <div class="api-detail-result"></div>
@@ -153,6 +153,42 @@
     };
 
     exports.$lang = {
+        title: {
+            cn: "标题",
+            en: "Title"
+        },
+        descriptions: {
+            cn: "描述",
+            en: "descriptions"
+        },
+        usage:{
+            cn: "写法",
+            en: "usage"
+        },
+        type: {
+            cn: "类型",
+            en: "Type"
+        },
+        argument: {
+            cn: "参数",
+            en: "argument"
+        },
+        is_required: {
+            cn: "是否必须",
+            en: "Required"
+        },
+        yes: {
+            cn: "是",
+            en: "Yes"
+        },
+        no: {
+            cn: "否",
+            en: "No"
+        },
+        example:{
+            cn: "示例",
+            en: "Example"
+        },
         optional_value: {
             cn: "可选值",
             en: "Optional value"

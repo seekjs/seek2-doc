@@ -14,6 +14,26 @@ exports.lang = {
     see_details:{
         cn: "详见",
         en: "See Details"
+    },
+    options: {
+        cn: "选项",
+        en: "Options"
+    },
+    default_lang:{
+        cn: "默认语言",
+        en: "Default Language"
+    },
+    lang_pack:{
+        cn: "语言包",
+        en: "Language Pack"
+    },
+    with_parameters: {
+        cn: "带参数",
+        en: "With parameters"
+    },
+    without_parameters: {
+        cn: "不带参数",
+        en: "Without parameters"
     }
 };
 
@@ -22,23 +42,23 @@ exports.getApi = function(lang) {
     return {
         name: "usePlugin",
         des: `${lang.use_plugin}, <a href="#guide-plugin">${lang.see_details}</a>`,
+        usage: `app.usePlugin(<plugin-name>, [options])`,
         args: [
             {name: "plugin-name", title: lang.plugin_module, type: "string", required:true},
-            {name: "options", title: "选项", type: "object", required:false},
-            {name: "options.lang", title: "语言", type: "string", required:false},
-            {name: "options.langPack", title: "语言包", type: "object", required:false},
+            {name: "options", title: lang.options, type: "object", required:false},
+            {name: "options.lang", title: lang.default_lang, type: "string", required:false},
+            {name: "options.langPack", title: lang.lang_pack, type: "object", required:false},
         ],
         cat: "method",
         sub_cat: "plugin",
-        usage: `app.usePlugin(plugin-name)`,
         example: `
-        app.usePlugin(\"seekjs-plugin-dialog\");        //不带参数
+        app.usePlugin(\"seekjs-plugin-dialog\");        //${lang.without_parameters}
         app.usePlugin(\"seekjs-plugin-dialog\", {
             lang:"en",
             langPack:{
                 hello:{cn:"你好",cn:"Hello"}
             }
-        });  //带参数
+        });  //${lang.with_parameters}
         `
     };
 };

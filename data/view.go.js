@@ -10,6 +10,18 @@ exports.lang = {
     title: {
         cn: "标题",
         en: "Title"
+    },
+    with_params:{
+        cn: "带参数",
+        en: "With Parameters"
+    },
+    without_params:{
+        cn: "不带参数",
+        en: "Without Parameters"
+    },
+    with_query_params:{
+        cn: "带查询参数",
+        en: "With Query Parameters"
     }
 };
 
@@ -23,8 +35,8 @@ exports.getApi = function(lang) {
         ],
         cat: "method",
         example: `
-        exports.go("home");     //不带参数
-        exports.go("list/cat/js");      //带参数
-        exports.go("list/cat/js?key=seekjs");      //带查询参数`
+        exports.go("home");     //${lang.without_params}
+        exports.go("list/cat/js");      //${lang.with_params}
+        exports.go("list/cat/js?key=seekjs");      //${lang.with_query_params}`
     };
 };

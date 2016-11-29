@@ -20,7 +20,7 @@
 
 <template>
     <div>
-<header class="ui-common-details-title">{$Lang.summary}</header>
+<header class="ui-common-details-title">{$lang.summary}</header>
 <ul class="ui-spa-ul">
     <li>
         <div class="ui-spa">
@@ -56,6 +56,11 @@
 
 <script type="text/ecmascript-6">
     exports.$lang = {
+        summary: {
+            cn: "概览",
+            en: "Summary"
+        },
+
         framework_base: {
             cn: "架构基础",
             en: "Architecture Foundation"

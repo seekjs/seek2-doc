@@ -34,7 +34,7 @@ var Lang = require("util.Lang");
 
 app.onInit = function(view){
     window.$Lang = Lang.getLang(Lang, localStorage.lang);
-    window.$lang = Lang.getLang(view.$lang, localStorage.lang);
+    window.$lang = view.lang = Lang.getLang(view.$lang, localStorage.lang);
 };
 
 if(!localStorage.lang){

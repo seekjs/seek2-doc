@@ -47,12 +47,24 @@
         },
         step4_title: {
             cn: "添加.sk页面文件",
-            en: "Add.Sk page file"
+            en: "Add .sk page file"
         },
 
+        delay_install_if_manual:{
+            cn: "如手动部署,可等build时再安装",
+            en: "If manual deployment, can be do install when build"
+        },
         config_namespace: {
             cn: "配置命名空间",
             en: "Configuration namespace"
+        },
+        import_app: {
+            cn: "引入APP",
+            en: "Import APP"
+        },
+        or: {
+            cn: "或",
+            en: "OR"
         },
         config_app: {
             cn: "配置APP",
@@ -67,7 +79,7 @@
     exports.onInit = function() {
         exports.code = {
 step1: `
-npm install seekjs-cli -g (如手动部署,可等build时再安装)
+npm install seekjs-cli -g (${$lang.delay_install_if_manual})
 npm install seekjs`,
 
 step2: `
@@ -80,13 +92,13 @@ seekjs.config({
         util: "/utils/"
     }
 });
-//2. 引入APP
+//2. ${$lang.import_app}
 require("sys.app");
 //3. ${$lang.config_app}
 app.config({
     page: "/pages/"
 });
-或
+${$lang.or}
 app.config({
     js: "/js/",
     tp: "/templates/",

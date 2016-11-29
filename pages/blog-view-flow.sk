@@ -3,20 +3,27 @@
 </template>
 
 <script>
+exports.$lang = {
+    flow:{
+        cn: "流程图",
+        en: "Flow"
+    }
+};
+
 var data = [
     {
         id: "main",
         text: "Main View"
     },
-        {
+    {
         id: "parent",
         text: "Parent View"
     },
-        {
+    {
         id: "part",
         text: "Part"
     },
-        {
+    {
         id: "sub",
         text: "SubView"
     },
@@ -25,8 +32,11 @@ var data = [
         text: "Plugin"
     }
 ];
-exports.usePlugin("seekjs-plugin-flow", {
-    title: "seekJs-View 流程图",
-    data
-});
+
+exports.onInit = function() {
+    exports.usePlugin("seekjs-plugin-flow", {
+        title: `seekJs-view ${this.lang.flow}`,
+        data
+    });
+};
 </script>

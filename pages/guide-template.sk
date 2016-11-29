@@ -8,13 +8,13 @@
 
 <template>
     <div>
-    <header class="ui-common-details-title">{$Lang.template}</header>
+    <header class="ui-common-details-title">{$lang.template}</header>
     <ul class="ui-spa">
         <li>
             <div class="ui-template">
-                <h4 class="ui-spa-title">1.{$Lang.usage}</h4>
+                <h4 class="ui-spa-title">1.{$lang.usage}</h4>
                 <ul class="ui-spa-bg">
-                    <li>1.smarty {$Lang.syntax} <a href="#api/template">{$Lang.see_details}</a></li>
+                    <li>1.smarty {$lang.syntax} <a href="#api/template">{$lang.see_details}</a></li>
                     <li>2.{$lang.native_js_syntax}</li>
                 </ul>
             </div>
@@ -23,19 +23,19 @@
             <div class="ui-template">
                 <h4 class="ui-spa-title">2.{$lang.format}</h4>
                 <ul class="ui-spa-bg">
-                    <li>{$lang.pipe_syntax}, <a href="#guide-pipe">{$Lang.see_details}</a></li>
+                    <li>{$lang.pipe_syntax}, <a href="#guide-pipe">{$lang.see_details}</a></li>
                 </ul>
             </div>
         </li>
         <li>
             <div class="ui-template">
-                <h4 class="ui-spa-title">3.data ${$Lang.extend}</h4>
+                <h4 class="ui-spa-title">3.data {$lang.extend}</h4>
 
                 <ul class="ui-spa-bg">
                     <p class="content">{$lang.similar_directive}</p>
-                    <li>1.data-event, {$Lang.event_bind}, <a href="#guide-event">{$Lang.see_details}</a></li>
-                    <li>2.data-bind, {$Lang.data_bind}, <a href="#guide-bind">{$Lang.see_details}</a></li>
-                    <li>3.data-view {$Lang.sub_view} <a href="#guide-view">{$Lang.see_details}</a></li>
+                    <li>1.data-event, {$lang.event_bind}, <a href="#guide-event">{$lang.see_details}</a></li>
+                    <li>2.data-bind, {$lang.data_bind}, <a href="#guide-bind">{$lang.see_details}</a></li>
+                    <li>3.data-view {$lang.sub_view} <a href="#guide-view">{$lang.see_details}</a></li>
                     <li>4.data-part, {$lang.embed_part}</li>
                     <!--li>5.data-pop</li-->
                 </ul>
@@ -47,6 +47,35 @@
 
 <script type="text/ecmascript-6">
     exports.$lang = {
+        usage:{
+            cn: "写法",
+            en: "usage"
+        },
+        syntax:{
+            cn: "语法",
+            en: "Syntax"
+        },
+        see_details:{
+            cn: "详见",
+            en: "See Details"
+        },
+        sub_view: {
+            cn: "子View",
+            en: "sub view"
+        },
+        data_bind: {
+            cn: "数据绑定",
+            en: "Data Bind"
+        },
+        event_bind: {
+            cn: "事件绑定",
+            en: "Event Bind"
+        },
+        template: {
+            cn: "模板",
+            en: "Template"
+        },
+
         native_js_syntax: {
             cn: "原生JS语法",
             en: "Native Js Syntax"
@@ -58,6 +87,10 @@
         pipe_syntax: {
             cn: "采用类似linux命令的管道语法",
             en: "Pipeline syntax using similar linux commands"
+        },
+        extend: {
+            cn: "扩展",
+            en: "Extend"
         },
         similar_directive: {
             cn: "类似于angular和vue中的自定义指令,但是严格遵守HTML5的规范",

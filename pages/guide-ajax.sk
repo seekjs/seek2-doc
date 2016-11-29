@@ -11,26 +11,39 @@
         <h4 class="ui-spa-title">1. ajax {$lang.global_config}</h4>
         <ul class="ui-spa-bg">
             <li>ajax.setup();</li>
-            <li>{$Lang.example}:</li>
+            <li>{$lang.example}:</li>
         </ul>
 
 
         <h4 class="ui-spa-title">2. ajax {$lang.return_processing}</h4>
         <ul class="ui-spa-bg">
             <li>ajax.res</li>
-            <li>{$Lang.example}:</li>
+            <li>{$lang.example}:</li>
         </ul>
 
         <h4 class="ui-spa-title">3. ajax {$lang.package_emit_interface}</h4>
         <ul class="ui-spa-bg">
-            <li>{$Lang.Import}: var emit = req("emit");</li>
-            <li>{$Lang.Call}: emit("file/method");</li>
+            <li>{$lang.Import}: var emit = req("emit");</li>
+            <li>{$lang.Call}: emit("file/method");</li>
         </ul>
     </div>
 </template>
 
 <script>
     exports.$lang = {
+        Call:{
+            cn: "调用",
+            en: "Call"
+        },
+        Import:{
+            cn: "引入",
+            en: "Import"
+        },
+        example:{
+            cn: "示例",
+            en: "Example"
+        },
+
         global_config:{
             cn: "全局配置",
             en: "Global configuration"

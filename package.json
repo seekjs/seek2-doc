@@ -6,7 +6,7 @@
     "ifun": "0.2.5",
     "jquery": "3.1.1",
     "seekjs": "2.0.21",
-    "seekjs-plugin-dialog": "1.0.5",
+    "seekjs-plugin-dialog": "1.0.7",
     "seekjs-plugin-flow": "1.0.4",
     "seekjs-plugin-mask": "1.0.2"
   },

@@ -4,7 +4,7 @@
 
 <template>
     <div class="guide-scaffold ui-spa">
-        <header class="ui-common-details-title">{$Lang.scaffold}</header>
+        <header class="ui-common-details-title">{$lang.scaffold}</header>
         <p class="ui-spa-title">seekjs {$lang.auto_build_tool}</p>
         <p class="ui-spa-title">{$lang.common_commands}:</p>
         <ul class="ui-spa-bg">
@@ -17,6 +17,10 @@
 
 <script>
     exports.$lang = {
+        scaffold: {
+            cn: "脚手架",
+            en: "Scaffold"
+        },
         auto_build_tool:{
             cn: "自动构建工具",
             en: "automatic construction tool"

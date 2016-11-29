@@ -6,16 +6,31 @@
 
 <template>
     <div class="ui-home">
-        <header class="left bold bg-black white ui-com-title">博客</header>
+        <header class="left bold bg-black white ui-com-title">{$lang.blog}</header>
         <ul class="api-detail blog">
-            <li><a href="#blog-flow">seekJs 加载流程图</a></li>
-            <li><a href="#blog-view-flow">seekjs-view 流程图</a></li>
+            <li><a href="#blog-flow">seekJs {$lang.loading_flow}</a></li>
+            <li><a href="#blog-view-flow">seekjs-view {$lang.flow}</a></li>
         </ul>
     </div>
 
 </template>
 
 <script>
+    exports.$lang = {
+        blog: {
+            cn: "博客",
+            en: "Blog"
+        },
+        loading_flow:{
+            cn: "加载流程图",
+            en: "Loading Flow"
+        },
+        flow: {
+            cn: "流程图",
+            en: "Flow"
+        }
+    };
+
     exports.subpage = "blog-flow";
     exports.changePage = function(){
         this.subpage = this.element.innerHTML;

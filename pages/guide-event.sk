@@ -8,18 +8,35 @@
 
 <template>
     <div class="ui-spa">
-        <header class="ui-common-details-title">{$Lang.event_bind}</header>
+        <header class="ui-common-details-title">{$lang.event_bind}</header>
         <div class="ui-node">
-            <h4 class="ui-spa-title">1.{$Lang.usage}</h4>
+            <h4 class="ui-spa-title">1.{$lang.usage}</h4>
             <ul class="ui-spa-bg">
                 <li>data-event="[eventName]>[method]:arguments1,arguments2"</li>
             </ul>
         </div>
         <div class="ui-node">
-            <h4 class="ui-spa-title">2.{$Lang.example}</h4>
+            <h4 class="ui-spa-title">2.{$lang.example}</h4>
             <ul class="ui-spa-bg">
                 <li>data-event="showMessage"</li>
             </ul>
         </div>
     </div>
 </template>
+
+<script type="text/ecmascript-6">
+    exports.$lang = {
+        usage:{
+            cn: "用法",
+            en: "usage"
+        },
+        example:{
+            cn: "示例",
+            en: "Example"
+        },
+        event_bind: {
+            cn: "事件绑定",
+            en: "Event Bind"
+        }
+    };
+</script>

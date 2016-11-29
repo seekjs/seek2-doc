@@ -44,7 +44,7 @@
 
 <template>
     <div class="ui-guide">
-        <header class="ui-guide-title">seekJs {$Lang.guide}</header>
+        <header class="ui-guide-title">seekJs {$lang.guide}</header>
         <ul class="ui-guide-contents">
             {foreach src=this.preList}
             <li class="ui-guide-li ui-guide-fast" data-event="go:{item.page}">
@@ -64,6 +64,51 @@
 
 <script type="text/ecmascript-6">
     exports.$lang = {
+        guide: {
+            cn: "教程",
+            en: "Guide"
+        },
+        quick_start: {
+            cn: "快速上手",
+            en: "Quick Start"
+        },
+        pipe: {
+            cn: "管道",
+            en: "Pipe"
+        },
+        unit_test: {
+            cn: "单元测试",
+            en: "Unit Test"
+        },
+        summary: {
+            cn: "概览",
+            en: "Summary"
+        },
+        plugin: {
+            cn: "插件",
+            en: "Plugin"
+        },
+        scaffold: {
+            cn: "脚手架",
+            en: "Scaffold"
+        },
+        template: {
+            cn: "模板",
+            en: "Template"
+        },
+        modularize: {
+            cn: "模块化",
+            en: "Modularize"
+        },
+        data_bind: {
+            cn: "数据绑定",
+            en: "Data Bind"
+        },
+        event_bind: {
+            cn: "事件绑定",
+            en: "Event Bind"
+        },
+
         app: {
             cn: "seekApp框架",
             en: "App Framework"
@@ -88,24 +133,24 @@
 
     exports.onInit = function() {
         exports.preList = [
-            { page: "guide-summary", name: "Summary", title: $Lang.summary },
-            { page: "guide-scaffold", name: "Scaffold", title: $Lang.scaffold },
-            { page: "quick-start", name: "Quick Start", title: $Lang.quick_start }
+            { page: "guide-summary", name: "Summary", title: $lang.summary },
+            { page: "guide-scaffold", name: "Scaffold", title: $lang.scaffold },
+            { page: "quick-start", name: "Quick Start", title: $lang.quick_start }
         ];
 
         exports.List = [
-            { page: "guide-modularize", name: "Modularize", title: $Lang.modularize },
+            { page: "guide-modularize", name: "Modularize", title: $lang.modularize },
             { page: "guide-app", name: "App", title: $lang.app },
             { page: "guide-view", name: "View", title: $lang.view },
-            { page: "guide-template", name: "Template", title: $Lang.template },
-            { page: "guide-bind", name: "Bind", title: $Lang.data_bind },
-            { page: "guide-event", name: "Event", title: $Lang.event_bind },
-            { page: "guide-pipe", name: "Pipe", title: $Lang.pipe },
+            { page: "guide-template", name: "Template", title: $lang.template },
+            { page: "guide-bind", name: "Bind", title: $lang.data_bind },
+            { page: "guide-event", name: "Event", title: $lang.event_bind },
+            { page: "guide-pipe", name: "Pipe", title: $lang.pipe },
             { page: "guide-ajax", name: "AJAX", title: $lang.ajax },
-            { page: "guide-form", name: "Form", title: $Lang.form },
-            { page: "guide-env", name: "Environment", title: $Lang.env },
-            { page: "guide-test", name: "Unit Test", title: $Lang.unit_test },
-            { page: "guide-plugin", name: "Plugin", title: $Lang.plugin }
+            { page: "guide-form", name: "Form", title: $lang.form },
+            { page: "guide-env", name: "Environment", title: $lang.env },
+            { page: "guide-test", name: "Unit Test", title: $lang.unit_test },
+            { page: "guide-plugin", name: "Plugin", title: $lang.plugin }
         ];
     };
 </script>

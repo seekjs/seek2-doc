@@ -153,12 +153,12 @@
     <div class="ui-header">
         <span><img src="images/logo.png"></span>
         <ul class="clear ui-menu">
-            <li data-event="go:guide">{$Lang.guide}</li>
+            <li data-event="go:guide">{$lang.guide}</li>
             <li data-event="go:api">API</li>
-            <!--li data-event="go:http://seekjs.club:2000">{$Lang.forum}</li-->
-            <li data-event="showTip">{$Lang.forum}</li>
-            <!--li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$Lang.blog}</li-->
-            <li data-event="go:blog">{$Lang.blog}</li>
+            <!--li data-event="go:http://seekjs.club:2000">{$lang.forum}</li-->
+            <li data-event="showTip">{$lang.forum}</li>
+            <!--li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$lang.blog}</li-->
+            <li data-event="go:blog">{$lang.blog}</li>
             <li data-event="go:http://github.com/seekjs-framework">GitHub</li>
         </ul>
     </div>
@@ -166,7 +166,7 @@
     <div class="ui-logo">
         <p class="center ui-seekName">Seek.js</p>
         <p class="center">{$lang.framework_des}</p>
-        <p class="center"><button class="ui-homeBtn" data-event="go:quick-start">{$Lang.quick_start}</button></p>
+        <p class="center"><button class="ui-homeBtn" data-event="go:quick-start">{$lang.quick_start}</button></p>
     </div>
     <div id="features">
         <div class="feats">
@@ -213,6 +213,23 @@
 
 <script>
     exports.$lang = {
+        guide: {
+            cn: "教程",
+            en: "Guide"
+        },
+        forum: {
+            cn: "论坛",
+            en: "Forum"
+        },
+        blog: {
+            cn: "博客",
+            en: "Blog"
+        },
+        now_is_developing:{
+            cn: "正在努力开发中,敬请期待!",
+            en: "Is working hard to develop, please look forward to!"
+        },
+
         framework_des: {
             cn: "数据驱动的组件，为现代化的 Web 界面而生",
             en: "Data driven components for the modernization of the Web interface"
@@ -220,6 +237,10 @@
         switch_language: {
             cn: "切换语言",
             en: "switch language"
+        },
+        quick_start: {
+            cn: "快速上手",
+            en: "Quick Start"
         },
 
         modular: {
@@ -278,7 +299,7 @@
     };
 
     exports.showTip = function(){
-        this.confirm($Lang.now_is_developing);
+        this.confirm(this.lang.now_is_developing);
     };
 
     exports.setLang = function(){

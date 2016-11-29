@@ -7,11 +7,28 @@
 
 <template>
     <div class="ui-spa">
-        <header class="ui-common-details-title">{$Lang.unit_test}</header>
-        <h4 class="ui-spa-title">1. {$Lang.usage}</h4>
+        <header class="ui-common-details-title">{$lang.unit_test}</header>
+        <h4 class="ui-spa-title">1. {$lang.usage}</h4>
         <ul class="ui-spa-bg">
             <li>test</li>
-            <li>{$Lang.example}:</li>
+            <li>{$lang.example}:</li>
         </ul>
     </div>
 </template>
+
+<script type="text/ecmascript-6">
+    exports.$lang = {
+        unit_test: {
+            cn: "单元测试",
+            en: "Unit Test"
+        },
+        usage:{
+            cn: "用法",
+            en: "usage"
+        },
+        example:{
+            cn: "示例",
+            en: "Example"
+        }
+    };
+</script>
