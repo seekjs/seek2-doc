@@ -1,0 +1,142 @@
+
+
+
+.ui-header{
+background: #0a102a;
+color: #fff;
+font-size: 18px;
+padding-top: 10px;
+
+}
+.ui-header span{
+display: inline-block;
+font-weight:bold;
+vertical-align: middle;
+padding: 0 20px;
+font-size: 30px;
+width: 12%;
+}
+.ui-menu{
+display: inline-block;
+vertical-align: middle;
+width: 78%;
+padding: 0 20px;
+}
+
+.ui-menu li{
+width: 20%;
+text-align:center;
+float: left;
+line-height: 70px;
+transition: .5s;
+cursor: pointer;
+}
+.ui-menu li:hover{
+background-color: #13a4dd;
+}
+.ui-logo{
+padding: 30px;
+line-height: 32px;
+font-size: 18px;
+background-color: #0a0f2c;
+color: #fff;
+}
+.ui-seekName{
+font-size: 30px;
+font-weight: bold;
+padding-bottom: 5px;
+}
+
+.ui-homeBtn{
+width: 138px;
+line-height: 45px;
+background-color: #039de7;
+border: none;
+color: #fff;
+font-size: 16px;
+border-radius: 2px;
+margin-top: 42px;
+margin-bottom: 7px;
+font-weight: bold;
+letter-spacing: 1px;
+transition: 0.5s;
+cursor: pointer;
+}
+.ui-homeBtn:hover{
+background-color: #017bac;
+color: #f4feff;
+}
+.ui-home-company{
+padding: 20px;
+display: block;
+}
+.ui-home-lang{
+border: 1px solid #34495e;
+width: 80px;
+text-align: center;
+margin-bottom: 20px;
+}
+#features {
+padding: 3em 0;
+text-align: center;
+background-color: #f0f0f0;
+}
+#features .cool {
+font-size: 1.8em;
+text-align: center;
+margin-top: 1em;
+color: #7f8c8d;
+}
+#features .feats {
+max-width: 1200px;
+margin: 0 auto;
+}
+#features .feat {
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+display: inline-block;
+text-align: left;
+vertical-align: top;
+width: 280px;
+margin: 20px;
+}
+#features .feat h2 {
+color: #34495e;
+line-height: 20px;
+margin-bottom: 0;
+}
+#features .feat p {
+color: #7f8c8d;
+padding: 0 10px;
+margin: 0.4em 0;
+}
+#features .feat a {
+color: #42b983;
+font-weight: 600;
+}
+#features .icon {
+display: inline-block;
+vertical-align: middle;
+position: relative;
+top: -3px;
+width: 40px;
+height: 40px;
+margin-right: 12px;
+background: url("../images/icons.png");
+background-size: 240px 40px;
+}
+#features .icon.fast {
+background-position: -40px 0;
+}
+#features .icon.compact {
+background-position: -80px 0;
+}
+#features .icon.powerful {
+background-position: -120px 0;
+}
+#features .icon.composable {
+background-position: -160px 0;
+}
+#features .icon.module {
+background-position: -200px 0;
+}

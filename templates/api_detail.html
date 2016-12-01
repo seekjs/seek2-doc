@@ -1,0 +1,72 @@
+ <%
+    var args = (this.args||[]).map(x=>x.name).join(",");
+%>
+<div class="ui-home">
+    <header class="left bold bg-black white ui-apiDetail-header">{this.cate}.{this.name}</header>
+    <div class="api-detail">
+    <ul>
+        {if this.title}
+        <li>{$lang.title}: <span>{this.title}</span></li>
+        {/if}
+        {if this.des}
+        <li>{$lang.descriptions}: <span>{this.des}</span></li>
+        {/if}
+        <li>
+            <b>{$lang.usage}:</b>
+            {if this.cate=="pipe"}
+                {{ {this.args[0].name} | {this.name} {if this.args.length>1}:{this.args.slice(1).map(x=>x.name).join(",")}{/if} }}
+            {elsif this.cate=="template"}
+                {this.name}{if this.cat=="method"}({args}){/if}
+            {else}
+                {if this.usage}
+                    {this.usage}
+                {else}
+                    {this.cate}.{this.name}{if this.cat=="method"}({args}){/if}
+                {/if}
+            {/if}
+        </li>
+        {if this.type}
+        <li>{$lang.type}: <span>{this.type}</span></li>
+        {/if}
+        {if this.defaultVal}
+        <li>{$lang.default_value}: <span>{this.defaultVal}</span></li>
+        {/if}
+    </ul>
+         {if this.cat=="property"}
+        {if this.list}
+        <p>{$lang.optional_value}:</p>
+        <ul>
+            {foreach src=this.list}
+            <li>{i} : {item}</li>
+            {/foreach}
+        </ul>
+        {/if}
+        {elsif this.cat=="method"||this.cat=="event"}
+        {if this.args}
+        <table border="1">
+            <tr>
+                <th>{$lang.argument}</th>
+                <th>{$lang.is_required}</th>
+                <th>{$lang.descriptions}</th>
+                <th>{$lang.type}</th>
+            </tr>
+            {foreach src=this.args}
+            <tr>
+                <td class="center">{item.name}</td>
+                <td class="center">{item.required?$lang.yes:$lang.no}</td>
+                <td class="center">{item.title}</td>
+                <td class="center">{item.type}</td>
+            </tr>
+            {/foreach}
+        </table>
+        {/if}
+        {/if}
+         {if this.example}
+        <p class="ui-api-detailExp">{$lang.example} : </p>
+        <code>{this.example|code}</code>
+        <p><button class="api-btn" data-event="runCode">run code</button></p>
+        <div class="api-detail-result"></div>
+        {/if}
+    </div>
+</div>
+

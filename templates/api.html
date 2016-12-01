@@ -1,0 +1,41 @@
+ <%
+    var catIndex = {
+        basic: 1,
+        box: 2,
+        url: 3
+    };
+%>
+<div class="ui-home">
+    <header class="ui-api-title">{$lang.api_reference}</header>
+    <div class="ui-api-home">
+        <p class="ui-api-ul ui-api-topone ui-api-one">{$lang.api_des}: P = Property  M = Method E = Event T = Template P=Pipe</p>
+        {foreach src=this.apiList key=cateName item=cate}
+        {if !this.params.id||this.params.id==cateName}
+        <p class="ui-api-top ui-{cateName}">seekjs/{cateName}</p>
+         <ul class="ui-api-ul clear">
+            {foreach src=cate.list}
+            <li class="ui-api-li" data-event="go:api_detail/{cateName}.{item.name}" title="{item.title}">
+                {if cateName=="template"}
+                <span class="symbol2" style="background-color: #F64747;">T</span>
+                {elsif cateName=="pipe"}
+                <span class="symbol2" style="background-color: #9A12B3;">P</span>
+                {elsif item.cat=="property"}
+                <span class="symbol2 bg-red">P{catIndex[item.subcat]}</span>
+                {elsif item.cat=="method"}
+                <span class="symbol2 bg-green">M</span>
+                {elsif item.cat=="event"}
+                <span class="symbol2 bg-blue">E</span>
+                {/if}
+                {item.name}
+            </li>
+            {/foreach}
+        </ul>
+        {if cate.des}
+        <p class="ui-api-des ui-api-one">{cate.des}</p>
+        {/if}
+        {/if}
+        {/foreach}
+        <footer class="ui-api-one"></footer>
+    </div>
+</div>
+

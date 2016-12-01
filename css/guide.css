@@ -1,0 +1,35 @@
+ .ui-guide-title{
+    background-color: #000;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 50px;
+    font-weight: bold;
+}
+ .ui-guide-li{
+    border: 1px solid #eeeeee;
+    padding-left: 1.5rem;
+    line-height: 50px;
+    cursor:pointer;
+}
+ .ui-guide-li p{
+    width:239px;
+    margin:0 auto;
+}
+.ui-guide-fast{
+    background: lightgray;
+    color: #34495e;
+}
+.ui-guide-contents{
+    width:85%;
+    margin:0 auto;
+}
+.ui-guide-contents>li:hover{
+    color: #017bac;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 736px) {
+    .ui-guide-contents{
+        width:100%;
+    }
+}

@@ -1,0 +1,17 @@
+ <div class="ui-guide">
+    <header class="ui-guide-title">seekJs {$lang.guide}</header>
+    <ul class="ui-guide-contents">
+        {foreach src=this.preList}
+        <li class="ui-guide-li ui-guide-fast" data-event="go:{item.page}">
+            <p>{sn|letter}. {item.name} - {item.title}</p>
+        </li>
+        {/foreach}
+    </ul>
+    <ul class="ui-guide-contents">
+        {foreach src=this.List}
+        <li class="ui-guide-li" data-event="go:{item.page}">
+            <p>{sn}. {item.name} - {item.title}</p>
+        </li>
+        {/foreach}
+    </ul>
+</div>

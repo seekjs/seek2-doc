@@ -4,31 +4,33 @@
 
 seekjs.config({
     ns:{
-        "data.": "/data/",
-        "util.": "/utils/",
-        "css.": {
+        data: "/data/",
+        util: "/utils/",
+        css: {
             path: "/css/",
             type: ".css"
         },
-        "code.": "/plugins/code/"
+        code: "/plugins/code/"
     }
 });
 
-require("css.tag");
-require("css.class");
+require("css._tag");
+require("css._class");
 
 var app = require("sys.app");
 
 app.config({
-    page: `/pages/`,
+    js: "/js/",
+    css: "/css/",
+    tp: "/templates/",
     useAnimate: true
 });
 
 app.viewEx = require("util.viewEx");
 app.pipeEx = require("util.pipeEx");
 
-app.usePlugin("seekjs-plugin-mask", {display:false});
-app.usePlugin("seekjs-plugin-dialog", {display:false});
+app.usePlugin("seekjs-plugin-mask");
+app.usePlugin("seekjs-plugin-dialog");
 
 var Lang = require("util.Lang");
 

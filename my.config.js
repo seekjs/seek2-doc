@@ -1,8 +1,8 @@
 module.exports = {
     staticMaps: [
-        {path: "/node_modules/seekjs-plugin-datepicker/", dir: "/data/github/seekjs-plugin/seekjs-plugin-datepicker"},
-        {path: "/node_modules/seekjs-plugin-dialog/", dir: "/data/github/seekjs-plugin/seekjs-plugin-dialog"},
-        {path: "/node_modules/seekjs-plugin-flow/", dir: "/data/github/seekjs-plugin/seekjs-plugin-flow"},
-        {path: "/node_modules/seekjs/", dir: "/data/github/seekjs"}
+        {path: "/node_modules/seekjs-plugin-datepicker/", dir: "/github/seekjs-framework/seekjs-plugin-datepicker"},
+        {path: "/node_modules/seekjs-plugin-dialog/", dir: "/github/seekjs-framework/seekjs-plugin-dialog"},
+        {path: "/node_modules/seekjs-plugin-flow/", dir: "/github/seekjs-framework/seekjs-plugin-flow"},
+        {path: "/node_modules/seekjs/", dir: "/github/seekjs-framework/seekjs"}
     ]
 };

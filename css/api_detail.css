@@ -1,0 +1,52 @@
+ .api-detail{
+    background-color: #f6f7fb;
+    padding: 20px;
+}
+ .api-detail table{
+    border-collapse: collapse;
+    width: 80%;
+}
+ .api-detail li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.api-detail li span{
+    font-size: 14px;
+    color: #33b4db;
+}
+ .api-detail code{
+    background-color: #d9e0e8;
+    font-size: 13px;
+    min-width: 500px;
+    min-height: 100px;
+    display: inline-block;
+    padding: 20px;
+    font-weight: normal;
+    color: #05052d;
+    line-height: 25px;
+}
+ .api-detail code b{
+    margin-bottom: -10px;
+    font-size: 14px;
+}
+.api-btn{
+    height: 30px;
+    padding: 0 8px;
+    background: #1E8BC3;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.api-btn:hover{
+    background-color: #20A8F1;
+}
+.ui-apiDetail-header{
+    padding: 20px;
+}

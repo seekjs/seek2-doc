@@ -2,12 +2,12 @@
  * Created by likaituan on 16/10/19.
  */
 
-var {requireJson,log} = require("ifun");
+var {requireJson} = require("ifun");
 var myConfig = requireJson(`${__dirname}/my.config.js`);
 
 module.exports = function (args) {
     var staticMaps = args.f && myConfig.staticMaps || [];
-    var config = {
+    return {
         static: {
             items: staticMaps.concat({
                 path: "/",
@@ -23,6 +23,4 @@ module.exports = function (args) {
         gzip: true,
         port: 2016
     };
-
-    return config;
 };
