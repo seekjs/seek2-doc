@@ -38,7 +38,7 @@ app.onInit = function(view){
 };
 
 if(!localStorage.lang){
-    localStorage.lang = "en";
+    localStorage.lang = "cn";
 }
 
 app.init("home");
