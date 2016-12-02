@@ -62,19 +62,19 @@
     margin-right: 50px;
 }
 .ui-app{
-    background: url("../images/app.png") no-repeat center left;
+    background: url("../images/api/app.png") no-repeat center left;
     background-size: 25px;
 }
 .ui-view{
-    background: url("../images/view.png") no-repeat center left;
+    background: url("../images/api/view.png") no-repeat center left;
     background-size: 25px;
 }
 .ui-template{
-    background: url("../images/template.png") no-repeat center left;
+    background: url("../images/api/template.png") no-repeat center left;
     background-size: 25px;
 }
 .ui-pipe{
-    background: url("../images/pipe.png") no-repeat center left;
+    background: url("../images/api/pipe.png") no-repeat center left;
     background-size: 25px;
 }
 .ui-api-home{

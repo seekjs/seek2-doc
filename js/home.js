@@ -8,8 +8,8 @@
         en: "Forum"
     },
     blog: {
-        cn: "博客",
-        en: "Blog"
+        cn: "进阶",
+        en: "More"
     },
     now_is_developing:{
         cn: "正在努力开发中,敬请期待!",
@@ -27,11 +27,11 @@
         cn: "快速上手",
         en: "Quick Start"
     },
-     modular: {
+    modularize: {
         cn: "模块化+命名空间",
         en: "Modular Add Namespace"
     },
-    modular_des: {
+    modularize_des: {
         cn: "采用目前流行的CommonJS模块化规范,无缝兼容NodeJS; 独创的命名空间写法, 方便加载和管理模块",
         en: "Real front end browser module, non AMD specification; Writing the original namespace, convenient loading and management module"
     },
@@ -51,21 +51,21 @@
         cn: "数据跟模板双向绑定, 只需专注数据, 去掉繁琐的dom操作, 让你的工作效率嗖嗖提升",
         en: "Basically do not operate DOM, just care about the data"
     },
-    three_in_one: {
-        cn: "三位一体",
-        en: "Three-in-one"
+    multi_mode: {
+        cn: "模式多样化",
+        en: "Multiple Mode"
     },
-    three_in_one_des: {
-        cn: "CSS样式 + HTML模板 + Javascript 合并成一个文件",
-        en: "CSS style + HTML template + Javascript mixed into one file"
+    multi_mode_des: {
+        cn: "追求结构清晰的,JS/CSS/HTML分开写; 喜欢单文件的,JS+CSS+HTML三位一体; 还有更轻量的,不设任何目录",
+        en: "The pursuit of a clear structure, JS/CSS/HTML separate write; like a single file, JS+CSS+HTML Trinity; there is a lighter weight, no directory"
     },
-    nice_extend_mode: {
+    nice_extend_system: {
         cn: "友好的扩展机制",
-        en: "Nice Extend Mode"
+        en: "Nice Extend System"
     },
-    nice_extend_mode_des: {
-        cn: "统一规范的插件机制, 通过NPM一键安装",
-        en: "Unified specification of the plug-in mechanism, through the NPM a key to install"
+    nice_extend_system_des: {
+        cn: "随意添加View扩展, 定制pipe扩展, 统一规范的插件机制, 通过NPM一键安装",
+        en: "Optionally add View extensions, custom pipe extensions, unified specification of the plug-in mechanism, through the NPM a key to install"
     },
     lightweight: {
         cn: "轻量模式",

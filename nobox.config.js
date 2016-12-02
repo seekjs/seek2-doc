@@ -14,11 +14,16 @@ module.exports = function (args) {
                 dir: args.time ? `${__dirname}/dist` : __dirname
             })
         },
+        remote: {
+            path: "/service/",
+            file: require("./node/service"),
+            type: "json"
+        },
         onPubBefore: function(cmd){
             cmd(`seekjs build`);
         },
         pub:{
-            packages: ["nobox.config.js", "dist"]
+            packages: ["nobox.config.js", "node", "dist"]
         },
         gzip: true,
         port: 2016

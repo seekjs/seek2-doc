@@ -11,6 +11,9 @@ seekjs.config({
             type: ".css"
         },
         code: "/plugins/code/"
+    },
+    alias: {
+        ajax: "/utils/ajax.js"
     }
 });
 
@@ -44,3 +47,5 @@ if(!localStorage.lang){
 }
 
 app.init("home");
+
+require("ajax").countPerson();

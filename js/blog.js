@@ -1,7 +1,7 @@
  exports.$lang = {
     blog: {
-        cn: "博客",
-        en: "Blog"
+        cn: "原型图",
+        en: "Flow"
     },
     loading_flow:{
         cn: "加载流程图",
