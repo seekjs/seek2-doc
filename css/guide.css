@@ -33,3 +33,25 @@ and (max-device-width : 736px) {
         width:100%;
     }
 }
+
+ .guide-phone{
+     width:85%;
+ }
+
+ .guide-pad{
+     font-size:0;
+ }
+
+.guide-pad>div{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+}
+
+.guide-pad .guide-left{
+    width: 300px;
+}
+
+.guide-right{
+    width: calc(100% - 300px);
+}
