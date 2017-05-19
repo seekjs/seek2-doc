@@ -5,6 +5,11 @@
 var fs = require("fs");
 var {log} = require("ifun");
 
+var mongodb = require('./mongodb');
+mongodb.setConfig({
+    database: 'counter'
+});
+
 var getDateTime = function(){
     var timestamp = Date.now() - new Date().getTimezoneOffset()*60000;
     return new Date(timestamp).toISOString().replace("T"," ").replace(/\.\d+Z/,"");
@@ -45,7 +50,7 @@ var getEnv = function(ua) {
     return {device,os,browser};
 };
 
-exports.countPerson = function(params, session, req){
+exports.countPerson = function(req, res, {params, session}){
     var file = `${__dirname}/count.json`;
     var code = fs.readFileSync(file).toString().trim();
     var json = JSON.parse(code);
@@ -57,10 +62,13 @@ exports.countPerson = function(params, session, req){
         os: env.os,
         browser: env.browser
     };
-    //log({item});
-    json.data.push(item);
-    json.count = json.data.length;
-    code = JSON.stringify(json,null,4);
-    fs.writeFileSync(file, code);
-    return [];
+    log({item});
+    mongodb.connect().then(
+        db => {
+            log({db});
+        },
+        err => log({err})
+    ).close();
+
+    res.json({success:true, code:200, data:null, message:''});
 };
