@@ -4,8 +4,16 @@
 
 var ajax = require("sys.ajax");
 
-exports.countPerson = function(){
+exports.addVisitor = function(){
     ajax({
-        url: "/service/countPerson"
+        url: "/service/addVisitor"
+    });
+};
+
+exports.getVisitorList = function(callback){
+    ajax({
+        url: "/service/getVisitorList",
+        dataType: 'json',
+        success: callback
     });
 };

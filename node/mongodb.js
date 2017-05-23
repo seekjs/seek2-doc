@@ -31,24 +31,24 @@ exports.connect = function () {
         db => {
             if (isFirst) {
                 isFirst = false;
-                console.log(`MongoDB Is Running At ${host}:${port} by ${dbName}`);
+                console.log(`MongoDB Is Running At ${host}:${port} by [${dbName}] database`);
             }
             return Promise.resolve(DB = db);
         },
         err => Promise.reject(err.message)
-    );
+    )/*.catch(
+	    err => console.log(err)
+    )*/;
 };
 
 // 断开连接
 Promise.prototype.close = function(){
     return this.then(
         data => {
-            console.log(111);
             DB && DB.close();
             return Promise.resolve(data);
         },
         err => {
-            console.log(222);
             DB && DB.close();
             return Promise.reject(err);
         }

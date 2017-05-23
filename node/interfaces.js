@@ -3,12 +3,12 @@
  */
 
 var fs = require("fs");
-var {log} = require("ifun");
+var {log, getArgs} = require("ifun");
+var dbConfig = require('../config/db');
 
+var env = getArgs().env || dbConfig.default_env;
 var mongodb = require('./mongodb');
-mongodb.setConfig({
-    database: 'counter'
-});
+mongodb.setConfig(dbConfig[env]);
 
 var getDateTime = function(){
     var timestamp = Date.now() - new Date().getTimezoneOffset()*60000;
@@ -50,10 +50,8 @@ var getEnv = function(ua) {
     return {device,os,browser};
 };
 
-exports.countPerson = function(req, res, {params, session}){
-    var file = `${__dirname}/count.json`;
-    var code = fs.readFileSync(file).toString().trim();
-    var json = JSON.parse(code);
+// 添加访客
+exports.addVisitor = function(req, res, {params, session}){
     var env = getEnv(req.headers["user-agent"]);
     var item = {
         ip: session.ip,
@@ -65,10 +63,37 @@ exports.countPerson = function(req, res, {params, session}){
     log({item});
     mongodb.connect().then(
         db => {
-            log({db});
+	        db.collection('visitor').insertOne(item).then(
+		        ret => {
+			        log({insertCount: ret.insertedCount});
+			        ret.insertedCount == 1 && res.end('insert success!');
+		        },
+		        err => log({err})
+	        );
         },
         err => log({err})
     ).close();
 
-    res.json({success:true, code:200, data:null, message:''});
+    //res.json({success:true, code:200, data:null, message:''});
+    //res.end(JSON.stringify({success:true, code:200, data:null, message:''}));
+};
+
+// 获取访客列表
+exports.getVisitorList = function(req, res, {params, session}){
+    var list = [];
+    mongodb.connect().then(
+        db => {
+            db.collection('visitor').find().toArray().then(
+	            docs => {
+		            list = docs || [];
+		            res.json(list);
+	            },
+	            err => {
+		            log({err});
+		            return Promise.reject(err);
+	            }
+            );
+        },
+        err => log({err})
+    ).close();
 };

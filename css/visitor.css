@@ -1,0 +1,8 @@
+.ui-visitor table {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.ui-visitor td {
+    text-align: center;
+}

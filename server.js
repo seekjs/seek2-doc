@@ -3,8 +3,6 @@
  */
 var log = console.log;
 
-var {requireJson} = require("ifun");
-var myConfig = requireJson(`${__dirname}/my.config.js`);
 var interfaces = require('./node/interfaces');
 
 var express = require('express');
@@ -18,7 +16,7 @@ Object.entries(interfaces).forEach(([method, fun]) => {
     app.use(`/service/${method}`, (req, res) => {
         options.params = req.query;
         options.session = {
-            ip: req.ip
+            ip: req.ip.replace('::ffff:', '')
         };
         fun(req, res, options);
     });
@@ -36,30 +34,3 @@ app.listen(port, err => {
 app.on('error', (a,b,c) => {
    log({a,b,c});
 });
-
-/*
-module.exports = function (args) {
-    var staticMaps = args.f && myConfig.staticMaps || [];
-    return {
-        static: {
-            items: staticMaps.concat({
-                path: "/",
-                dir: args.time ? `${__dirname}/dist` : __dirname
-            })
-        },
-        remote: {
-            path: "/service/",
-            file: require("./node/interfaces"),
-            type: "json"
-        },
-        onPubBefore: function(cmd){
-            cmd(`seekjs build`);
-        },
-        pub:{
-            packages: ["nobox.config.js", "node", "dist"]
-        },
-        gzip: true,
-        port: 2016
-    };
-};
-*/

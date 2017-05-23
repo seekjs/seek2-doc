@@ -37,9 +37,11 @@ app.usePlugin("seekjs-plugin-dialog");
 
 var Lang = require("util.Lang");
 
+var isFirst = true;
 app.onInit = function(view){
     window.$Lang = Lang.getLang(Lang, localStorage.lang);
     window.$lang = view.lang = Lang.getLang(view.$lang, localStorage.lang);
+    isFirst && view.page === 'home' && require("ajax").addVisitor(x=>isFirst=false);
 };
 
 if(!localStorage.lang){
@@ -47,5 +49,3 @@ if(!localStorage.lang){
 }
 
 app.init("home");
-
-require("ajax").countPerson();

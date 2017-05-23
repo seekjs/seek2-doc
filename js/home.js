@@ -80,6 +80,7 @@
     en: "english",
     cn: "中文"
 };
+
  exports.showTip = function(){
     this.confirm(this.lang.now_is_developing);
 };

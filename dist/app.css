@@ -312,7 +312,7 @@ and (max-device-width : 736px) {
         display: inline-block;
         width: 2rem;
         height: 2rem;
-        background: url("1.png?1491903667430") no-repeat center;
+        background: url("1.png?1495530481697") no-repeat center;
         background-size: 1.8rem auto;
     }
     .sk-dialog-cont{
@@ -421,19 +421,19 @@ and (max-device-width : 736px) {
     margin-right: 50px;
 }
 .ui-app{
-    background: url("2.png?1491903667430") no-repeat center left;
+    background: url("2.png?1495530481697") no-repeat center left;
     background-size: 25px;
 }
 .ui-view{
-    background: url("3.png?1491903667430") no-repeat center left;
+    background: url("3.png?1495530481697") no-repeat center left;
     background-size: 25px;
 }
 .ui-template{
-    background: url("4.png?1491903667430") no-repeat center left;
+    background: url("4.png?1495530481697") no-repeat center left;
     background-size: 25px;
 }
 .ui-pipe{
-    background: url("5.png?1491903667430") no-repeat center left;
+    background: url("5.png?1495530481697") no-repeat center left;
     background-size: 25px;
 }
 .ui-api-home{
@@ -658,7 +658,7 @@ padding: 0.5rem 2rem;
         border: none;
         width: 200px;
         height: 20px;
-        background: url("7.png?1491903667430") no-repeat center;
+        background: url("7.png?1495530481697") no-repeat center;
         background-size: 20px 20px;
         text-align: right;
     }
@@ -805,7 +805,7 @@ padding: 0.5rem 2rem;
         border: none;
         width: 200px;
         height: 20px;
-        background: url("7.png?1491903667430") no-repeat center;
+        background: url("7.png?1495530481697") no-repeat center;
         background-size: 20px 20px;
         text-align: right;
     }
@@ -1196,27 +1196,27 @@ and (max-device-width : 736px) {
 }
 
 #features .icon.modularize {
-    background-image: url("9.png?1491903667430");
+    background-image: url("9.png?1495530481697");
 }
 
 #features .icon.spa {
-    background-image: url("10.png?1491903667430");
+    background-image: url("10.png?1495530481697");
 }
 
 #features .icon.data-driver {
-    background-image: url("11.png?1491903667430");
+    background-image: url("11.png?1495530481697");
 }
 
 #features .icon.multi-mode {
-    background-image: url("12.png?1491903667430");
+    background-image: url("12.png?1495530481697");
 }
 
 #features .icon.extend {
-    background-image: url("13.png?1491903667430");
+    background-image: url("13.png?1495530481697");
 }
 
 #features .icon.fast {
-    background-image: url("14.png?1491903667430");
+    background-image: url("14.png?1495530481697");
 }
 
 
@@ -1235,4 +1235,13 @@ line-height: 50px;
 font-size: 20px;
 font-family: "微软雅黑";
 padding-top: 10px;
+}
+
+.ui-visitor table {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.ui-visitor td {
+    text-align: center;
 }
