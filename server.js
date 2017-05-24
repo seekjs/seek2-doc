@@ -3,12 +3,15 @@
  */
 var log = console.log;
 
+var {getArgs} = require('ifun');
+var args = getArgs();
 var interfaces = require('./node/interfaces');
 
 var express = require('express');
 var app = express();
+app.set('trust proxy', 'loopback');
 
-app.use(express.static("dist"));
+app.use(express.static(args.node === 'online' ? 'dist' : '.'));
 
 var options = {};
 options.session = {};

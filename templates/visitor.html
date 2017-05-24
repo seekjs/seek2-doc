@@ -2,19 +2,19 @@
     <table border="1">
         <tr>
             <th>No</th>
-            <th>Browser</th>
             <th>Device</th>
-            <th>Ip</th>
             <th>Os</th>
+            <th>Browser</th>
+            <th>Ip</th>
             <th>Time</th>
         </tr>
         {foreach src=this.list}
         <tr>
             <td>{(+i+1).toString().padStart(3,0)}</td>
-            <td>{item.browser}</td>
             <td>{item.device}</td>
-            <td>{item.ip}</td>
             <td>{item.os}</td>
+            <td>{item.browser}</td>
+            <td>{item.ip}</td>
             <td>{item.time}</td>
         </tr>
         {/foreach}

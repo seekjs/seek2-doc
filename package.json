@@ -7,7 +7,7 @@
     "ifun": "0.2.5",
     "jquery": "3.1.1",
     "mongodb": "^2.2.27",
-    "seekjs": "2.1.6",
+    "seekjs": "2.1.8",
     "seekjs-plugin-dialog": "1.0.8",
     "seekjs-plugin-flow": "1.0.4",
     "seekjs-plugin-mask": "1.0.2"
