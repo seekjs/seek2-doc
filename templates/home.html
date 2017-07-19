@@ -1,61 +1,82 @@
-
 <div class="ui-home">
-<!--<input type="text" dateType="start" max readonly data-event="input>controlDate:start;focus>selectTime" placeholder="结束日期" >－<input type="text" readonly dateType="end" min data-event="input>controlDate:end;focus>selectTime"  placeholder="开始月">s-->
-<!--<input data-event="showDatePicker" style="position: relative" />-->
-<div class="ui-header">
-    <span><img src="images/logo.png"></span>
-    <ul class="clear ui-menu">
-        <li data-event="go:guide">{$lang.guide}</li>
-        <li data-event="go:api">API</li>
-        <!--li data-event="go:http://seekjs.club:2000">{$lang.forum}</li-->
-        <li data-event="showTip">{$lang.forum}</li>
-        <!--li data-event="go:http://blog.likaituan.me:2006/#list?key=seekjs">{$lang.blog}</li-->
-        <li data-event="go:blog">{$lang.blog}</li>
-        <li data-event="go:http://github.com/seekjs-framework">GitHub</li>
-    </ul>
-</div>
- <div class="ui-logo">
-    <p class="center ui-seekName">Seek.js@2.1</p>
-    <p class="center">{$lang.framework_des}</p>
-    <p class="center"><button class="ui-homeBtn" data-event="go:quick-start">{$lang.quick_start}</button></p>
-</div>
-<div id="features">
-    <div class="feats">
-        <div class="feat">
-            <h2><span class="icon modularize"></span>{$lang.modularize}</h2>
-            <p>{$lang.modularize_des}</p>
+    <div class="ui-header">
+        <span><img src="images/logo.png"></span>
+        <ul class="clear ui-menu">
+            <li class="ui-home-search">
+                <span></span>
+                <input type="text" placeholder="{$lang.search_you_want}" />
+            </li>
+            <li data-event="go:guide">{$lang.guide}</li>
+            <li data-event="go:api">API</li>
+            <li data-event="go:sample">{$lang.sample}</li>
+            <li class="sub-menu">
+                <span>{$lang.ecosystem} V</span>
+                <div>
+                    <ul>
+                        <li data-event="go:http://github.com/seekjs">GitHub</li>
+                        <li data-event="go:http://forum.seekjs.io">{$lang.forum}</li>
+                        <li data-event="go:http://blog.seekjs.io">{$lang.blog}</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="sub-menu">
+                <span>{$lang.multiLang} V</span>
+                <div>
+                    <ul>
+                        {foreach src=this.langs}
+                        <li data-event="setLang:{i}" class="{localStorage.lang==i|iif:'current'}">{item}</li>
+                        {/foreach}
+                    </ul>
+                </div>
+            </li>
+            <li class="sub-menu">
+                <span>{$lang.topList} V</span>
+                <div>
+                    <ul>
+                        <li data-event="go:top,1">{$lang.top1}</li>
+                        <li data-event="go:top,2">{$lang.top2}</li>
+                        <li data-event="go:top,3">{$lang.top3}</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="ui-logo">
+        <p class="center ui-seekName">Seek.js@2.1</p>
+        <p class="center">{$lang.framework_des}</p>
+        <p class="center">
+            <button class="ui-homeBtn" data-event="go:quick-start">{$lang.quick_start}</button>
+        </p>
+    </div>
+    <div id="features">
+        <div class="feats">
+            <div class="feat">
+                <h2><span class="icon modularize"></span>{$lang.modularize}</h2>
+                <p>{$lang.modularize_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon spa"></span>{$lang.spa}</h2>
+                <p>{$lang.spa_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon data-driver"></span>{$lang.data_driver}</h2>
+                <p>{$lang.data_driver_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon multi-mode"></span>{$lang.multi_mode}</h2>
+                <p>{$lang.multi_mode_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon extend"></span>{$lang.nice_extend_system}</h2>
+                <p>{$lang.nice_extend_system_des}</p>
+            </div>
+            <div class="feat">
+                <h2><span class="icon fast"></span>{$lang.lightweight}</h2>
+                <p>{$lang.lightweight_des}</p>
+            </div>
         </div>
-        <div class="feat">
-            <h2><span class="icon spa"></span>{$lang.spa}</h2>
-            <p>{$lang.spa_des}</p>
-        </div>
-        <div class="feat">
-            <h2><span class="icon data-driver"></span>{$lang.data_driver}</h2>
-            <p>{$lang.data_driver_des}</p>
-        </div>
-        <div class="feat">
-            <h2><span class="icon multi-mode"></span>{$lang.multi_mode}</h2>
-            <p>{$lang.multi_mode_des}</p>
-        </div>
-        <div class="feat">
-            <h2><span class="icon extend"></span>{$lang.nice_extend_system}</h2>
-            <p>{$lang.nice_extend_system_des}</p>
-        </div>
-        <div class="feat">
-            <h2><span class="icon fast"></span>{$lang.lightweight}</h2>
-            <p>{$lang.lightweight_des}</p>
-        </div>
-     </div>
-</div>
-<footer class="center">
-    <p class="center ui-home-company">Copyright (c) 2016 Li</p>
-    <p>
-        <span class="">{$lang.switch_language}</span>
-        <select class="ui-home-lang" data-event="change>setLang">
-            {foreach src=this.langs}
-            <option value="{i}" {localStorage.lang==i|iif:selected='selected'}>{item}</option>
-            {/foreach}
-        </select>
-    </p>
-</footer>
+    </div>
+    <footer class="center">
+        <p class="center ui-home-company">Copyright (c) 2016 Li</p>
+    </footer>
 </div>

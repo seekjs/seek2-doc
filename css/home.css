@@ -6,13 +6,13 @@
     padding-top: 10px;
 }
 
-.ui-header span {
+.ui-header>span {
     display: inline-block;
     font-weight: bold;
     vertical-align: middle;
     padding: 0 20px;
     font-size: 30px;
-    width: 12%;
+    width: 14%;
 }
 
 .ui-menu {
@@ -22,8 +22,8 @@
     padding: 0 20px;
 }
 
-.ui-menu li {
-    width: 20%;
+.ui-menu>li {
+    width: 14%;
     text-align: center;
     float: left;
     line-height: 70px;
@@ -31,7 +31,7 @@
     cursor: pointer;
 }
 
-.ui-menu li:hover {
+.ui-menu>li:hover {
     background-color: #13a4dd;
 }
 
@@ -73,13 +73,6 @@
 .ui-home-company {
     padding: 20px;
     display: block;
-}
-
-.ui-home-lang {
-    border: 1px solid #34495e;
-    width: 80px;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 #features {
@@ -160,4 +153,37 @@
 
 #features .icon.fast {
     background-image: url("../images/features/lightweight.png");
+}
+
+.sub-menu{
+
+}
+
+.sub-menu>div {
+    display: none;
+}
+
+.sub-menu:hover>div {
+    display: inherit;
+}
+
+.ui-home-search{
+
+}
+
+.ui-home-search span{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-color: #fff;
+    background-image: url("../images/search.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+.ui-home-search input{
+    width: 90px;
+    height: 30px;
+    margin: 0;
+    border: 0;
 }

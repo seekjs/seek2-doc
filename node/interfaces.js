@@ -4,6 +4,7 @@
 
 var fs = require("fs");
 var {log, getArgs} = require("ifun");
+var rest = require('./rest');
 var dbConfig = require('../config/db');
 
 var env = getArgs().env || dbConfig.default_env;
@@ -63,12 +64,18 @@ exports.addVisitor = function(req, res, {params, session}){
     log({item});
     mongodb.connect().then(
         db => {
-	        db.collection('visitor').insertOne(item).then(
-		        ret => {
-			        log({insertCount: ret.insertedCount});
-			        ret.insertedCount == 1 && res.end('insert success!');
+	        rest.get(`https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?query=${item.ip}&resource_id=6006`).then(
+		        ret2 => {
+			        item.address = ret2.localtion;
+			        db.collection('visitor').insertOne(item).then(
+				        ret => {
+					        log({insertCount: ret.insertedCount});
+					        ret.insertedCount == 1 && res.end('insert success!');
+				        },
+				        err => log({err})
+			        );
 		        },
-		        err => log({err})
+			    err => log({err})
 	        );
         },
         err => log({err})

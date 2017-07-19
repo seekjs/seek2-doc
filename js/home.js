@@ -7,9 +7,41 @@
         cn: "论坛",
         en: "Forum"
     },
+    sample: {
+        cn: "样例",
+        en: "Sample"
+    },
+    ecosystem: {
+        cn: "生态系统",
+        en: "Ecosystem"
+    },
+    multiLang: {
+        cn: "多语言",
+        en: "Language"
+    },
+    topList: {
+        cn: "贡献榜",
+        en: "Top List"
+    },
+    top1: {
+        cn: "插件贡献榜",
+        en: "Plugin Top"
+    },
+	 top2: {
+        cn: "代码贡献榜",
+        en: "Code Top"
+    },
+	 top3: {
+        cn: "FAQ贡献榜",
+        en: "FAQ Top"
+    },
     blog: {
         cn: "进阶",
         en: "More"
+    },
+    search_you_want: {
+        cn: "搜了就知道",
+        en: "Search You Want"
     },
     now_is_developing:{
         cn: "正在努力开发中,敬请期待!",
@@ -84,8 +116,24 @@
  exports.showTip = function(){
     this.confirm(this.lang.now_is_developing);
 };
- exports.setLang = function(){
-    localStorage.lang = this.element.value;
+
+ exports.setLang = function(lang){
+    localStorage.lang = lang;
     require("sys.app").onInit(this);
     exports.render();
 };
+
+ exports.onRender = function() {
+	 this.langBox = this.ui.querySelector('.ui-home-lang-box');
+ };
+
+ exports.onHover = function (flag) {
+	 console.log({flag});
+	 console.log(this.langBox);
+	 if(flag==0){
+		 this.langBox.style.display = 'block';
+	 }
+	 if(flag==1){
+		 this.langBox.style.display = 'none';
+	 }
+ };
