@@ -1,7 +1,7 @@
 /**
  * Created by likaituan on 16/10/19.
  */
-var log = console.log;
+global.log = console.log;
 
 var {getArgs} = require('ifun');
 var args = getArgs();
@@ -10,7 +10,7 @@ var interfaces = require('./node/interfaces');
 var express = require('express');
 var app = express();
 app.set('trust proxy', 'loopback');
-
+app.use('/node_modules/seekjs', express.static('/github/seekjs/seekjs2'));  //暂时,调试时用
 app.use(express.static(args.node === 'online' ? 'dist' : '.'));
 
 var options = {};

@@ -1,46 +1,5 @@
 <div class="ui-home">
-    <div class="ui-header">
-        <span><img src="images/logo.png"></span>
-        <ul class="clear ui-menu">
-            <li class="ui-home-search">
-                <span></span>
-                <input type="text" placeholder="{$lang.search_you_want}" />
-            </li>
-            <li data-event="go:guide">{$lang.guide}</li>
-            <li data-event="go:api">API</li>
-            <li data-event="go:sample">{$lang.sample}</li>
-            <li class="sub-menu">
-                <span>{$lang.ecosystem} V</span>
-                <div>
-                    <ul>
-                        <li data-event="go:http://github.com/seekjs">GitHub</li>
-                        <li data-event="go:http://forum.seekjs.io">{$lang.forum}</li>
-                        <li data-event="go:http://blog.seekjs.io">{$lang.blog}</li>
-                    </ul>
-                </div>
-            </li>
-            <li class="sub-menu">
-                <span>{$lang.multiLang} V</span>
-                <div>
-                    <ul>
-                        {foreach src=this.langs}
-                        <li data-event="setLang:{i}" class="{localStorage.lang==i|iif:'current'}">{item}</li>
-                        {/foreach}
-                    </ul>
-                </div>
-            </li>
-            <li class="sub-menu">
-                <span>{$lang.topList} V</span>
-                <div>
-                    <ul>
-                        <li data-event="go:top,1">{$lang.top1}</li>
-                        <li data-event="go:top,2">{$lang.top2}</li>
-                        <li data-event="go:top,3">{$lang.top3}</li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
+    <div data-view="header"></div>
     <div class="ui-logo">
         <p class="center ui-seekName">Seek.js@2.1</p>
         <p class="center">{$lang.framework_des}</p>
