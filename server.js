@@ -10,7 +10,7 @@ var interfaces = require('./node/interfaces');
 var express = require('express');
 var app = express();
 app.set('trust proxy', 'loopback');
-app.use('/node_modules/seekjs', express.static('/github/seekjs/seekjs2'));  //暂时,调试时用
+app.use('/node_modules/seekjs', express.static('/github/seekjs/sk2'));  //暂时,调试时用
 app.use(express.static(args.node === 'online' ? 'dist' : '.'));
 
 var options = {};

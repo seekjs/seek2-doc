@@ -5,13 +5,13 @@
 var ajax = require("sys.ajax");
 
 exports.addVisitor = function(){
-    ajax({
+    ajax.call(ajax, {
         url: "/service/addVisitor"
     });
 };
 
 exports.getVisitorList = function(callback){
-    ajax({
+    ajax.call(ajax, {
         url: "/service/getVisitorList",
         dataType: 'json',
         success: callback

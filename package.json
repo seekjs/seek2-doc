@@ -1,5 +1,5 @@
 {
-  "name": "seekjs-doc",
+  "name": "seek2-doc",
   "version": "1.0.0",
   "description": "seekjs api and document",
   "dependencies": {
@@ -8,15 +8,15 @@
     "jquery": "3.1.1",
     "mongodb": "^2.2.27",
     "restler": "^3.4.0",
-    "seekjs": "github:seekjs/seekjs2",
-    "seekjs-plugin-dialog": "1.0.8",
-    "seekjs-plugin-flow": "1.0.4",
-    "seekjs-plugin-mask": "1.0.2"
+    "seekjs": "github:seekjs/sk2",
+    "sk2-plugin-dialog": "seekjs/sk2-plugin-dialog",
+    "sk2-plugin-flow": "seekjs/sk2-plugin-flow",
+    "sk2-plugin-mask": "seekjs/sk2-plugin-mask"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:likaituan/seekjs-doc.git"
+    "url": "git@github.com:seekjs/seek2-doc.git"
   },
   "scripts": {
     "build": "babel /data/github/seekjs-doc/dist/app.js -o /data/github/seekjs-doc/dist/app.js --compact=auto --plugins=es2015"
